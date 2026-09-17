@@ -1,0 +1,48 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { absoluteAsset, canonical, site } from '../lib/site.js';
+
+const {
+  title,
+  description,
+  path,
+  image = site.socialImagePath,
+  ogType = 'website',
+  view = 'hub',
+  jsonLd
+} = Astro.props;
+const pageUrl = canonical(path);
+const socialImage = absoluteAsset(image);
+const serializedJsonLd = JSON.stringify(jsonLd).replaceAll('<', '\\u003c');
+---
+<!doctype html>
+<html lang={site.language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={site.brandName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <link rel="canonical" href={pageUrl} />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="stylesheet" href="/assets/geo-static.css" />
+    <title>{title}</title>
+    <script type="application/ld+json" set:html={serializedJsonLd}></script>
+    <script src="/scripts/site-interactions.js" defer></script>
+    <noscript><style>.answer[hidden]{display:block!important}</style></noscript>
+  </head>
+  <body data-view={view}>
+    <Header view={view} />
+    <main><slot /></main>
+    <Footer />
+  </body>
+</html>

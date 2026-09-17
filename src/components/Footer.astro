@@ -1,0 +1,23 @@
+---
+import External from './External.astro';
+import { official } from '../lib/site.js';
+---
+<footer>
+  <div class="container footer-grid">
+    <img src="/assets/logo-morris-garages.png" width="180" height="63" alt="Morris Garages" />
+    <div>
+      <span>Explore MG</span>
+      <External href={official('/vehicles/electric')}>Electric vehicles</External>
+      <External href={official('/offers')}>Offers</External>
+      <a href="/explore/ev-guides">EV Guides &amp; Advice</a>
+      <a href="/about/faqs">FAQs</a>
+    </div>
+    <div>
+      <span>Owners</span>
+      <External href={official('/about/servicing')}>Servicing</External>
+      <External href={official('/explore/warranty')}>Warranty</External>
+      <External href={official('/about/find-a-dealer')}>Find a dealer</External>
+    </div>
+  </div>
+  <div class="container footer-note">MG Australia Pty Ltd © 2026</div>
+</footer>

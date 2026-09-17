@@ -1,0 +1,13 @@
+---
+const { table, heading } = Astro.props;
+const explicit = !Array.isArray(table);
+const implicitHeader = Array.isArray(table) && table[0]?.length > 2 && ['Model', 'Version', 'Specification', 'Parameter'].includes(table[0][0]);
+const headers = explicit ? table.headers : implicitHeader ? table[0] : null;
+const rows = explicit ? table.rows : implicitHeader ? table.slice(1) : table;
+---
+<div class="guide-fact-table" role="region" aria-label={`${heading} facts`} tabindex="0">
+  <table>
+    {headers && <thead><tr>{headers.map((header) => <th scope="col">{header}</th>)}</tr></thead>}
+    <tbody>{rows.map((row) => <tr>{row.map((cell, index) => index === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>)}</tr>)}</tbody>
+  </table>
+</div>

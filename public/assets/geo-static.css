@@ -1,0 +1,9 @@
+/* Only aliases selectors whose semantic buttons became crawlable links. */
+.explore-menu>a{display:flex;width:100%;align-items:center;justify-content:space-between;gap:20px;padding:16px;text-align:left;font-size:15px;font-weight:400;text-decoration:none;color:inherit}
+.explore-menu>a:hover,.explore-menu>a[aria-current=page]{background:#f0f0ee;text-decoration:none}
+.related a{display:flex;align-items:center;gap:12px;font-size:14px;line-height:1.4;padding:3px 0;text-align:left;text-decoration:none;color:inherit}
+.related a:hover{text-decoration:underline}
+.faq.is-last-visible{border-bottom:0}
+.guide-card[hidden]{display:none}
+.subnav .subnav-all{font-size:14px;display:flex;gap:10px;align-items:center;padding:1px 6px;text-decoration:none;color:inherit}
+@media(max-width:767px){.explore-menu>a{padding:13px 12px;text-transform:none}.subnav .subnav-all{font-size:12px}.related a{font-size:13px;padding:5px 0}}

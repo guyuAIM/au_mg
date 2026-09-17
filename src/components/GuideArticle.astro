@@ -1,0 +1,29 @@
+---
+import Citations from './Citations.astro';
+import External from './External.astro';
+import GuideFactTable from './GuideFactTable.astro';
+import Icon from './Icon.astro';
+import { editorialGuides, guidePath, guideSources } from '../lib/content.js';
+import { official } from '../lib/site.js';
+
+const { guide } = Astro.props;
+const related = guide.related.map((id) => editorialGuides.find((item) => item.guideId === id)).filter(Boolean);
+const referenceIds = [...new Set([...guide.sources, ...guide.sections.flatMap((section) => section.sources || [])])];
+const modelPath = guide.targetModels.length === 1 && guide.targetModels[0] === 'MGS6 EV' ? '/vehicles/mgs6-ev' : guide.targetModels.length === 1 ? '/vehicles/mg4-ev-urban' : '/vehicles/electric';
+const modelCta = guide.targetModels.length === 1 ? `Explore the ${guide.targetModels[0]}` : 'Explore MG electric vehicles';
+const showLeadMedia = guide.showLeadImage !== false;
+---
+<nav class="guide-breadcrumb container" aria-label="Breadcrumb"><a href="/explore/ev-guides">EV Guides &amp; Advice</a><span aria-hidden="true">/</span><span>{guide.category}</span></nav>
+<article class="guide-article" id="guide-content">
+  <header class="guide-article-header container"><span class="eyebrow">{guide.category}</span><h1>{guide.title}</h1><p class="guide-deck">{guide.summary}</p><div class="guide-meta"><span>Published <!-- -->{guide.published}</span><span>Last reviewed <!-- -->{guide.reviewed || '14 September 2026'}</span><span>{guide.targetModels.join(' · ')}</span></div></header>
+  <div class="guide-article-body container"><aside class="quick-answer" aria-label="Quick answer"><span>Quick answer</span><p>{guide.quickAnswer}<Citations ids={guide.sources.slice(0, 4)} {referenceIds} /></p></aside></div>
+  {showLeadMedia && <figure class="guide-lead-media"><External href={guide.image.href}><img src={guide.image.src} alt={guide.image.alt} /></External></figure>}
+  <div class="guide-article-body container">
+    {guide.sections.map((section) => <section class="guide-copy-section"><h2>{section.heading}</h2>{section.paragraphs.map((paragraph, index) => <p>{paragraph}{index === section.paragraphs.length - 1 && <Citations ids={section.sources} {referenceIds} />}</p>)}{section.bullets && <ul>{section.bullets.map((item) => <li>{item}</li>)}</ul>}{section.table && <GuideFactTable table={section.table} heading={section.heading} />}</section>)}
+    <section class="guide-notes" aria-labelledby="important-notes"><h2 id="important-notes">What to confirm before buying</h2>{guide.notes.map((note) => <p>{note}</p>)}</section>
+    <section class="guide-faq" aria-labelledby="guide-faq-title"><span class="eyebrow">Common questions</span><h2 id="guide-faq-title">Questions buyers also ask</h2>{guide.faq.map(([question, answer]) => <details><summary>{question}</summary><p>{answer}</p></details>)}</section>
+    <section class="guide-sources" aria-labelledby="guide-sources-title"><h2 id="guide-sources-title">Sources &amp; references</h2><p>Official model information, terms and Australian EV guidance used in this guide.</p><ol>{referenceIds.map((id) => <li><External href={guideSources[id].url}>{guideSources[id].label}{' '}<Icon name="out" /></External></li>)}</ol></section>
+    <section class="guide-related" aria-labelledby="related-guides-title"><span class="eyebrow">Keep comparing</span><h2 id="related-guides-title">Related EV guides</h2>{related.map((item) => <a href={guidePath(item.slug)}><span>{item.title}</span><Icon name="right" /></a>)}</section>
+    <div class="guide-actions guide-article-actions"><External class="button dark" href={official(modelPath)}>{modelCta}{' '}<Icon name="right" /></External><External class="button outline" href={official('/about/find-a-dealer')}>Find a dealer{' '}<Icon name="right" /></External></div>
+  </div>
+</article>

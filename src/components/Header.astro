@@ -1,0 +1,27 @@
+---
+import External from './External.astro';
+import Icon from './Icon.astro';
+import { official } from '../lib/site.js';
+
+const { view = 'hub' } = Astro.props;
+const isModel = view === 's6';
+const isGuides = view === 'guides';
+---
+<a class="skip" href={isGuides ? '#guide-content' : '#questions'}>{isGuides ? 'Skip to guide content' : 'Skip to questions'}</a>
+<header class:list={['header', { 'over-hero': isModel }]}> 
+  <External class="brand" href="https://mgmotor.com.au/" aria-label="MG Australia home"><img src="/assets/mg-logo.jpg" alt="MG" width="50" height="50" /></External>
+  <nav aria-label="Main navigation" class="nav" data-main-nav>
+    <External href={official('/vehicles/electric')}>Vehicles</External>
+    <External href={official('/offers')}>Offers</External>
+    <div class="explore-nav" data-explore-nav>
+      <button type="button" aria-expanded="false" aria-haspopup="true" aria-current={isGuides ? 'page' : undefined} data-explore-toggle>Explore <Icon name="down" /></button>
+      <div class="explore-menu" hidden data-explore-menu><a href="/explore/ev-guides" aria-current={isGuides ? 'page' : undefined}>EV Guides &amp; Advice <Icon name="right" /></a></div>
+    </div>
+    <a href="/vehicles/mgs6-ev">MGS6 EV</a>
+    <a href="/about/faqs" aria-current={view === 'hub' ? 'page' : undefined}>FAQs</a>
+  </nav>
+  <div class="header-actions">
+    <External class="nav-cta" href={official('/about/find-a-dealer')}>Find a dealer</External>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-toggle><Icon name="menu" /></button>
+  </div>
+</header>

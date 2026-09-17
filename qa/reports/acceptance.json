@@ -1,0 +1,79 @@
+{
+  "date": "2026-09-17",
+  "status": "local-content-layout-interactions-verified-with-disclosed-limitations",
+  "recheckReport": "../recheck/REPORT.md",
+  "recheck": {
+    "pageViewportPairs": 34,
+    "textTablesExternalLinksImagesAndPageDimensionsExact": 34,
+    "allMeasuredComputedStylesExact": true,
+    "maximumElementBoxDeltaPx": 0.0078125,
+    "viewportScreenshotPairsByteIdentical": 33,
+    "remainingScreenshotDifference": "Desktop FAQ native select text: 1064 changed pixels within x960..1039/y792..807; matching text, geometry and computed font. Cause not conclusively established; not claimed pixel-identical.",
+    "filterCombinationsCompared": 36,
+    "filterMismatches": 0,
+    "mobileExpandedFaqElementsCompared": 780,
+    "mobileExpandedFaqPageHeightPx": 23681,
+    "mobileExpandedFaqMaximumElementBoxDeltaPx": 0,
+    "actualBrowserJavaScriptDisabledTestPerformed": false,
+    "fullPageScreenshotPixelComparisonPerformed": false,
+    "nginxRuntimeRedirectTestPerformed": false
+  },
+  "canonicalPages": 17,
+  "guides": 14,
+  "faqs": 16,
+  "legacyRedirects": 25,
+  "sourceRecords": 25,
+  "goldenFilesCompared": 5,
+  "assetsCompared": 25,
+  "sourceMismatches": 0,
+  "browser": {
+    "engine": "Chrome",
+    "viewports": [
+      {
+        "width": 1280,
+        "height": 900,
+        "pagesCompared": 17,
+        "visibleTextExact": 17,
+        "titleExact": 17,
+        "pageDimensionsExact": 17,
+        "keyLayoutAndComputedStyleExact": 17
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "pagesCompared": 17,
+        "visibleTextExact": 17,
+        "titleExact": 17,
+        "pageDimensionsExact": 17,
+        "keyLayoutAndComputedStyleExact": 17
+      }
+    ],
+    "interactionChecks": [
+      "faq-expand-all",
+      "faq-search",
+      "faq-model-and-category-filter",
+      "faq-deep-link",
+      "faq-copy-link",
+      "guide-search",
+      "guide-category-filter",
+      "mobile-menu",
+      "mobile-explore-submenu"
+    ],
+    "consoleErrorsOrWarnings": 0
+  },
+  "build": {
+    "rawHtmlContainsVisibleContent": true,
+    "oneH1PerPage": true,
+    "jsonLdValidPerPage": true,
+    "sitemapUrls": 17,
+    "localLinksAndAssetsVerified": true,
+    "tableCellsAndSourcesVerified": true,
+    "spaRootFound": false,
+    "rootStatus": 404,
+    "unknownRouteStatus": 404,
+    "canonicalRouteStatuses": 200,
+    "npmAuditVulnerabilities": 0,
+    "cleanInstallSucceeded": true
+  },
+  "remoteDeploymentPerformed": false
+}

@@ -1,0 +1,8 @@
+---
+import External from './External.astro';
+import { guideSources } from '../lib/content.js';
+
+const { ids = [], referenceIds = [] } = Astro.props;
+const uniqueIds = [...new Set(ids)].filter((id) => guideSources[id] && referenceIds.includes(id));
+---
+{uniqueIds.length > 0 && <sup class="guide-citations">{uniqueIds.map((id) => { const number = referenceIds.indexOf(id) + 1; return <External href={guideSources[id].url} aria-label={`Source ${number}: ${guideSources[id].label}`}><Fragment set:html={`[<!-- -->${number}<!-- -->]`} /></External>; })}</sup>}

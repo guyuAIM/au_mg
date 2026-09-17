@@ -1,0 +1,19 @@
+---
+import External from './External.astro';
+import Icon from './Icon.astro';
+import { editorialGuides, guideCategories, guidePath } from '../lib/content.js';
+import { official } from '../lib/site.js';
+---
+<section class="hero faq-hero guides-hero" aria-labelledby="page-title">
+  <picture><source media="(max-width: 767px)" srcset="/assets/faq-banner-mobile.jpg" /><img src="/assets/faq-banner.jpg" alt="Red MG Cyberster on an Australian road" /></picture>
+  <div class="hero-copy container"><span class="hero-eyebrow">Explore</span><h1 id="page-title">EV Guides &amp; Advice</h1><p>Clear information for choosing, charging and owning an electric car.</p></div>
+</section>
+<section class="container guides-section" id="guide-content" data-guide-root>
+  <div class="intro guides-intro"><h2>Get to know <br /><strong>electric driving.</strong></h2><div><p>Start with the basics, then move from charging and range to choosing, buying and owning an electric car. Every guide uses plain English and links to the source material behind its key facts.</p><p class="muted">Browse practical advice on EV technology, public and home charging, batteries, affordable cars, family SUVs, comparisons and running costs.</p></div></div>
+  <div class="guide-search"><Icon name="search" /><label class="sr-only" for="guide-search">Search EV guides</label><input id="guide-search" type="search" placeholder="Search EV guides" data-guide-search /><button type="button" aria-label="Clear search" data-guide-search-clear hidden><Icon name="close" /></button></div>
+  <nav class="guide-topics" aria-label="EV guide topics">{guideCategories.map((category, index) => <button type="button" aria-current={index === 0 ? 'page' : undefined} class={index === 0 ? 'selected' : ''} data-guide-category={category}>{category}</button>)}</nav>
+  <div class="guide-heading"><div><span class="eyebrow" data-guide-eyebrow>All guides</span><h2 data-guide-heading>Popular EV questions, answered.</h2></div><p data-guide-count>{editorialGuides.length} guides</p></div>
+  <div class="guide-list">{editorialGuides.map((guide) => <article class="guide-card" data-guide-card data-category={guide.category} data-search={`${guide.title} ${guide.summary} ${guide.targetModels.join(' ')}`}><h3><a href={guidePath(guide.slug)}>{guide.title}</a></h3><p>{guide.summary}</p><a class="guide-read" href={guidePath(guide.slug)}>Read guide <Icon name="right" /></a><small>{guide.targetModels.join(' · ')}</small></article>)}</div>
+  <div class="empty" data-guide-empty hidden><h3>No matching guides</h3><p>Try a broader term or choose another category.</p><button type="button" class="button outline" data-guide-reset>Show all guides</button></div>
+</section>
+<section class="guide-feature"><div class="container guide-feature-inner"><div><span class="eyebrow">Ready to compare?</span><h2>Find an electric MG <br /><strong>for your everyday.</strong></h2><p>Explore the current MG electric range, then speak with a dealer about the model, charging and ownership questions that matter to you.</p><div class="guide-actions"><External class="button dark" href={official('/vehicles/electric')}>Explore electric vehicles <Icon name="right" /></External><External class="button outline" href={official('/about/find-a-dealer')}>Find a dealer <Icon name="right" /></External></div></div><img src="/assets/mg4-ev-urban.png" alt="MG4 EV Urban" /></div></section>

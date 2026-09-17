@@ -1,0 +1,14 @@
+---
+import GuideHub from '../../../components/GuideHub.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { editorialGuides } from '../../../lib/content.js';
+import { guideHubSchema } from '../../../lib/schema.js';
+
+const path = '/explore/ev-guides';
+const title = 'EV Guides & Advice | MG Australia';
+const description = 'Practical guides for choosing, charging and owning an electric vehicle in Australia.';
+const jsonLd = guideHubSchema({ guides: editorialGuides, title, description });
+---
+<BaseLayout {title} {description} {path} image="/assets/faq-banner.jpg" view="guides" {jsonLd}>
+  <GuideHub />
+</BaseLayout>

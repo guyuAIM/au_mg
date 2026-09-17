@@ -1,0 +1,20 @@
+---
+import GuideArticle from '../../../components/GuideArticle.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { editorialGuides, guideSources } from '../../../lib/content.js';
+import { guideArticleSchema } from '../../../lib/schema.js';
+
+export function getStaticPaths() {
+  return editorialGuides.map((guide) => ({ params: { slug: guide.slug }, props: { guide } }));
+}
+
+const { guide } = Astro.props;
+const path = `/explore/ev-guides/${guide.slug}`;
+const title = `${guide.title} | MG Australia`;
+const description = guide.summary;
+const referenceIds = [...new Set([...guide.sources, ...guide.sections.flatMap((section) => section.sources || [])])];
+const jsonLd = guideArticleSchema(guide, referenceIds.map((id) => guideSources[id].url));
+---
+<BaseLayout {title} {description} {path} image={guide.image.src} ogType="article" view="guides" {jsonLd}>
+  <GuideArticle {guide} />
+</BaseLayout>

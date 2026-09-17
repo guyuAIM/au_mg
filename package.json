@@ -1,0 +1,25 @@
+{
+  "name": "au_mg",
+  "version": "2026.9.17",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "node scripts/run-astro.mjs dev",
+    "build": "npm run verify:content && node scripts/run-astro.mjs build && npm run verify:build",
+    "preview": "node scripts/run-astro.mjs preview",
+    "test": "npm run verify:content && npm run build",
+    "verify:content": "node scripts/verify-content.mjs",
+    "verify:original": "node scripts/compare-original.mjs",
+    "verify:build": "node scripts/verify-build.mjs",
+    "package": "npm run build && node scripts/generate-manifest.mjs"
+  },
+  "dependencies": {
+    "astro": "7.3.3"
+  },
+  "devDependencies": {
+    "@bruits/satteri-wasm32-wasi": "file:vendor/satteri-wasm32-wasi"
+  }
+}

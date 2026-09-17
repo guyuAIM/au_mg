@@ -1,0 +1,20 @@
+{
+  "textExact": true,
+  "tablesExact": true,
+  "dimensions": [
+    [
+      375,
+      23681
+    ],
+    [
+      375,
+      23681
+    ]
+  ],
+  "elementCounts": [
+    780,
+    780
+  ],
+  "maxDeltaPx": 0,
+  "stylesExact": true
+}

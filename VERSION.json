@@ -1,0 +1,11 @@
+{
+  "name": "MG Australia EV Guides GEO Static Source",
+  "versionDate": "2026-09-17",
+  "framework": "Astro 7.3.3 static output",
+  "canonicalPageCount": 17,
+  "guideCount": 14,
+  "faqCount": 16,
+  "legacyRedirectCount": 25,
+  "backend": false,
+  "ownsRootRoute": false
+}

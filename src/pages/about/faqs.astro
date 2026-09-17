@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqContent from '../../components/FaqContent.astro';
+import { faqData } from '../../lib/content.js';
+import { faqPageSchema } from '../../lib/schema.js';
+
+const path = '/about/faqs';
+const title = 'FAQs | MG Australia';
+const description = 'Practical answers for choosing, comparing and owning an MG electric vehicle in Australia.';
+const faqs = faqData.faqs.map((faq) => ({ question: faq.question, answer: [...faq.paragraphs, faq.note].filter(Boolean).join(' ') }));
+const jsonLd = faqPageSchema({ path, title, description, faqs });
+---
+<BaseLayout {title} {description} {path} image="/assets/faq-banner.jpg" view="hub" {jsonLd}>
+  <FaqContent view="hub" />
+</BaseLayout>
