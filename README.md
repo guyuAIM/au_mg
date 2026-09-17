@@ -12,6 +12,7 @@ npm run build
 npm run preview
 npm test
 npm run package
+npm run pages:prepare -- --base /au_mg
 ```
 
 The root preview URL and dist/index.html directly contain the full guide list; neither redirects nor loads the body through JavaScript. Double-click dist/index.html for local-file browsing with JavaScript enabled. Real-browser file-mode verification may require a manual check; see the current QA report. `npm run preview` starts the local fixed-folder URL mapper at http://127.0.0.1:4330.
@@ -40,6 +41,20 @@ See deployment/README.md and DELIVERY.md. Do not replace MG's homepage, main sit
 Current directory layout and acceptance: deployment/FIXED_DIRECTORY.md and qa/FLAT_DELIVERY_REPORT.md. Earlier QA reports describe their dated layouts and must not be treated as current entry-point evidence.
 
 No automatic Git push, remote deployment or webmaster-account submission occurs.
+
+## GitHub Pages preview
+
+`.github/workflows/pages.yml` builds and publishes a preview after every push to
+`main`, and can also be started manually. The workflow runs the full test/build
+gate before uploading `.pages/`. The preview rewrites only browser navigation
+paths for the repository subdirectory; canonical URLs, JSON-LD and the child
+sitemap continue to identify `https://mgmotor.com.au/explore/ev-guides`.
+
+Pages HTML receives `noindex, follow` so the GitHub-hosted copy is a review
+environment rather than a competing indexed site. The repository must use
+**Settings → Pages → Source: GitHub Actions** once before the first deployment.
+The production `dist/` layout and MG integration configuration are not changed.
+Expected preview URL for this repository: `https://guyuaim.github.io/au_mg/`.
 # 双模式交付（默认带导航）
 
 `npm run build` / `npm run package` 默认带导航；`npm run build:content` /

@@ -7,6 +7,8 @@
   const isFile = location.protocol === 'file:';
   const mobile = () => matchMedia('(max-width:991px)').matches;
   function guideHref() {
+    const pagesBase = document.documentElement.dataset.pagesBase;
+    if (!isFile && pagesBase) return pagesBase;
     if (!isFile) return '/explore/ev-guides';
     const depth = Math.max(0, document.body.dataset.pagePath.split('/').filter(Boolean).length - 2);
     return new URL('index.html', new URL('../'.repeat(depth), new URL('.', location.href))).href;
