@@ -8,8 +8,8 @@
   const mobile = () => matchMedia('(max-width:991px)').matches;
   function guideHref() {
     if (!isFile) return '/explore/ev-guides';
-    const depth = document.body.dataset.pagePath.split('/').filter(Boolean).length;
-    return new URL('explore/ev-guides/index.html', new URL('../'.repeat(depth), new URL('.', location.href))).href;
+    const depth = Math.max(0, document.body.dataset.pagePath.split('/').filter(Boolean).length - 2);
+    return new URL('index.html', new URL('../'.repeat(depth), new URL('.', location.href))).href;
   }
   function context(host) { return host.shadowRoot.querySelector('.official-context'); }
   const originalOverflow = document.body.style.overflow;

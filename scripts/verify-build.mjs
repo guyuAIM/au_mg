@@ -2,25 +2,26 @@ import { access, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { canonicalRoutes, editorialGuides, guideSources } from '../src/lib/content.js';
+import { contentFile, guideBase } from '../src/lib/site.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
 const delivery = JSON.parse(await readFile(path.join(dist, 'delivery-config.json'), 'utf8'));
-const htmlFile = (route) => path.join(dist, ...route.slice(1).split('/'), 'index.html');
+const htmlFile = (route) => path.join(dist, contentFile(route));
 const failures = [];
 const htmlByRoute = new Map();
 const check = (condition, message) => { if (!condition) failures.push(message); };
 const escaped = (value) => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 const tableCells = (table) => Array.isArray(table) ? table.flat() : [...(table?.headers || []), ...(table?.rows || []).flat()];
 
-const launcher = await readFile(path.join(dist, 'index.html'), 'utf8');
+const entry = await readFile(path.join(dist, 'index.html'), 'utf8');
 if (delivery.mode === 'content') {
   for (const asset of ['official-shell.js', 'official-shell-core.js']) {
-    try { await access(path.join(dist, 'explore/ev-guides/scripts', asset)); failures.push('content mode includes shell runtime: ' + asset); } catch {}
+    try { await access(path.join(dist, 'scripts', asset)); failures.push('content mode includes shell runtime: ' + asset); } catch {}
   }
 }
-check(launcher.includes('noindex') && launcher.includes('location.replace') && launcher.includes('./explore/ev-guides/index.html'), 'root launcher is missing file/HTTP redirect or noindex');
-for (const forbidden of ['about/faqs/index.html', 'vehicles/mgs6-ev/index.html', 'robots.txt', 'sitemap.xml', 'assets', 'scripts']) {
+check(entry.includes('<main>') && entry.includes('EV Guides &amp; Advice') && !/location\.replace|http-equiv="refresh"|content="noindex/.test(entry), 'root entry must contain full content, not redirect or noindex');
+for (const forbidden of ['about/faqs/index.html', 'vehicles/mgs6-ev/index.html', 'robots.txt', 'sitemap.xml', 'explore']) {
   try { await access(path.join(dist, forbidden)); failures.push('unexpected output: ' + forbidden); } catch {}
 }
 
@@ -79,7 +80,7 @@ for (const [route, html] of htmlByRoute) {
       const resolved = new URL(value, 'https://mgmotor.com.au' + route + '/');
       const target = resolved.pathname;
       if (target.includes('/assets/') || target.includes('/scripts/')) {
-        await access(path.join(dist, ...target.slice(1).split('/'))).catch(() => failures.push(route + ' references missing asset ' + target));
+        await access(path.join(dist, target.slice(guideBase.length + 1))).catch(() => failures.push(route + ' references missing asset ' + target));
         check(target.startsWith('/explore/ev-guides/'), 'asset escaped guide namespace: ' + target);
       } else {
         check(localTargets.has(target), route + ' references non-canonical route ' + target);
@@ -96,7 +97,7 @@ await access(path.join(dist, '404.html')).catch(async () => access(path.join(dis
 
 const deployment = await readFile(path.join(root, 'deployment/nginx-geo-static.conf'), 'utf8');
 check(!/^\s*location\s+(?:=\s+)?\/\s*\{/m.test(deployment), 'integration must not take over the MG root route');
-for (const route of canonicalRoutes) check(deployment.includes(`location = ${route} {`), `deployment is missing ${route}`);
+check(deployment.includes('try_files /index.html =404') && deployment.includes('try_files /$mg_evguide_slug/index.html =404'), 'deployment must map flat package HTML without SPA fallback');
 const redirects = await readFile(path.join(root, 'deployment/legacy-guide-redirects.conf'), 'utf8');
 check((redirects.match(/return 301 /g) || []).length === 25, 'deployment must contain 25 legacy redirects');
 
@@ -106,9 +107,6 @@ const latest = editorialGuides.map(guide => guide.modifiedIso).sort().at(-1);
 check(sitemap.includes(`<loc>https://mgmotor.com.au/explore/ev-guides</loc><lastmod>${latest}</lastmod>`), 'hub lastmod must reflect latest guide date');
 for (const guide of editorialGuides) check(sitemap.includes(`<loc>https://mgmotor.com.au/explore/ev-guides/${guide.slug}</loc><lastmod>${guide.modifiedIso}</lastmod>`), 'guide lastmod mismatch');
 check(!/^\s*location\s+=\s+\/(?:index\.html|robots\.txt|sitemap\.xml)\s*\{/m.test(deployment), 'integration must not replace existing MG root files');
-for (const route of canonicalRoutes) {
-  check(deployment.includes(`location = ${route}/index.html { return 301 ${route}; }`), 'index.html redirect missing');
-  check(deployment.includes(`location = ${route}/ { return 301 ${route}; }`), 'trailing slash redirect missing');
-}
+check(deployment.includes(`location = ${guideBase}/index.html { return 301 ${guideBase}; }`) && deployment.includes('(?<mg_evguide_suffix>/index[.]html|/)?$'), 'canonical alias normalization missing');
 if (failures.length) throw new Error(`Build verification failed (${failures.length}):\n- ${failures.join('\n- ')}`);
 console.log(JSON.stringify({ canonicalRoutes: 15, guideArticles: 14, h1PerPage: 1, jsonLdPerPage: true, spaRootFound: false, sitemapUrls: 15, tableCellsAndSourcesVerified: true, localLinksAndAssetsVerified: true }, null, 2));

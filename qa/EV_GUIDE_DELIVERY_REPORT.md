@@ -1,5 +1,8 @@
 # EV Guide-only delivery acceptance — 2026-09-17
 
+> Historical layout report: its root launcher and nested output structure are superseded.
+> Current flat-root delivery evidence is in FLAT_DELIVERY_REPORT.md.
+
 ## Result and boundaries
 
 Implementation completed locally: 15 canonical EV guide pages, root preview launcher, namespaced portable resources, child sitemap, scoped Nginx integration and checksum-verified delivery ZIP. No Git commit/push or remote deployment was performed. The original project and desktop static copy were not modified.

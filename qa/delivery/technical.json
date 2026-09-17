@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "checks": 188,
+  "checks": 190,
   "originalFontsEmbeddedExactly": 5,
   "originalCssDeclarationsExact": true,
   "localFilePathsResolved": 15,
@@ -362,6 +362,16 @@
     },
     {
       "url": "http://127.0.0.1:4331/explore/ev-guides/missing-article",
+      "status": 404,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/missing-article/",
+      "status": 404,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/missing-article/index.html",
       "status": 404,
       "location": null
     },

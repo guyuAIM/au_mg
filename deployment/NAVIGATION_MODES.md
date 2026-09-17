@@ -17,6 +17,10 @@
 ZIP路径及SHA-256。`dist/delivery-config.json` 标记实际构建模式。CLI模式优先于配置。
 构建本身不请求官网，使用已保存的快照，保证官网不可用时仍能打包。
 
+两个模式都采用扁平交付目录：完整指南首页位于 `dist/index.html`，子sitemap同级；
+文章位于 `dist/<slug>/index.html`，资源位于 `dist/assets/`、`dist/scripts/`。
+公开URL仍为 `/explore/ev-guides` 及其子路径；一次性接入映射见 `FIXED_DIRECTORY.md`。
+
 ## 带导航版的实际行为
 
 1. 初始HTML包含本地快照导航、页脚和完整指南正文。Chrome支持的声明式Shadow DOM

@@ -12,7 +12,7 @@ const walk = async (directory, prefix = '') => {
     if (entry.isDirectory() && excludedDirectories.has(entry.name)) continue;
     const relative = path.posix.join(prefix, entry.name);
     if (entry.isDirectory()) await walk(path.join(directory, entry.name), relative);
-    else if (!excludedFiles.has(relative)) files.push(relative);
+    else if (!excludedFiles.has(relative) && !entry.name.endsWith('.log')) files.push(relative);
   }
 };
 await walk(root);

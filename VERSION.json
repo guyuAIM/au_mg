@@ -8,7 +8,10 @@
   "legacyRedirectCount": 25,
   "backend": false,
   "ownsRootRoute": false,
-  "previewRootLauncher": true,
+  "previewRootLauncher": false,
+  "deliveryLayout": "flat-guide-root",
+  "deliveryEntry": "index.html",
+  "deliveryEntryContainsFullContent": true,
   "childSitemap": "/sitemap_evguide.xml",
   "localFileBrowsingImplemented": true,
   "localFileBrowserAcceptance": "manual-verification-pending"

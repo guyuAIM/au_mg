@@ -33,7 +33,7 @@ if (delivery.mode === 'navigation') {
   await rm(generatedShellAssets, { recursive: true, force: true });
 }
 await writeFile(path.join(root, '.generated/public/delivery-config.json'), JSON.stringify({
-  mode: delivery.mode, navigation: delivery.mode === 'navigation' ? delivery.navigation : null
+  mode: delivery.mode, layout: 'flat-guide-root', publicBase: '/explore/ev-guides', navigation: delivery.mode === 'navigation' ? delivery.navigation : null
 }, null, 2) + '\n');
 const original = await readFile(path.join(root, 'public/assets/styles.css'), 'utf8');
 let portable = original;

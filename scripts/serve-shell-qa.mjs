@@ -23,6 +23,9 @@ http.createServer(async (req, res) => {
       res.writeHead(503); return res.end('Unavailable');
     }
     let pathname = decodeURIComponent(url.pathname);
+    // New package layout is flat; historical baseline packages remain nested.
+    const flat = !(await stat(path.join(root, 'explore/ev-guides/index.html')).catch(() => null));
+    if (flat && (pathname === '/explore/ev-guides' || pathname.startsWith('/explore/ev-guides/'))) pathname = pathname.slice('/explore/ev-guides'.length) || '/';
     let file = path.resolve(root, '.' + pathname);
     if (!file.startsWith(root + path.sep) && file !== root) { res.writeHead(403); return res.end(); }
     try { if ((await stat(file)).isDirectory()) file = path.join(file, 'index.html'); }

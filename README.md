@@ -14,11 +14,11 @@ npm test
 npm run package
 ```
 
-The root preview URL redirects to /explore/ev-guides. Double-click dist/index.html for local-file browsing with JavaScript enabled. Real-browser file-mode verification may require a manual check; see the current QA report.
+The root preview URL and dist/index.html directly contain the full guide list; neither redirects nor loads the body through JavaScript. Double-click dist/index.html for local-file browsing with JavaScript enabled. Real-browser file-mode verification may require a manual check; see the current QA report. `npm run preview` starts the local fixed-folder URL mapper at http://127.0.0.1:4330.
 
-Build output: dist/index.html (preview launcher), dist/404.html, dist/sitemap_evguide.xml, and dist/explore/ev-guides/ (15 content HTML files, assets and scripts). No backend/API/CMS is required. HTTP content and links remain usable without JavaScript.
+Build output: dist/index.html (complete guide hub), dist/sitemap_evguide.xml, dist/404.html, dist/assets/, dist/scripts/, and dist/<slug>/index.html (14 articles). The old nested dist/explore/ev-guides/ is no longer emitted. No backend/API/CMS is required. HTTP content and links remain usable without JavaScript.
 
-Public source assets remain immutable. The build prepares namespaced resources in .generated/public; the derived stylesheet embeds original font bytes for local-file compatibility, with layout/style declarations unchanged.
+Public source assets remain immutable. Astro develops using the canonical routes and namespaced resources in .generated/public; the build finalizer relocates only generated files into the flat delivery root. The derived stylesheet embeds original font bytes for local-file compatibility, with layout/style declarations unchanged.
 
 npm run package produces a timestamped ZIP in release/, including dist/, deployment instructions and SHA-256 checksums. It extracts the archive to a Chinese/space-containing verification directory and checks every file. FILE_MANIFEST_SHA256.txt separately inventories source and built output; generated caches/releases are excluded.
 
@@ -37,7 +37,7 @@ The original project is not required to build. FAQ data is retained as historica
 
 See deployment/README.md and DELIVERY.md. Do not replace MG's homepage, main sitemap or robots policy. Only map the 15 guide pages, namespaced resources, 25 legacy redirects and /sitemap_evguide.xml.
 
-Current release checks: qa/EV_GUIDE_DELIVERY_REPORT.md. Earlier qa/recheck/ and qa/QA_REPORT.md describe the superseded 17-page version, not the current release's acceptance verdict.
+Current directory layout and acceptance: deployment/FIXED_DIRECTORY.md and qa/FLAT_DELIVERY_REPORT.md. Earlier QA reports describe their dated layouts and must not be treated as current entry-point evidence.
 
 No automatic Git push, remote deployment or webmaster-account submission occurs.
 # 双模式交付（默认带导航）

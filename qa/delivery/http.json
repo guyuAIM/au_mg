@@ -1,0 +1,131 @@
+{
+  "origin": "http://127.0.0.1:4330",
+  "results": [
+    {
+      "path": "/explore/ev-guides",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/explore/ev-guides/affordable-electric-cars",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/explore/ev-guides/small-electric-car-city-guide",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/explore/ev-guides/how-to-choose-an-electric-car",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/explore/ev-guides/family-electric-suv-buying-guide",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/explore/ev-guides/how-to-compare-family-electric-suvs",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/explore/ev-guides/electric-car-running-costs",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/explore/ev-guides/how-electric-cars-work",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/explore/ev-guides/ev-hybrid-plug-in-hybrid-differences",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/explore/ev-guides/ac-and-dc-ev-charging",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/explore/ev-guides/how-long-does-ev-charging-take",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/explore/ev-guides/owning-an-ev-without-home-charging",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/explore/ev-guides/electric-car-range-explained",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/explore/ev-guides/electric-car-battery-life-and-warranty",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/explore/ev-guides/electric-car-maintenance",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/missing-geo-review-route",
+      "expected": 404,
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/explore/ev-guides/missing-geo-review-guide",
+      "expected": 404,
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/robots.txt",
+      "expected": 404,
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "expected": 404,
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/sitemap_evguide.xml",
+      "expected": 200,
+      "status": 200,
+      "pass": true
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { canonicalRoutes, editorialGuides } from '../src/lib/content.js';
-import { resourceHref, absoluteAsset, canonical } from '../src/lib/site.js';
+import { resourceHref, absoluteAsset, canonical, contentFile } from '../src/lib/site.js';
 
 test('15 canonical URLs exclude original MG FAQ and vehicle ownership', () => {
   assert.equal(canonicalRoutes.length, 15);
@@ -19,12 +19,18 @@ test('asset and metadata paths use guide namespace without changing canonical UR
 test('local URL arithmetic retains a package root with spaces and Chinese characters', () => {
   const root = new URL('file:///D:/交付 文件/dist/');
   for (const route of canonicalRoutes) {
-    const page = new URL(route.slice(1) + '/index.html', root);
-    const inferredRoot = new URL('../'.repeat(route.split('/').filter(Boolean).length), new URL('.', page));
+    const page = new URL(contentFile(route), root);
+    const inferredRoot = new URL('../'.repeat(route.split('/').filter(Boolean).length - 2), new URL('.', page));
     assert.equal(inferredRoot.href, root.href);
-    assert.equal(new URL(resourceHref('/assets/styles.css', route), page).href, new URL('explore/ev-guides/assets/styles.css', root).href);
-    for (const destination of canonicalRoutes) assert.equal(new URL(destination.slice(1) + '/index.html', inferredRoot).href, new URL(destination.slice(1) + '/index.html', root).href);
+    assert.equal(new URL(resourceHref('/assets/styles.css', route), page).href, new URL('assets/styles.css', root).href);
+    for (const destination of canonicalRoutes) assert.equal(new URL(contentFile(destination), inferredRoot).href, new URL(contentFile(destination), root).href);
   }
+});
+
+test('package root is the real hub, article folders do not repeat the public prefix', () => {
+  assert.equal(contentFile('/explore/ev-guides'), 'index.html');
+  assert.equal(contentFile('/explore/ev-guides/how-electric-cars-work'), 'how-electric-cars-work/index.html');
+  for (const route of ['/other', '/explore/ev-guides/../outside', '/explore/ev-guides/assets/styles.css']) assert.throws(() => contentFile(route));
 });
 
 test('guide dates remain data-owned and valid ISO dates', () => {
