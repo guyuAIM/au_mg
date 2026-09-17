@@ -9,8 +9,6 @@ const isHub = view === 'hub';
 const visibleFaqs = isHub ? faqData.faqs : faqData.faqs.filter((faq) => faq.models.includes('s6'));
 const source = (id) => faqData.sources[id];
 const offerExpired = new Date() > new Date(`${faqData.offerExpiry}T23:59:59+10:00`);
-const ctaLabel = (cta) => cta === 'offers' ? 'View MG offers' : cta === 'serviceprice' ? 'Check servicing prices' : cta === 'warranty' ? 'Read the warranty policy' : 'Explore model details';
-const answerPath = (faq) => `${questionsPath}#${faq.id}`;
 const formatDate = (value) => new Intl.DateTimeFormat('en-AU', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Australia/Sydney' }).format(new Date(`${value}T12:00:00+10:00`));
 ---
 {isHub ? (
@@ -65,9 +63,6 @@ const formatDate = (value) => new Intl.DateTimeFormat('en-AU', { day: 'numeric',
             </>
           )}
           <div class="sources"><strong>References</strong>{faq.sources.map((id) => <External href={source(id).url}>{source(id).title}<Icon name="out" /></External>)}</div>
-          <div class="answer-bottom"><div class="answer-actions"><External class="button outline" href={source(faq.cta).url}>{ctaLabel(faq.cta)}<Icon name="right" /></External>{faq.owner?.startsWith('/explore/ev-guides/') && <a class="guide-link" href={faq.owner}>Read the related EV guide <Icon name="right" /></a>}</div><button type="button" class="text-button" data-copy-answer>Copy answer link</button></div>
-          <p role="status" data-copy-status hidden></p>
-          <div class="related"><span>Related questions</span>{faq.related.map((id) => { const related = faqData.faqs.find((item) => item.id === id); return <a href={answerPath(related)}>{related.question}<Icon name="right" /></a>; })}</div>
         </div>
       </article>
     ))}

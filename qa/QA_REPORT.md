@@ -34,7 +34,6 @@ Interaction parity passed for:
 - FAQ search for `30k`.
 - MGS6 EV plus Compare models filtering.
 - Cold-start deep link `/about/faqs#F08`.
-- Copy answer link target.
 - Guide search for `battery`.
 - EV basics category filtering (2 guides).
 - Mobile menu and Explore submenu.

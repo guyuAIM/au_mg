@@ -113,26 +113,6 @@
       update();
     };
     resetButtons.forEach((button) => button.addEventListener('click', resetFilters));
-    const setCopyStatus = (value) => items.forEach((item) => {
-      const button = item.querySelector('[data-copy-answer]');
-      const status = item.querySelector('[data-copy-status]');
-      if (button) button.textContent = value === item.id ? 'Link copied' : 'Copy answer link';
-      if (status) {
-        status.hidden = !value.startsWith('Link:');
-        status.textContent = status.hidden ? '' : value;
-      }
-    });
-    items.forEach((item) => item.querySelector('[data-copy-answer]')?.addEventListener('click', async () => {
-      const url = new URL(location.pathname, location.origin);
-      url.hash = item.id;
-      try {
-        await navigator.clipboard.writeText(url.href);
-        setCopyStatus(item.id);
-      } catch {
-        setCopyStatus(`Link: ${url.href}`);
-      }
-    }));
-
     const openHash = () => {
       let id;
       try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
@@ -146,14 +126,6 @@
       }
     };
     window.addEventListener('hashchange', openHash);
-    faqRoot.querySelectorAll('.related a').forEach((link) => link.addEventListener('click', (event) => {
-      if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-      const target = new URL(link.href);
-      if (target.pathname !== location.pathname) return;
-      event.preventDefault();
-      history.pushState({}, '', target.hash);
-      openHash();
-    }));
     update();
     openHash();
   }
