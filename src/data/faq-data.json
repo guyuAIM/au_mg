@@ -1,12 +1,14 @@
 {
   "reviewed": "2026-09-14",
+  "modified": "2026-09-17",
+  "offerChecked": "2026-09-17",
   "offerExpiry": "2026-09-30",
   "sources": {
     "offers": {
       "title": "MG Australia offers — September 2026",
       "url": "https://mgmotor.com.au/offers",
       "supports": "Advertised drive-away prices, eligibility, end dates and bonus conditions.",
-      "checked": "2026-09-14"
+      "checked": "2026-09-17"
     },
     "urban": {
       "title": "MG4 EV Urban — Australian model page",
@@ -68,53 +70,29 @@
       "supports": "Model-specific servicing lookup. No five-year total is asserted.",
       "checked": "2026-09-14"
     },
-    "dolphin": {
-      "title": "BYD Dolphin — 2025 Australian specification sheet",
-      "url": "https://bydautomotive.com.au/brochures/BYD-DOLPHIN-2025.pdf",
-      "supports": "Current linked brochure, version 02.1C: 340/427 km WLTP and 345-litre boot.",
-      "checked": "2026-09-14"
-    },
-    "sealion": {
-      "title": "BYD Sealion 7 — 2026 Australian brochure",
-      "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-7-2026.pdf",
-      "supports": "Premium/Performance WLTP range and output.",
-      "checked": "2026-09-14"
-    },
-    "kia": {
-      "title": "Kia EV5 — Australian MY26 brochure",
-      "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
-      "supports": "Air SR/LR ranges, dimensions and VDA boot measurement.",
-      "checked": "2026-09-14"
-    },
-    "geely": {
-      "title": "Geely EX5 — 2026 brochure",
-      "url": "https://tddashboard.s3.ap-southeast-2.amazonaws.com/1773386427-geely-ex5-brochure.pdf",
-      "supports": "2026 brochure linked by authorised Geely Orange dealer; Extended Range variants.",
-      "checked": "2026-09-14"
-    },
-    "geelydealer": {
-      "title": "Geely Orange — EX5",
-      "url": "https://www.geelyorange.com.au/models/ex5",
-      "supports": "Authorised Australian dealer source for 2026 brochure and 475/450 km variants.",
-      "checked": "2026-09-14"
-    },
-    "bydwarranty": {
-      "title": "BYD Australia service and warranty",
-      "url": "https://bydautomotive.com.au/service-and-warranty",
-      "supports": "Six-year/150,000 km vehicle and eight-year/160,000 km traction battery headline limits.",
-      "checked": "2026-09-14"
-    },
     "original": {
       "title": "Existing MG Australia FAQs",
       "url": "https://mgmotor.com.au/about/faqs",
       "supports": "Existing owner-support content retained via links in this prototype.",
-      "checked": "2026-09-14"
+      "checked": "2026-09-17"
+    },
+    "evbuy": {
+      "title": "Australian Government — preparing to buy an electric vehicle",
+      "url": "https://www.energy.gov.au/electric-vehicles/buying-electric-vehicle/preparing-buy-electric-vehicle",
+      "supports": "Independent guidance on purchase price, energy, insurance, registration, servicing and charging access.",
+      "checked": "2026-09-17"
+    },
+    "evcost": {
+      "title": "Australian Government — EV cost and emissions comparison tools",
+      "url": "https://www.energy.gov.au/electric-vehicles/buying-electric-vehicle/cost-and-emissions-comparison-tools",
+      "supports": "Independent tools for comparing annual energy costs, charging time and vehicle emissions.",
+      "checked": "2026-09-17"
     }
   },
   "faqs": [
     {
       "id": "F01",
-      "question": "Which MG electric cars fit a drive-away budget under A$30,000 or A$40,000?",
+      "question": "Which MG electric cars are available under A$30,000 or A$40,000 drive-away?",
       "category": "Budget & offers",
       "models": [
         "urban",
@@ -153,7 +131,7 @@
           ]
         ]
       },
-      "note": "Price snapshot: 14 September 2026. Offers end 30 September 2026, subject to eligible sale and delivery, participating dealer stock and full offer terms. Options may cost extra. Urban prices already include the advertised A$2,000 cashback.",
+      "note": "Price snapshot: 17 September 2026. Offers end 30 September 2026, subject to eligible sale and delivery, participating dealer stock and full offer terms. Options may cost extra. Urban prices already include the advertised A$2,000 cashback.",
       "related": [
         "F14",
         "F06",
@@ -162,7 +140,7 @@
       "cta": "offers",
       "keywords": "30k 30000 40k 40000 affordable cheap value",
       "expiry": true,
-      "owner": "/offers",
+      "owner": "/explore/ev-guides/affordable-electric-cars",
       "promptIds": [
         1,
         2,
@@ -172,7 +150,7 @@
     },
     {
       "id": "F02",
-      "question": "Which MG electric SUVs fit a drive-away budget under A$50,000 or A$60,000?",
+      "question": "Which MG electric SUVs are available under A$50,000 or A$60,000 drive-away?",
       "category": "Budget & offers",
       "models": [
         "s5",
@@ -180,7 +158,7 @@
       ],
       "paragraphs": [
         "Under A$50,000 drive-away, MG’s September offers include MGS5 EV Essence 49, MGS5 EV Essence 62 and MGS6 EV Essence RWD. The MGS6 EV Essence AWD sits below A$60,000. Start with the space you need, then compare range and equipment within your budget.",
-        "For a family wanting a larger boot, compare the MGS6 EV RWD with the MGS5 EV in person. Choose AWD for its different drivetrain and equipment when those features matter to you; the RWD has the longer published WLTP range."
+        "If you need a larger boot, compare the MGS6 EV RWD with the MGS5 EV in person. Choose AWD if all-wheel drive and its additional equipment matter to you; RWD has the longer published WLTP range."
       ],
       "sources": [
         "offers",
@@ -216,7 +194,7 @@
           ]
         ]
       },
-      "note": "Price snapshot: 14 September 2026. Offers end 30 September 2026, subject to eligible sale and delivery, participating dealer stock and full offer terms. Options may cost extra.",
+      "note": "Price snapshot: 17 September 2026. Offers end 30 September 2026, subject to eligible sale and delivery, participating dealer stock and full offer terms. Options may cost extra.",
       "related": [
         "F15",
         "F04"
@@ -224,7 +202,7 @@
       "cta": "offers",
       "keywords": "50k 50000 60k 60000 affordable",
       "expiry": true,
-      "owner": "/offers",
+      "owner": "/explore/ev-guides/family-electric-suv-buying-guide",
       "promptIds": [
         3,
         4
@@ -232,15 +210,15 @@
     },
     {
       "id": "F03",
-      "question": "Is an MG electric hatchback suitable for my first EV and everyday city driving?",
+      "question": "Is the MG4 EV Urban a good first electric car for city driving?",
       "category": "Choosing your MG",
       "models": [
         "urban",
         "mg4"
       ],
       "paragraphs": [
-        "The MG4 EV Urban is a useful starting point for a first EV if a hatchback suits your passengers, luggage and parking space. Its standard 360-degree camera helps you check the surroundings, while physical climate and volume controls keep common adjustments easy to reach.",
-        "Essence 43 is rated at 316 km WLTP and Essence 54 at 405 km WLTP. Compare your normal weekly travel with a realistic charging routine before choosing. During a test drive, try parking, rear-seat access and loading your usual bags. If you regularly carry bulky family equipment, also try an MG electric SUV."
+        "Yes. The MG4 EV Urban can suit a first-time EV buyer and everyday city driving if its hatchback layout fits your passengers, luggage and parking space. The standard 360-degree camera and physical climate and volume controls can make everyday use easier.",
+        "Essence 43 is rated at 316 km WLTP and Essence 54 at 405 km WLTP. Compare that range with your normal week and charging access, then use a test drive to check parking, rear-seat access and your usual luggage."
       ],
       "sources": [
         "urban",
@@ -255,7 +233,7 @@
       "cta": "urban",
       "keywords": "first car first ev city small hatchback commute",
       "expiry": false,
-      "owner": "/vehicles/electric",
+      "owner": "/explore/ev-guides/small-electric-car-city-guide",
       "promptIds": [
         5,
         6,
@@ -267,14 +245,14 @@
     },
     {
       "id": "F04",
-      "question": "Is the MGS6 EV suitable for my family?",
+      "question": "Is the MGS6 EV practical for family use?",
       "category": "Space & family",
       "models": [
         "s6"
       ],
       "paragraphs": [
-        "The MGS6 EV is a five-seat electric SUV to consider when your family needs everyday luggage space and equipment such as a powered tailgate, a 360-degree camera and heated and ventilated front seats. Its rear boot is rated at 581 litres with the seats in place.",
-        "The Essence RWD has a published range of 530 km WLTP, compared with 485 km for the AWD. Bring your child seats and pram to a test drive, and check your garage and usual charging routes. Families needing seven seats will need a different vehicle; five seats alone also do not establish that three child restraints will fit across the rear."
+        "Yes, for families that need five seats and a large everyday luggage area. The MGS6 EV has a 581-litre rear boot, a powered tailgate and a 360-degree camera.",
+        "RWD is rated at 530 km WLTP and AWD at 485 km. Bring your child seats and pram to a test drive, and check garage fit and charging access. Families needing seven seats will need a different vehicle."
       ],
       "sources": [
         "s6",
@@ -290,7 +268,7 @@
       "cta": "s6",
       "keywords": "family mid size midsize value suv",
       "expiry": false,
-      "owner": "/vehicles/mgs6-ev",
+      "owner": "/explore/ev-guides/family-electric-suv-buying-guide",
       "promptIds": [
         9,
         10,
@@ -301,7 +279,7 @@
     },
     {
       "id": "F05",
-      "question": "How do I choose between MG electric hatchbacks, SUVs and hybrid SUVs?",
+      "question": "Should I choose an MG electric hatchback, electric SUV or hybrid SUV?",
       "category": "Choosing your MG",
       "models": [
         "urban",
@@ -369,7 +347,7 @@
       "cta": "electric",
       "keywords": "hybrid petrol electric best value choose",
       "expiry": false,
-      "owner": "/vehicles/electric",
+      "owner": "/explore/ev-guides/how-to-choose-an-electric-car",
       "promptIds": [
         8,
         12,
@@ -382,19 +360,21 @@
     },
     {
       "id": "F06",
-      "question": "What should I include in the five-year ownership cost of an MG electric hatchback?",
+      "question": "What costs should I include when comparing an MG electric hatchback over five years?",
       "category": "Ownership & warranty",
       "models": [
         "urban",
         "mg4"
       ],
       "paragraphs": [
-        "Compare five-year ownership cost by adding the purchase price and running costs, then subtracting an estimated resale value. For an MG electric hatchback, include charging, insurance, registration, scheduled servicing, tyres and any home charger installation. If you finance the car, include interest and fees without counting the purchase price twice.",
-        "Use the MG service pricing guide for your exact model and confirm its maintenance schedule and quoted prices with the dealer. An EV is not maintenance-free. Keep resale value as a range, and calculate a second scenario with more public charging: that can materially change the result."
+        "Add the drive-away price, charging, insurance, registration, scheduled servicing, tyres, home-charger installation and finance costs where relevant, then subtract an estimated resale value. Use the same five-year period and annual distance for every car.",
+        "Use model-specific servicing and insurance quotes. Treat resale value as a range and calculate a second scenario with more public charging, because the charging mix can materially change the result."
       ],
       "sources": [
         "service",
-        "serviceprice"
+        "serviceprice",
+        "evbuy",
+        "evcost"
       ],
       "table": {
         "headers": [
@@ -428,7 +408,7 @@
       "cta": "serviceprice",
       "keywords": "running cost cheap servicing five year total ownership",
       "expiry": false,
-      "owner": "/explore/ev-ownership-costs",
+      "owner": "/explore/ev-guides/electric-car-running-costs",
       "promptIds": [
         13,
         33,
@@ -437,18 +417,20 @@
     },
     {
       "id": "F07",
-      "question": "How should I compare the total ownership cost of the MGS6 EV?",
+      "question": "How do I compare the five-year ownership cost of an MGS6 EV?",
       "category": "Ownership & warranty",
       "models": [
         "s6"
       ],
       "paragraphs": [
-        "Compare MGS6 EV ownership costs with another electric SUV using the same five-year period, annual kilometres and mix of home and public charging. Obtain drive-away and insurance quotes for the actual variants you would buy, then add servicing, tyres, registration, charging equipment and finance costs where relevant.",
-        "Use a consistent resale assumption and show how the result changes if electricity prices, public charging use or resale value differ. The MGS6 EV RWD and AWD should have separate calculations. A lower purchase price can help, but it does not establish the lowest total ownership cost without the rest of the figures."
+        "Compare the MGS6 EV with another electric SUV using the same five-year period, annual kilometres and home-versus-public charging mix. Add the drive-away price, insurance, registration, servicing, tyres, charging equipment and finance costs where relevant.",
+        "Calculate RWD and AWD separately, use the same resale method for every vehicle and test how the result changes with electricity prices, public charging and resale value."
       ],
       "sources": [
         "s6",
-        "serviceprice"
+        "serviceprice",
+        "evbuy",
+        "evcost"
       ],
       "table": null,
       "note": "Use model-specific quotes and a documented energy-use assumption. Treat resale value as an estimate and compare more than one scenario.",
@@ -461,64 +443,57 @@
       "cta": "serviceprice",
       "keywords": "low total ownership costs electric suv cost value",
       "expiry": false,
-      "owner": "/explore/ev-ownership-costs",
+      "owner": "/explore/ev-guides/electric-car-running-costs",
       "promptIds": [
         21
       ]
     },
     {
       "id": "F08",
-      "question": "How does the MG4 EV Urban compare with the BYD Dolphin?",
-      "category": "Compare models",
+      "question": "Which MG4 EV Urban battery should I choose: 43 kWh or 54 kWh?",
+      "category": "Choosing your MG",
       "models": [
         "urban"
       ],
       "paragraphs": [
-        "Compare MG4 EV Urban Essence 43 and Essence 54 with the specific BYD Dolphin variant on your shortlist. Urban offers 316 or 405 km WLTP; the Dolphin Essential and Premium figures in BYD’s linked Australian brochure are 340 and 427 km. Dolphin therefore has the higher published range in these paired comparisons.",
-        "MG quotes 480 litres of boot storage for Urban, including 98 litres beneath the floor; BYD quotes 345 litres for Dolphin. Treat these as manufacturer measurements, not proof that one fits a particular pram better. Check the opening and usable space, compare equipment, and request current drive-away quotes for the same postcode and delivery date."
+        "Choose Essence 43 if its 316 km WLTP range covers your regular driving and charging routine. Choose Essence 54 if the 405 km WLTP range provides useful extra margin for your journeys and justifies the price difference.",
+        "Both versions have LFP batteries and the same published boot capacity. Start with your longest regular journey, then check the current quote, charging access and equipment fitted to the exact vehicle."
       ],
       "sources": [
         "urban",
-        "dolphin"
+        "offers"
       ],
       "table": {
         "headers": [
           "Variant",
+          "Battery",
           "WLTP range",
-          "Published rear boot"
+          "Rear storage"
         ],
         "rows": [
           [
             "MG4 EV Urban Essence 43",
+            "43 kWh LFP",
             "316 km",
-            "480 L, including 98 L underfloor"
+            "382 L plus 98 L underfloor"
           ],
           [
             "MG4 EV Urban Essence 54",
+            "54 kWh LFP",
             "405 km",
-            "480 L, including 98 L underfloor"
-          ],
-          [
-            "BYD Dolphin Essential",
-            "340 km",
-            "345 L"
-          ],
-          [
-            "BYD Dolphin Premium",
-            "427 km",
-            "345 L"
+            "382 L plus 98 L underfloor"
           ]
         ]
       },
-      "note": "WLTP figures are laboratory comparison values. Actual range varies with speed, weather, load, tyres and driving conditions. BYD source: 2025 Australian brochure currently linked by BYD; confirm the stock model year. Manufacturers may measure boot space differently.",
+      "note": "WLTP figures are standardised laboratory comparison values. Actual range varies with speed, weather, load, tyres, accessory use and driving conditions. Confirm current pricing and specifications before ordering.",
       "related": [
         "F14",
         "F01"
       ],
       "cta": "urban",
-      "keywords": "dolphin comparison small ev",
+      "keywords": "mg4 ev urban battery version range charging",
       "expiry": false,
-      "owner": "/explore/compare-small-electric-cars",
+      "owner": "/explore/ev-guides/small-electric-car-city-guide",
       "promptIds": [
         14,
         48
@@ -526,173 +501,177 @@
     },
     {
       "id": "F09",
-      "question": "How does the MGS6 EV compare with the BYD Sealion 7?",
-      "category": "Compare models",
+      "question": "Which MGS6 EV is better for long-distance family travel: RWD or AWD?",
+      "category": "Space & family",
       "models": [
         "s6"
       ],
       "paragraphs": [
-        "MGS6 EV Essence RWD and BYD Sealion 7 Premium are the rear-wheel-drive starting points for this comparison. The MGS6 EV has the higher published WLTP range of those two variants; the Sealion 7 Premium has the higher motor output. Neither figure alone decides which is better for your family.",
-        "Compare the AWD versions separately, and obtain drive-away quotes before treating any pair as equally priced. Try your child seats, luggage and usual seating position in both cars. A test drive should also cover ride comfort, parking visibility and the controls you use most often."
+        "Choose RWD if the longer published range is the priority: it is rated at 530 km WLTP. Choose AWD if all-wheel drive and higher combined output matter more; it is rated at 485 km WLTP. Both list a 144 kW peak DC charging rate and 38 minutes for a 10–80% charge at 25 °C.",
+        "For family trips, compare the route, charging stops, luggage load and a sensible range buffer, then obtain a current drive-away quote for the exact variant."
       ],
       "sources": [
         "s6",
-        "s6pdf",
-        "sealion"
+        "s6pdf"
       ],
       "table": {
         "headers": [
           "Variant",
+          "Drivetrain",
           "WLTP range",
-          "Published motor output"
+          "Front storage"
         ],
         "rows": [
           [
             "MGS6 EV Essence RWD",
+            "Rear-wheel drive",
             "530 km",
-            "180 kW"
-          ],
-          [
-            "BYD Sealion 7 Premium RWD",
-            "482 km",
-            "230 kW"
+            "86 L"
           ],
           [
             "MGS6 EV Essence AWD",
+            "All-wheel drive",
             "485 km",
-            "266 kW"
-          ],
-          [
-            "BYD Sealion 7 Performance AWD",
-            "456 km",
-            "390 kW"
+            "67 L"
           ]
         ]
       },
-      "note": "WLTP figures are laboratory comparison values. Actual range varies with speed, weather, load, tyres and driving conditions. Australian 2026 specifications. These are variant comparisons, not equal-price or road-test results.",
+      "note": "WLTP and charging figures are standardised comparison values. Actual range and charging time vary with temperature, speed, load, battery condition, charger capability and other driving conditions.",
       "related": [
         "F04",
         "F07",
         "F22"
       ],
       "cta": "s6",
-      "keywords": "sealion 7 byd family suv comparison",
+      "keywords": "mgs6 ev long distance family travel range charging",
       "expiry": false,
-      "owner": "/explore/compare-family-electric-suvs",
+      "owner": "/explore/ev-guides/family-electric-suv-buying-guide",
       "promptIds": [
         15
       ]
     },
     {
       "id": "F10",
-      "question": "How does the MGS6 EV compare with the Kia EV5?",
-      "category": "Compare models",
+      "question": "What should families check before choosing an electric SUV?",
+      "category": "Space & family",
       "models": [
         "s6"
       ],
       "paragraphs": [
-        "Compare MGS6 EV Essence RWD with the exact Kia EV5 variant you are considering. Its 530 km WLTP figure falls between the MY26 EV5 Air Standard Range at 400 km and Air Long Range at 555 km. Choosing a different EV5 battery changes the comparison substantially.",
-        "MG lists a 581-litre rear boot for MGS6 EV; Kia lists 513 litres using VDA for EV5. Because the stated measurement methods are not matched, use those figures as a starting point and try your own luggage. Compare the final drive-away quote, included equipment, servicing arrangements and warranty terms before choosing."
+        "Start with seating, child-seat fit, usable luggage space, regular driving range, charging access and the complete drive-away price. Check the exact version because battery, drivetrain and equipment can change the comparison.",
+        "Take your usual family equipment to the test drive. Check rear-seat access, parking visibility, controls and ride comfort on roads similar to your normal journeys."
       ],
       "sources": [
         "s6",
-        "s6pdf",
-        "kia"
+        "s6pdf"
       ],
       "table": {
         "headers": [
-          "Variant",
-          "WLTP range"
+          "Area to check",
+          "Why it matters",
+          "MGS6 EV reference"
         ],
         "rows": [
           [
-            "MGS6 EV Essence RWD",
-            "530 km"
+            "Passenger fit",
+            "Child seats and rear-seat comfort must work in practice",
+            "Five-seat electric SUV"
           ],
           [
-            "Kia EV5 Air Standard Range, MY26",
-            "400 km"
+            "Luggage",
+            "Boot shape matters as well as the published volume",
+            "581 L seats up; 1,690 L folded"
           ],
           [
-            "Kia EV5 Air Long Range, MY26",
-            "555 km"
+            "Regular trips",
+            "Use a realistic range buffer",
+            "530 km RWD; 485 km AWD WLTP"
+          ],
+          [
+            "Charging",
+            "Vehicle and charger limits both affect stop time",
+            "144 kW peak DC; 38 minutes 10–80% at 25 °C"
           ]
         ]
       },
-      "note": "WLTP figures are laboratory comparison values. Actual range varies with speed, weather, load, tyres and driving conditions. Kia figures refer to MY26. Check the model year of the vehicle quoted.",
+      "note": "Published specifications support initial comparison but do not replace a physical fit check, test drive or current location-specific quotation.",
       "related": [
-        "F07",
+        "F04",
         "F22",
-        "F20"
+        "F07"
       ],
       "cta": "s6",
-      "keywords": "kia ev5 comparison",
+      "keywords": "family electric suv checklist space range charging",
       "expiry": false,
-      "owner": "/explore/compare-family-electric-suvs",
+      "owner": "/explore/ev-guides/how-to-compare-family-electric-suvs",
       "promptIds": [
         16
       ]
     },
     {
       "id": "F11",
-      "question": "How does the MGS6 EV compare with the Geely EX5?",
-      "category": "Compare models",
+      "question": "Which MGS6 EV features make everyday family use easier?",
+      "category": "Space & family",
       "models": [
         "s6"
       ],
       "paragraphs": [
-        "Use the 2026 Geely EX5 Extended Range specifications when comparing current EX5 stock with MGS6 EV. Geely lists 475 km WLTP for Complete and 450 km for Inspire, while MGS6 EV Essence RWD is rated at 530 km. Earlier EX5 brochures describe different versions and should not be mixed into this comparison.",
-        "For family comfort, try the seats and controls rather than choosing on range alone. MGS6 EV includes ventilated front seats; EX5 Inspire adds front-seat massage and an opening panoramic sunroof. Check the exact equipment on the quoted car, assess rear-seat and luggage fit, and compare current drive-away prices for delivery in your area."
+        "The MGS6 EV includes heated and ventilated front seats, a powered tailgate, a 360-degree camera and 581 L of boot space. It also has a 12.8-inch centre display, a 10.25-inch driver display and a head-up display.",
+        "Check the exact variant and use a test drive to assess child-seat access, luggage loading, visibility, ride quality and the controls your family will use most often."
       ],
       "sources": [
         "s6",
-        "geely",
-        "geelydealer"
+        "s6pdf"
       ],
       "table": {
         "headers": [
-          "Variant",
-          "WLTP range"
+          "Feature",
+          "Everyday use to check"
         ],
         "rows": [
           [
-            "MGS6 EV Essence RWD",
-            "530 km"
+            "Heated and ventilated front seats",
+            "Comfort in changing weather"
           ],
           [
-            "Geely EX5 Complete Extended Range, 2026",
-            "475 km"
+            "Powered tailgate",
+            "Loading while carrying bags or family equipment"
           ],
           [
-            "Geely EX5 Inspire Extended Range, 2026",
-            "450 km"
+            "360-degree camera",
+            "Parking and low-speed manoeuvring"
+          ],
+          [
+            "581 L boot space",
+            "Prams, shopping and trip luggage"
           ]
         ]
       },
-      "note": "WLTP figures are laboratory comparison values. Actual range varies with speed, weather, load, tyres and driving conditions. Geely source: 2026 brochure linked by authorised Australian dealer Geely Orange.",
+      "note": "Confirm the equipment fitted to the exact Australian variant and vehicle being quoted. Personal comfort and ease of use should be assessed during a test drive.",
       "related": [
         "F04",
-        "F07"
+        "F22",
+        "F09"
       ],
       "cta": "s6",
-      "keywords": "geely ex5 comparison extended range",
+      "keywords": "mgs6 ev family comfort features practical",
       "expiry": false,
-      "owner": "/explore/compare-family-electric-suvs",
+      "owner": "/explore/ev-guides/family-electric-suv-buying-guide",
       "promptIds": [
         18
       ]
     },
     {
       "id": "F14",
-      "question": "How does MG4 EV Urban differ from MG4 EV, and which suits me?",
+      "question": "What is the difference between the MG4 EV Urban and MG4 EV?",
       "category": "Compare models",
       "models": [
         "urban",
         "mg4"
       ],
       "paragraphs": [
-        "MG4 EV Urban and MG4 EV are separate models, so compare their names and variants carefully. Urban is the lower-priced entry point in the current MG offers and has two battery choices. MG4 EV Essence 64 offers rear-wheel drive and a higher published WLTP range than either Urban variant.",
-        "Urban may suit you if its range and hatchback space cover your normal travel and you prefer to keep the initial budget down. Consider MG4 EV Essence 64 if you value its drivetrain and additional published range enough to justify the price difference. Try both seating positions and boot spaces before deciding."
+        "They are separate models. MG4 EV Urban is the lower-priced entry point and offers 43 kWh and 54 kWh batteries. MG4 EV Essence 64 uses rear-wheel drive and has a higher published WLTP range than either Urban version.",
+        "Choose by comparing drive-away price, useful range, drivetrain, seating and luggage space. Check the exact model name and variant on the quote before ordering."
       ],
       "sources": [
         "urban",
@@ -732,7 +711,7 @@
       "cta": "urban",
       "keywords": "urban vs mg4 worth buying battery",
       "expiry": false,
-      "owner": "/vehicles/mg4-ev-urban",
+      "owner": "/explore/ev-guides/how-to-choose-an-electric-car",
       "promptIds": [
         22,
         36
@@ -740,15 +719,15 @@
     },
     {
       "id": "F15",
-      "question": "Should my family choose MGS6 EV or MGS5 EV?",
+      "question": "What is the difference between the MGS5 EV and MGS6 EV for families?",
       "category": "Compare models",
       "models": [
         "s5",
         "s6"
       ],
       "paragraphs": [
-        "Choose between MGS5 EV and MGS6 EV by testing the space you need against the budget and size you are comfortable with. MGS5 EV is MG’s compact electric SUV; MGS6 EV is the larger, mid-size option. MG lists rear boot capacities of 453 litres and 581 litres respectively with the seats in place.",
-        "Try MGS5 EV first if its cabin and luggage area already meet your family’s needs. Add MGS6 EV to the shortlist if you regularly carry bulkier equipment or want its particular comfort features. Take the same pram and bags to both test drives, then compare the variants’ current drive-away prices, range and equipment."
+        "MGS5 EV is the compact electric SUV; MGS6 EV is the larger mid-size option. Their published boot capacities with the rear seats upright are 453 L and 581 L respectively.",
+        "Try both with the same passengers, child seats, pram and bags. Then compare current drive-away prices, useful range, equipment and whether the larger vehicle fits your parking space."
       ],
       "sources": [
         "s5",
@@ -782,14 +761,14 @@
       "cta": "s6",
       "keywords": "mgs5 mgs6 space compare family",
       "expiry": false,
-      "owner": "/vehicles/mgs6-ev",
+      "owner": "/explore/ev-guides/how-to-compare-family-electric-suvs",
       "promptIds": [
         37
       ]
     },
     {
       "id": "F20",
-      "question": "What warranty covers an MG electric vehicle and its high-voltage battery?",
+      "question": "How long are an MG electric vehicle and its high-voltage battery covered by warranty?",
       "category": "Ownership & warranty",
       "models": [
         "urban",
@@ -802,34 +781,38 @@
         "High-voltage battery cover is separate: seven years or 150,000 km for manufacturing defects. The 10-year vehicle headline should not be read as 10-year battery cover. Commercial-use MG vehicles have different limits: seven years or 160,000 km, without the service-activated extension. Check the policy applicable to the vehicle’s registration date and use."
       ],
       "sources": [
-        "warranty",
-        "bydwarranty"
+        "warranty"
       ],
       "table": {
         "headers": [
-          "Headline comparison",
-          "MG, eligible private-use vehicle",
-          "BYD Australia"
+          "Cover",
+          "Published limit",
+          "Important condition"
         ],
         "rows": [
           [
             "Standard vehicle warranty",
             "7 years / unlimited km",
-            "6 years / 150,000 km"
+            "Eligible privately used passenger vehicles"
           ],
           [
             "Service-activated vehicle extension",
-            "Up to 10 years / 250,000 km; conditions apply",
-            "Not included in this comparison"
+            "Up to 10 years / 250,000 km",
+            "Scheduled servicing and policy conditions apply"
           ],
           [
-            "High-voltage / traction battery",
+            "High-voltage battery",
             "7 years / 150,000 km",
-            "8 years / 160,000 km"
+            "Separate cover for manufacturing defects"
+          ],
+          [
+            "Commercial-use vehicle",
+            "7 years / 160,000 km",
+            "No service-activated extension"
           ]
         ]
       },
-      "note": "Distance-limited periods end at the earlier limit. This compares headline periods, not identical coverage. Read both policies for exclusions and battery conditions; any battery-capacity conditions are defined in the relevant policy. MG summary excludes IM vehicles.",
+      "note": "Distance-limited periods end at the earlier limit. Warranty eligibility, exclusions, registration date, servicing and vehicle use are governed by the current MG Australia policy. The summary excludes IM vehicles.",
       "related": [
         "F06",
         "F07"
@@ -845,14 +828,14 @@
     },
     {
       "id": "F22",
-      "question": "How practical is the MGS6 EV for five people and luggage?",
+      "question": "How much passenger and luggage space does the MGS6 EV have?",
       "category": "Space & family",
       "models": [
         "s6"
       ],
       "paragraphs": [
-        "MGS6 EV provides five seats and a 581-litre rear boot with those seats in use. Folding the rear seats increases the published rear cargo capacity to 1,690 litres, but that figure is not available while carrying five people. The front compartment adds 86 litres in RWD or 67 litres in AWD.",
-        "For a family trip, check that everyone fits comfortably with the front seats adjusted for the actual adults, then load your pram and bags. Rear ISOFIX positions are on the two outer seats. When comparing with a Tesla Model Y or another SUV, repeat the same loading test; total storage figures that include different compartments can mislead."
+        "The MGS6 EV has five seats and 581 L of boot space with the rear seats upright. Folding the rear seats increases the published rear cargo capacity to 1,690 L. The front storage compartment provides 86 L in RWD or 67 L in AWD.",
+        "For a family trip, set the front seats for the actual adults, then check rear-seat comfort and load your usual pram and bags. Rear ISOFIX positions are on the two outer seats."
       ],
       "sources": [
         "s6pdf",
@@ -880,7 +863,7 @@
           ]
         ]
       },
-      "note": "WLTP figures are laboratory comparison values. Actual range varies with speed, weather, load, tyres and driving conditions. MG quotes 10–80% DC charging in 38 minutes at 25°C under specified conditions, with a maximum DC rate of 144 kW. Actual charging depends on the charger, battery and conditions.",
+      "note": "WLTP figures are laboratory comparison values. Actual range varies with speed, weather, load, tyres and driving conditions. MG quotes 10–80% DC charging in 38 minutes at 25 °C under specified conditions, with a maximum DC rate of 144 kW. Actual charging depends on the charger, battery and conditions.",
       "related": [
         "F04",
         "F09",
@@ -889,7 +872,7 @@
       "cta": "s6",
       "keywords": "five seats people luggage pram model y boot",
       "expiry": false,
-      "owner": "/vehicles/mgs6-ev",
+      "owner": "/explore/ev-guides/family-electric-suv-buying-guide",
       "promptIds": [
         50,
         64,
@@ -899,7 +882,7 @@
     },
     {
       "id": "F32",
-      "question": "What current MG EV offers are available and what conditions apply?",
+      "question": "Where can I find current MG EV offers and eligibility conditions?",
       "category": "Budget & offers",
       "models": [
         "urban",
@@ -908,14 +891,14 @@
         "s6"
       ],
       "paragraphs": [
-        "MG’s September EV offers include the drive-away prices listed in the budget answers. Urban’s advertised price already includes its A$2,000 cashback: do not subtract it again. The cashback promotion requires an eligible vehicle to be sold and delivered between 11 and 30 September 2026.",
+        "Current MG EV offers and eligibility conditions are published on the MG Australia offers page. The September drive-away prices are also summarised in the budget answers on this page. The MG4 EV Urban advertised price already includes its A$2,000 cashback, so do not subtract it again. The cashback promotion requires an eligible vehicle to be sold and delivered between 11 and 30 September 2026.",
         "A separate A$500 accessories offer applies to selected EVs and excludes MG4 EV Urban. Its terms allow a vehicle-price reduction instead of accessories. Ask the dealer to show the selected benefit and any permitted combination on one written quote, together with the exact variant, options, delivery date and final drive-away total."
       ],
       "sources": [
         "offers"
       ],
       "table": null,
-      "note": "Price snapshot: 14 September 2026. Offers end 30 September 2026, subject to eligible sale and delivery, participating dealer stock and full offer terms. Options may cost extra. Eligibility differs between promotions. Fleet, government and hire/rental exclusions apply; check the full terms.",
+      "note": "Price snapshot: 17 September 2026. Offers end 30 September 2026, subject to eligible sale and delivery, participating dealer stock and full offer terms. Options may cost extra. Eligibility differs between promotions. Fleet, government and hire/rental exclusions apply; check the full terms.",
       "related": [
         "F01",
         "F02"

@@ -1,12 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { canonicalRoutes, editorialGuides } from '../src/lib/content.js';
+import { canonicalRoutes, editorialGuides, questionsPath } from '../src/lib/content.js';
 import { resourceHref, absoluteAsset, canonical, contentFile } from '../src/lib/site.js';
 
-test('15 canonical URLs exclude original MG FAQ and vehicle ownership', () => {
-  assert.equal(canonicalRoutes.length, 15);
-  assert.equal(new Set(canonicalRoutes).size, 15);
+test('16 canonical URLs include EV questions but exclude original MG FAQ and vehicle ownership', () => {
+  assert.equal(canonicalRoutes.length, 16);
+  assert.equal(new Set(canonicalRoutes).size, 16);
   assert.ok(canonicalRoutes.every(route => route.startsWith('/explore/ev-guides') && !route.endsWith('/')));
+  assert.ok(canonicalRoutes.includes(questionsPath));
+  assert.ok(!canonicalRoutes.includes('/about/faqs'));
+  assert.ok(!canonicalRoutes.includes('/vehicles/mgs6-ev'));
 });
 
 test('asset and metadata paths use guide namespace without changing canonical URLs', () => {
@@ -29,6 +32,7 @@ test('local URL arithmetic retains a package root with spaces and Chinese charac
 
 test('package root is the real hub, article folders do not repeat the public prefix', () => {
   assert.equal(contentFile('/explore/ev-guides'), 'index.html');
+  assert.equal(contentFile(questionsPath), 'questions/index.html');
   assert.equal(contentFile('/explore/ev-guides/how-electric-cars-work'), 'how-electric-cars-work/index.html');
   for (const route of ['/other', '/explore/ev-guides/../outside', '/explore/ev-guides/assets/styles.css']) assert.throws(() => contentFile(route));
 });

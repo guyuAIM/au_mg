@@ -2,19 +2,19 @@
 
 ## Deployment boundary
 
-Place the CONTENTS of dist/ in a dedicated fixed directory, for example /srv/mg-geo/dist. Its root index.html directly contains the complete guide hub; the 14 article folders, assets/, scripts/ and sitemap_evguide.xml are its siblings. **Do not replace the existing MG homepage or root /index.html**: the guide hub's public URL stays /explore/ev-guides. No root / or global error handling is defined by the integration snippets. See FIXED_DIRECTORY.md for the Chinese handoff checklist.
+Place the CONTENTS of dist/ in a dedicated fixed directory, for example /srv/mg-geo/dist. Its root index.html directly contains the complete guide hub; the 14 article folders, questions/, assets/, scripts/ and sitemap_evguide.xml are its siblings. **Do not replace the existing MG homepage or root /index.html**: the guide hub's public URL stays /explore/ev-guides. No root / or global error handling is defined by the integration snippets. See FIXED_DIRECTORY.md for the Chinese handoff checklist.
 
-The MG team adds its own navigation/footer entry pointing to https://mgmotor.com.au/explore/ev-guides. This delivery owns the guide list, 14 articles and namespaced /explore/ev-guides/assets/ and /scripts/ only. Existing FAQ/model navigation goes to the live MG pages.
+The MG team adds one navigation/footer entry pointing to https://mgmotor.com.au/explore/ev-guides. This delivery owns the guide list, 14 articles, the EV Questions & Answers page and namespaced /explore/ev-guides/assets/ and /scripts/ only. Existing owner FAQ/model navigation goes to the live MG pages.
 
 Include nginx-geo-static.conf and legacy-guide-redirects.conf in the existing MG server block after changing the single $mg_evguide_dir value. Test with nginx -t before release. These stable rules map the hub, safe slug directories and namespaced asset/script directories; they do not enumerate hashed resource filenames. Unknown guide paths and missing files return 404, never the hub. Existing articles' slash/index.html aliases normalize to canonical URLs; 25 legacy guide rules return 301. Content/resource updates in the fixed directory do not require per-file Nginx edits. Changes to public prefixes or legacy redirects still require configuration coordination.
 
-After deployment verify all 15 canonical URLs return 200, the child sitemap returns XML, every legacy alias returns 301 to its canonical guide, and unknown guide paths return 404. Verify the MG homepage, FAQ/model pages, main sitemap and robots rules are unchanged.
+After deployment verify all 16 canonical URLs return 200, the child sitemap returns XML, every legacy alias returns 301 to its canonical guide, and unknown guide paths return 404. Verify the MG homepage, owner FAQ/model pages, main sitemap and robots rules are unchanged.
 
 ## Child sitemap
 
 Stable URL: https://mgmotor.com.au/sitemap_evguide.xml
 
-The UTF-8 urlset contains only the 15 absolute, unique canonical content URLs. Article dates come from content data; the list date is the latest guide date. The preview root URL, 404, aliases, assets, FAQ and model pages are excluded. Regenerate the complete child file with each release, preserving still-active article URLs. The XML sits at the delivery filesystem root and is exposed at the domain-root URL through its own exact mapping.
+The UTF-8 urlset contains only the 16 absolute, unique canonical EV-content URLs. Article and question dates come from content data; the list date is the latest guide date. The preview root URL, 404, aliases, assets, existing owner FAQ and model pages are excluded. Regenerate the complete child file with each release, preserving still-active URLs. The XML sits at the delivery filesystem root and is exposed at the domain-root URL through its own exact mapping.
 
 - Existing main sitemap is a sitemapindex: merge sitemap-index-snippet.xml as a child entry, retaining all existing entries, and persist the change in MG's sitemap generator configuration.
 - Existing main sitemap is a urlset: do not insert a sitemap entry into that urlset and do not replace it. Merge robots-sitemap-snippet.txt into the root robots.txt, or submit the child URL separately through the verified Google Search Console/Bing Webmaster Tools account.

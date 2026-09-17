@@ -1,0 +1,20 @@
+---
+import FaqContent from '../../../components/FaqContent.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { faqData, questionsPath } from '../../../lib/content.js';
+import { faqPageSchema } from '../../../lib/schema.js';
+
+const path = questionsPath;
+const title = 'EV Questions & Answers | MG Australia';
+const description = 'Practical answers about choosing, charging and owning an electric car, including prices, range, family space, running costs and warranty.';
+const answerText = (faq) => {
+  const parts = [...faq.paragraphs];
+  if (faq.table) parts.push(faq.table.rows.map((row) => row.map((cell, index) => `${faq.table.headers[index]}: ${cell}`).join('; ')).join('. '));
+  if (faq.note) parts.push(faq.note);
+  return parts.join(' ');
+};
+const jsonLd = faqPageSchema({ path, title, description, faqs: faqData.faqs.map((faq) => ({ question: faq.question, answer: answerText(faq) })) });
+---
+<BaseLayout {title} {description} {path} image="/assets/faq-banner.jpg" view="questions" {jsonLd}>
+  <FaqContent view="hub" />
+</BaseLayout>

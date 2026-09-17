@@ -1,8 +1,8 @@
 ---
 import External from './External.astro';
 import Icon from './Icon.astro';
-import { faqCategories, faqData, faqModels } from '../lib/content.js';
-import { official } from '../lib/site.js';
+import { faqCategories, faqData, faqModels, questionsPath } from '../lib/content.js';
+import { official, resourceHref } from '../lib/site.js';
 
 const { view = 'hub' } = Astro.props;
 const isHub = view === 'hub';
@@ -10,17 +10,21 @@ const visibleFaqs = isHub ? faqData.faqs : faqData.faqs.filter((faq) => faq.mode
 const source = (id) => faqData.sources[id];
 const offerExpired = new Date() > new Date(`${faqData.offerExpiry}T23:59:59+10:00`);
 const ctaLabel = (cta) => cta === 'offers' ? 'View MG offers' : cta === 'serviceprice' ? 'Check servicing prices' : cta === 'warranty' ? 'Read the warranty policy' : 'Explore model details';
-const answerPath = (faq) => !isHub && !faq.models.includes('s6') ? `/about/faqs#${faq.id}` : `${isHub ? '/about/faqs' : '/vehicles/mgs6-ev'}#${faq.id}`;
+const answerPath = (faq) => `${questionsPath}#${faq.id}`;
+const formatDate = (value) => new Intl.DateTimeFormat('en-AU', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Australia/Sydney' }).format(new Date(`${value}T12:00:00+10:00`));
 ---
 {isHub ? (
-  <section class="hero faq-hero" aria-labelledby="page-title">
-    <picture><source media="(max-width: 767px)" srcset="/assets/faq-banner-mobile.jpg" /><img src="/assets/faq-banner.jpg" alt="Red MG Cyberster on an Australian road" /></picture>
-    <div class="hero-copy container"><h1 id="page-title">FAQs</h1><p>Your questions, answered.</p></div>
-  </section>
+  <>
+    <section class="hero faq-hero guides-hero" aria-labelledby="page-title">
+      <picture><source media="(max-width: 767px)" srcset={resourceHref('/assets/faq-banner-mobile.jpg', Astro.url.pathname)} /><img src={resourceHref('/assets/faq-banner.jpg', Astro.url.pathname)} alt="Red MG Cyberster on an Australian road" /></picture>
+      <div class="hero-copy container"><span class="hero-eyebrow">EV Guides &amp; Advice</span><h1 id="page-title">EV Questions &amp; Answers</h1><p>Practical answers for choosing, charging and owning an electric car.</p></div>
+    </section>
+    <nav class="content-switch container" aria-label="EV Guides and Advice sections"><a href="/explore/ev-guides">Guides &amp; Advice</a><a class="selected" aria-current="page" href={questionsPath}>Questions &amp; Answers</a></nav>
+  </>
 ) : (
   <>
     <section class="hero model-hero" aria-labelledby="page-title">
-      <picture><source media="(max-width: 767px)" srcset="/assets/mgs6-hero-mobile.jpg" /><img src="/assets/mgs6-hero-desktop.jpg" alt="MGS6 EV in a green studio setting" /></picture>
+      <picture><source media="(max-width: 767px)" srcset={resourceHref('/assets/mgs6-hero-mobile.jpg', Astro.url.pathname)} /><img src={resourceHref('/assets/mgs6-hero-desktop.jpg', Astro.url.pathname)} alt="MGS6 EV in a green studio setting" /></picture>
       <div class="model-heading"><h1 id="page-title">MGS6 EV</h1><p>Space for the everyday. And everything else.</p></div>
       <div class="hero-model-actions"><a class="button light" href="#questions">Explore FAQs</a><External class="button dark" href={official('/vehicles/mgs6-ev')}>Explore the MGS6 EV</External></div>
     </section>
@@ -30,7 +34,7 @@ const answerPath = (faq) => !isHub && !faq.models.includes('s6') ? `/about/faqs#
 
 <section class="container questions-section" id="questions" data-faq-root data-view={view}>
   <div class="intro">
-    <h2>{isHub ? <>Frequently asked <br /><strong>questions</strong></> : <>Your MGS6 EV <br /><strong>questions</strong></>}</h2>
+    <h2>{isHub ? <>EV questions, <br /><strong>answered.</strong></> : <>Your MGS6 EV <br /><strong>questions</strong></>}</h2>
     <div>
       <p>{isHub ? 'From choosing your first electric car to comparing family SUVs, find practical answers to help you choose and own your MG.' : 'Explore the space, range, ownership costs and model comparisons that matter when choosing your next family SUV.'}</p>
       <p class="muted">Looking for something specific? Search a question or browse by topic.</p>
@@ -50,7 +54,7 @@ const answerPath = (faq) => !isHub && !faq.models.includes('s6') ? `/about/faqs#
       <article class="faq" id={faq.id} data-faq-item data-category={faq.category} data-models={faq.models.join(' ')} data-search={`${faq.question} ${faq.keywords} ${faq.paragraphs.join(' ')} ${JSON.stringify(faq.table || '')}`}>
         <h3><button type="button" id={`trigger-${faq.id}`} aria-expanded="false" aria-controls={`answer-${faq.id}`} data-faq-trigger><span>{faq.question}</span><Icon name="down" /></button></h3>
         <div class="answer" id={`answer-${faq.id}`} role="region" aria-labelledby={`trigger-${faq.id}`} hidden>
-          {faq.expiry && <div class="date-note">{offerExpired ? 'This September 2026 offer snapshot has expired. ' : 'Prices checked 14 September 2026 · Offers end 30 September 2026. '}{offerExpired && <External href={official('/offers')}>View current MG offers</External>}</div>}
+          {faq.expiry && <div class="date-note">{offerExpired ? 'This September 2026 offer snapshot has expired. ' : `Prices checked ${formatDate(faqData.offerChecked)} · Offers end ${formatDate(faqData.offerExpiry)}. `}{offerExpired && <External href={official('/offers')}>View current MG offers</External>}</div>}
           {offerExpired && faq.expiry ? (
             <p>See the current offers page for available vehicles, prices and eligibility. The September promotion previously shown on this page is no longer presented as a current offer.</p>
           ) : (
@@ -61,7 +65,7 @@ const answerPath = (faq) => !isHub && !faq.models.includes('s6') ? `/about/faqs#
             </>
           )}
           <div class="sources"><strong>References</strong>{faq.sources.map((id) => <External href={source(id).url}>{source(id).title}<Icon name="out" /></External>)}</div>
-          <div class="answer-bottom"><External class="button outline" href={source(faq.cta).url}>{ctaLabel(faq.cta)}<Icon name="right" /></External><button type="button" class="text-button" data-copy-answer>Copy answer link</button></div>
+          <div class="answer-bottom"><div class="answer-actions"><External class="button outline" href={source(faq.cta).url}>{ctaLabel(faq.cta)}<Icon name="right" /></External>{faq.owner?.startsWith('/explore/ev-guides/') && <a class="guide-link" href={faq.owner}>Read the related EV guide <Icon name="right" /></a>}</div><button type="button" class="text-button" data-copy-answer>Copy answer link</button></div>
           <p role="status" data-copy-status hidden></p>
           <div class="related"><span>Related questions</span>{faq.related.map((id) => { const related = faqData.faqs.find((item) => item.id === id); return <a href={answerPath(related)}>{related.question}<Icon name="right" /></a>; })}</div>
         </div>
@@ -69,10 +73,10 @@ const answerPath = (faq) => !isHub && !faq.models.includes('s6') ? `/about/faqs#
     ))}
   </div>
   <div class="empty" data-faq-empty hidden><h3>No matching questions</h3><p>Try a model name, “30k”, “family” or “warranty”, or clear the filters to see all questions.</p><button type="button" class="button dark" data-faq-reset>Show all questions</button></div>
-  <p class="updated">Information checked 14 September 2026. See each answer for its source and applicable conditions.</p>
+  <p class="updated">Information checked {formatDate(faqData.modified)}. See each answer for its source and applicable conditions.</p>
 </section>
 
-{isHub && <section class="container model-feature"><div><span class="eyebrow">Explore your next MG</span><h2>A little more <br /><strong>room to explore.</strong></h2><p>Take a closer look at the MGS6 EV, with family questions answered where you choose your car.</p><a class="button dark" href="/vehicles/mgs6-ev">Explore MGS6 EV FAQs <Icon name="right" /></a></div><img src="/assets/mgs6-ev.png" alt="MGS6 EV" /></section>}
+{isHub && <section class="container model-feature"><div><span class="eyebrow">Explore your next MG</span><h2>A little more <br /><strong>room to explore.</strong></h2><p>Take a closer look at the MGS6 EV, with family questions answered where you choose your car.</p><External class="button dark" href={official('/vehicles/mgs6-ev')}>Explore the MGS6 EV <Icon name="right" /></External></div><img src={resourceHref('/assets/mgs6-ev.png', Astro.url.pathname)} alt="MGS6 EV" /></section>}
 
 <section class="owner-section"><div class="container owner-inner"><div><span class="eyebrow">Already an MG owner?</span><h2>Here for your <br /><strong>everyday questions.</strong></h2></div><div class="owner-links"><External href={official('/about/faqs')}>Vehicle care and existing owner FAQs <Icon name="right" /></External><External href={official('/about/servicing')}>Servicing your MG <Icon name="right" /></External><External href={official('/explore/warranty')}>Warranty and ownership cover <Icon name="right" /></External></div></div></section>
 <section class="container final-cta"><h2>Find your next MG.</h2><p>Explore the range and talk through your questions with your local MG dealer.</p><div><External class="button dark" href={official('/vehicles/electric')}>Explore electric vehicles <Icon name="right" /></External><External class="button outline" href={official('/about/find-a-dealer')}>Find a dealer <Icon name="right" /></External></div></section>

@@ -37,7 +37,7 @@ assert.match(entry, /<main>/);
 assert.doesNotMatch(entry, /location\.replace|http-equiv="refresh"|content="noindex/);
 assert.equal(entry, await readFile(new URL('index.html', dist), 'utf8'));
 const xml = await (await check(origin + '/sitemap_evguide.xml', 200)).text();
-assert.equal((xml.match(/<url>/g) || []).length, 15);
+assert.equal((xml.match(/<url>/g) || []).length, 16);
 const css = await readFile(new URL('assets/styles.css', dist), 'utf8');
 const golden = await readFile(new URL('public/assets/styles.css', root), 'utf8');
 const originalFonts = [...golden.matchAll(/url\('\/assets\/([^']+)'\)/g)];

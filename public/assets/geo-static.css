@@ -6,4 +6,5 @@
 .faq.is-last-visible{border-bottom:0}
 .guide-card[hidden]{display:none}
 .subnav .subnav-all{font-size:14px;display:flex;gap:10px;align-items:center;padding:1px 6px;text-decoration:none;color:inherit}
-@media(max-width:767px){.explore-menu>a{padding:13px 12px;text-transform:none}.subnav .subnav-all{font-size:12px}.related a{font-size:13px;padding:5px 0}}
+.content-switch{display:flex;align-items:center;gap:28px;padding-top:24px;padding-bottom:24px;border-bottom:1px solid #bbb}.content-switch a{padding:8px 0;color:#666;border-bottom:2px solid transparent;text-decoration:none}.content-switch a:hover{color:#000}.content-switch a.selected{color:#000;border-bottom-color:#000;font-weight:500}.answer-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px 22px}.guide-link{display:inline-flex;align-items:center;gap:9px;font-size:14px;text-underline-offset:4px}.guide-link .icon{font-size:17px}
+@media(max-width:767px){.explore-menu>a{padding:13px 12px;text-transform:none}.subnav .subnav-all{font-size:12px}.related a{font-size:13px;padding:5px 0}.content-switch{gap:24px;padding-top:18px;padding-bottom:18px;overflow-x:auto}.content-switch a{white-space:nowrap}.answer-actions{align-items:flex-start;flex-direction:column}}

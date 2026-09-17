@@ -5,11 +5,13 @@
 ```text
 dist/
 ├── index.html                 # 完整指南首页，有正文，不跳转
-├── sitemap_evguide.xml        # 15个官网正式URL
+├── sitemap_evguide.xml        # 16个官网正式URL
 ├── 404.html
 ├── delivery-config.json
 ├── assets/
 ├── scripts/
+├── questions/
+│   └── index.html
 ├── affordable-electric-cars/
 │   └── index.html
 └── 其余13个文章slug目录/index.html
@@ -30,6 +32,7 @@ dist/
 | 官网地址 | 固定目录内文件 |
 | --- | --- |
 | `/explore/ev-guides` | `index.html` |
+| `/explore/ev-guides/questions` | `questions/index.html` |
 | `/explore/ev-guides/<slug>` | `<slug>/index.html` |
 | `/explore/ev-guides/assets/...` | `assets/...` |
 | `/explore/ev-guides/scripts/...` | `scripts/...` |

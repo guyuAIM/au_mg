@@ -7,9 +7,11 @@ export const faqCategories = ['All topics', 'Budget & offers', 'Choosing your MG
 export const faqModels = [['all', 'All models'], ['urban', 'MG4 EV Urban'], ['mg4', 'MG4 EV'], ['s5', 'MGS5 EV'], ['s6', 'MGS6 EV'], ['hybrid', 'MG hybrids']];
 export const guideCategories = ['All guides', 'EV basics', 'Charging', 'Range & batteries', 'Budget & value', 'Choosing an EV', 'Family electric SUVs', 'Ownership costs'];
 export const guidePath = (slug) => `/explore/ev-guides/${slug}`;
+export const questionsPath = '/explore/ev-guides/questions';
 
 export const canonicalRoutes = [
   '/explore/ev-guides',
+  questionsPath,
   ...editorialGuides.map((guide) => guidePath(guide.slug))
 ];
 

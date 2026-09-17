@@ -1,7 +1,7 @@
 import { access, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { canonicalRoutes, editorialGuides, guideSources } from '../src/lib/content.js';
+import { canonicalRoutes, editorialGuides, faqData, guideSources, questionsPath } from '../src/lib/content.js';
 import { contentFile, guideBase } from '../src/lib/site.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -46,6 +46,13 @@ for (const route of canonicalRoutes) {
 }
 
 const guideHub = await readFile(htmlFile('/explore/ev-guides'), 'utf8');
+const questionsHtml = await readFile(htmlFile(questionsPath), 'utf8');
+for (const faq of faqData.faqs) {
+  check(questionsHtml.includes(escaped(faq.question)), `${questionsPath} is missing FAQ question ${faq.id}`);
+  for (const paragraph of faq.paragraphs) check(questionsHtml.includes(escaped(paragraph)), `${questionsPath} is missing paragraph from ${faq.id}`);
+  for (const cell of tableCells(faq.table)) check(questionsHtml.includes(escaped(cell)), `${questionsPath} is missing table cell from ${faq.id}: ${cell}`);
+  for (const sourceId of faq.sources || []) check(questionsHtml.includes(escaped(faqData.sources[sourceId].url)), `${questionsPath} is missing source URL ${sourceId}`);
+}
 for (const guide of editorialGuides) {
   check(guideHub.includes(escaped(guide.title)), `guide hub is missing ${guide.guideId}`);
   const article = await readFile(htmlFile(`/explore/ev-guides/${guide.slug}`), 'utf8');
@@ -90,7 +97,7 @@ for (const [route, html] of htmlByRoute) {
   }
 }
 const sitemap = await readFile(path.join(dist, 'sitemap_evguide.xml'), 'utf8');
-check((sitemap.match(/<url>/g) || []).length === 15, 'sitemap must contain exactly 15 URLs');
+check((sitemap.match(/<url>/g) || []).length === 16, 'sitemap must contain exactly 16 URLs');
 for (const route of canonicalRoutes) check(sitemap.includes(`<loc>https://mgmotor.com.au${route}</loc>`), `sitemap is missing ${route}`);
 
 await access(path.join(dist, '404.html')).catch(async () => access(path.join(dist, '404', 'index.html')));
@@ -102,11 +109,11 @@ const redirects = await readFile(path.join(root, 'deployment/legacy-guide-redire
 check((redirects.match(/return 301 /g) || []).length === 25, 'deployment must contain 25 legacy redirects');
 
 const locations = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
-check(new Set(locations).size === 15, 'sitemap must have 15 unique URLs');
+check(new Set(locations).size === 16, 'sitemap must have 16 unique URLs');
 const latest = editorialGuides.map(guide => guide.modifiedIso).sort().at(-1);
 check(sitemap.includes(`<loc>https://mgmotor.com.au/explore/ev-guides</loc><lastmod>${latest}</lastmod>`), 'hub lastmod must reflect latest guide date');
 for (const guide of editorialGuides) check(sitemap.includes(`<loc>https://mgmotor.com.au/explore/ev-guides/${guide.slug}</loc><lastmod>${guide.modifiedIso}</lastmod>`), 'guide lastmod mismatch');
 check(!/^\s*location\s+=\s+\/(?:index\.html|robots\.txt|sitemap\.xml)\s*\{/m.test(deployment), 'integration must not replace existing MG root files');
 check(deployment.includes(`location = ${guideBase}/index.html { return 301 ${guideBase}; }`) && deployment.includes('(?<mg_evguide_suffix>/index[.]html|/)?$'), 'canonical alias normalization missing');
 if (failures.length) throw new Error(`Build verification failed (${failures.length}):\n- ${failures.join('\n- ')}`);
-console.log(JSON.stringify({ canonicalRoutes: 15, guideArticles: 14, h1PerPage: 1, jsonLdPerPage: true, spaRootFound: false, sitemapUrls: 15, tableCellsAndSourcesVerified: true, localLinksAndAssetsVerified: true }, null, 2));
+console.log(JSON.stringify({ canonicalRoutes: 16, guideArticles: 14, questions: 16, h1PerPage: 1, jsonLdPerPage: true, spaRootFound: false, sitemapUrls: 16, tableCellsAndSourcesVerified: true, localLinksAndAssetsVerified: true }, null, 2));

@@ -6,9 +6,9 @@ import { canonicalRoutes, editorialGuides, faqData, guideSources, legacyGuideAli
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const expectedHashes = {
-  'src/data/faq-data.json': '9da952eb0776db1ef9398c5efbc3a83851e6f379b01420b0901fa40713417f69',
+  'src/data/faq-data.json': 'c1644517ff2f1c4edc947a29c8d1fc3270f8bde2b59f8357d82450a4e68da799',
   'src/data/p0-guides.js': 'e71c308ac13eac31c62dba8ad0cbdd8cd24c86fd284f95eeb4957f3cfc3ae0e5',
-  'src/data/editorial-guides.js': '18f9ce348e84c2065f5a850fb9dbe6f2551deb9ae16cc4bce5b8ddd0a5a9daee',
+  'src/data/editorial-guides.js': 'dca61ea8b421a8f1cc2f7e68f75ce50e75dbec04890925c998922b2a0714588d',
   'src/data/education-guides.js': '1805915ee59eb5f9bc9385219c9d02b06e9166b8dabd7de3a2f8ea0c22fa53f9',
   'public/assets/styles.css': '7c08f1be48edd167e95aaec51cf6affeef6f635c412da7cc78c27b8388825b72'
 };
@@ -20,7 +20,7 @@ for (const [relativePath, expected] of Object.entries(expectedHashes)) {
 }
 
 const summary = validateContent();
-if (canonicalRoutes.length !== 15) throw new Error(`Expected 15 canonical routes, found ${canonicalRoutes.length}`);
+if (canonicalRoutes.length !== 16) throw new Error(`Expected 16 canonical routes, found ${canonicalRoutes.length}`);
 if (Object.keys(guideSources).length !== 25) throw new Error(`Expected 25 guide sources, found ${Object.keys(guideSources).length}`);
 
 const payload = {

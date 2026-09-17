@@ -18,7 +18,7 @@ ZIP路径及SHA-256。`dist/delivery-config.json` 标记实际构建模式。CLI
 构建本身不请求官网，使用已保存的快照，保证官网不可用时仍能打包。
 
 两个模式都采用扁平交付目录：完整指南首页位于 `dist/index.html`，子sitemap同级；
-文章位于 `dist/<slug>/index.html`，资源位于 `dist/assets/`、`dist/scripts/`。
+文章与问答页位于 `dist/<slug>/index.html`，资源位于 `dist/assets/`、`dist/scripts/`。
 公开URL仍为 `/explore/ev-guides` 及其子路径；一次性接入映射见 `FIXED_DIRECTORY.md`。
 
 ## 带导航版的实际行为
@@ -63,18 +63,18 @@ ZIP路径及SHA-256。`dist/delivery-config.json` 标记实际构建模式。CLI
 
 ## 纯内容版与未来接入
 
-纯内容版仍是15个完整静态HTML文档，保留metadata、JSON-LD、sitemap、正文样式和交互；
+纯内容版仍是16个完整静态HTML文档，保留metadata、JSON-LD、sitemap、正文样式和交互；
 **不是已适配客户模板的HTML片段**。没有header/footer，也不发起导航同步请求。
 未来客户愿意接入模板时，可复用这些内容和公共布局层；仍需处理head合并、base路径和
 客户全局CSS隔离。仅去掉导航不意味着能把整份HTML直接粘入任何CMS而无需适配。
 
-两个模式都不得覆盖MG首页、robots.txt或主sitemap。原有15页映射、25条旧链接301、
+两个模式都不得覆盖MG首页、既有FAQ、robots.txt或主sitemap。现有16页映射、25条旧链接301、
 尾斜杠/index归一化和子sitemap接入方式不变。动态导航不进入指南Article数据或子sitemap。
 
 ## 回归验证
 
 `node --test tests/*.test.mjs` 测试模式、URL过滤、结构变化拒绝、转义、动作跳转和内容更新。
-`npm run build` 自动验证正文、原始文件哈希、15页、链接和sitemap。
+`npm run build` 自动验证正文、原始文件哈希、16页、链接和sitemap。
 `scripts/serve-shell-qa.mjs` 是仅绑定127.0.0.1的本地测试服务器，用于模拟成功更新、503、
 超时、结构变化和禁JS；不随客户ZIP交付，也不在生产页面开放测试参数。
 实际浏览器验收结果见 `qa/NAVIGATION_MODES_REPORT.md`，不要将旧版全页截图验收当成本版导航验收。
