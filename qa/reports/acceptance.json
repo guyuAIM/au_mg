@@ -1,6 +1,7 @@
 {
   "date": "2026-09-17",
-  "status": "local-content-layout-interactions-verified-with-disclosed-limitations",
+  "status": "historical-17-page-version-superseded",
+  "currentReport": "../EV_GUIDE_DELIVERY_REPORT.md",
   "recheckReport": "../recheck/REPORT.md",
   "recheck": {
     "pageViewportPairs": 34,

@@ -1,43 +1,48 @@
-# au_mg — MG Australia EV Guides GEO static source
+# au_mg — MG Australia EV Guides static source
 
-This is an independent Astro static build of the approved MG Australia FAQ, MGS6 EV and EV Guides experience. The original React/Vite package remains the visual and content golden master.
-
-## Requirements
-
-- Node.js 22.12 or later
-- npm 10 or later
+Independent Astro static delivery: one EV guide list and 14 guide articles. FAQ and MGS6 pages belong to the existing MG website and are not published by this package. Original content and visual presentation remain the golden master.
 
 ## Commands
+
+Node.js >=22.12 and npm >=10 are required.
 
 ```powershell
 npm ci
 npm run build
 npm run preview
+npm test
+npm run package
 ```
 
-Open the preview through HTTP, for example `http://localhost:4321/about/faqs`. Do not open files under `dist/` with a `file://` URL or by double-clicking an HTML file: production-root references such as `/assets/styles.css` would then resolve against the drive root instead of this site, so styles, fonts, images and scripts would not load.
+The root preview URL redirects to /explore/ev-guides. Double-click dist/index.html for local-file browsing with JavaScript enabled. Real-browser file-mode verification may require a manual check; see the current QA report.
 
-The build creates 17 canonical HTML pages in `dist/`. Every page contains its visible copy, tables, references, internal links and JSON-LD before client JavaScript executes. There is deliberately no root `/` page and no SPA fallback.
+Build output: dist/index.html (preview launcher), dist/404.html, dist/sitemap_evguide.xml, and dist/explore/ev-guides/ (15 content HTML files, assets and scripts). No backend/API/CMS is required. HTTP content and links remain usable without JavaScript.
 
-`npm run package` rebuilds, verifies and writes `FILE_MANIFEST_SHA256.txt` for the source and delivery output.
+Public source assets remain immutable. The build prepares namespaced resources in .generated/public; the derived stylesheet embeds original font bytes for local-file compatibility, with layout/style declarations unchanged.
 
-On Windows, the project uses the vendored official WASI build of Astro's parser so that the build remains reproducible on machines where application control blocks native parser DLLs. Node may print an experimental WASI warning; this is a build-time runtime notice and does not add client JavaScript or affect the generated HTML.
+npm run package produces a timestamped ZIP in release/, including dist/, deployment instructions and SHA-256 checksums. It extracts the archive to a Chinese/space-containing verification directory and checks every file. FILE_MANIFEST_SHA256.txt separately inventories source and built output; generated caches/releases are excluded.
 
 ## Content safety
 
-The four source-data files and the approved stylesheet are copied byte-for-byte from the golden project. `npm run verify:content` rejects any unexpected change to those files. Git preserves exact file bytes using `.gitattributes`, so checkout line-ending conversion cannot invalidate the source hashes.
-
-Building this repository does not require the original project. Optional comparison with that project also checks copied images/fonts. Set its actual local path before running the comparison:
+npm run verify:content checks the four original data files and original CSS against frozen SHA-256 values. Git preserves their exact bytes. Optional original-project comparison also checks copied images/fonts:
 
 ```powershell
 $env:ORIGINAL_PROJECT = 'C:\path\to\MG_Australia_EV_Guides_Source_20260916'
 npm run verify:original
 ```
 
-The repository is named `au_mg` and the local working copy is `D:\gy\au_mg`. Generated `dist/`, dependency `node_modules/`, `.astro/` and local environment files are not committed. Run `npm run build` after a fresh clone to regenerate the static output.
+The original project is not required to build. FAQ data is retained as historical protected source but does not create FAQ/model routes. dist/, .generated/, node_modules/, release/ and local environment files are not committed.
 
-## MG integration
+## Integration and acceptance
 
-See `deployment/README.md`. No backend, database, CMS, authentication, deployment or production mutation is included.
+See deployment/README.md and DELIVERY.md. Do not replace MG's homepage, main sitemap or robots policy. Only map the 15 guide pages, namespaced resources, 25 legacy redirects and /sitemap_evguide.xml.
 
-Current content, browser, interaction, HTTP and build evidence, including remaining limitations, is recorded in `qa/recheck/REPORT.md` and `qa/reports/acceptance.json`. The older `qa/QA_REPORT.md` is retained as historical evidence and is superseded by the recheck.
+Current release checks: qa/EV_GUIDE_DELIVERY_REPORT.md. Earlier qa/recheck/ and qa/QA_REPORT.md describe the superseded 17-page version, not the current release's acceptance verdict.
+
+No automatic Git push, remote deployment or webmaster-account submission occurs.
+# 双模式交付（默认带导航）
+
+`npm run build` / `npm run package` 默认带导航；`npm run build:content` /
+`npm run package:content` 输出不带header/footer的内容页面。显式带导航命令为
+`build:nav` / `package:nav`。配置入口 `config/delivery.mjs`；详细说明见
+[deployment/NAVIGATION_MODES.md](deployment/NAVIGATION_MODES.md)。模式切换不会修改指南正文、原始CSS或正式URL。

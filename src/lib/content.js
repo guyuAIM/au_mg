@@ -9,8 +9,6 @@ export const guideCategories = ['All guides', 'EV basics', 'Charging', 'Range & 
 export const guidePath = (slug) => `/explore/ev-guides/${slug}`;
 
 export const canonicalRoutes = [
-  '/about/faqs',
-  '/vehicles/mgs6-ev',
   '/explore/ev-guides',
   ...editorialGuides.map((guide) => guidePath(guide.slug))
 ];

@@ -1,0 +1,130 @@
+[
+  {
+    "width": 1280,
+    "route": "/explore/ev-guides",
+    "navigationPixelsExact": false,
+    "contentPixelsExact": false,
+    "cropHeight": 650,
+    "encodings": [
+      {
+        "format": "jpeg",
+        "width": 1265,
+        "height": 889,
+        "cssWidth": 1280,
+        "cssHeight": 900
+      },
+      {
+        "format": "jpeg",
+        "width": 1265,
+        "height": 889,
+        "cssWidth": 1280,
+        "cssHeight": 900
+      },
+      {
+        "format": "jpeg",
+        "width": 1265,
+        "height": 889,
+        "cssWidth": 1280,
+        "cssHeight": 900
+      }
+    ],
+    "losslessPixelCertification": false,
+    "limitation": "Browser screenshot channel returned resized lossy JPEG. Different document offsets also change resampling phase. Not a lossless pixel comparison; use DOM geometry evidence and visual review separately."
+  },
+  {
+    "width": 1280,
+    "route": "/explore/ev-guides/affordable-electric-cars",
+    "navigationPixelsExact": false,
+    "contentPixelsExact": false,
+    "cropHeight": 650,
+    "encodings": [
+      {
+        "format": "jpeg",
+        "width": 1265,
+        "height": 889,
+        "cssWidth": 1280,
+        "cssHeight": 900
+      },
+      {
+        "format": "jpeg",
+        "width": 1265,
+        "height": 889,
+        "cssWidth": 1280,
+        "cssHeight": 900
+      },
+      {
+        "format": "jpeg",
+        "width": 1265,
+        "height": 889,
+        "cssWidth": 1280,
+        "cssHeight": 900
+      }
+    ],
+    "losslessPixelCertification": false,
+    "limitation": "Browser screenshot channel returned resized lossy JPEG. Different document offsets also change resampling phase. Not a lossless pixel comparison; use DOM geometry evidence and visual review separately."
+  },
+  {
+    "width": 390,
+    "route": "/explore/ev-guides",
+    "navigationPixelsExact": false,
+    "contentPixelsExact": false,
+    "cropHeight": 650,
+    "encodings": [
+      {
+        "format": "jpeg",
+        "width": 375,
+        "height": 812,
+        "cssWidth": 390,
+        "cssHeight": 844
+      },
+      {
+        "format": "jpeg",
+        "width": 375,
+        "height": 812,
+        "cssWidth": 390,
+        "cssHeight": 844
+      },
+      {
+        "format": "jpeg",
+        "width": 375,
+        "height": 812,
+        "cssWidth": 390,
+        "cssHeight": 844
+      }
+    ],
+    "losslessPixelCertification": false,
+    "limitation": "Browser screenshot channel returned resized lossy JPEG. Different document offsets also change resampling phase. Not a lossless pixel comparison; use DOM geometry evidence and visual review separately."
+  },
+  {
+    "width": 390,
+    "route": "/explore/ev-guides/affordable-electric-cars",
+    "navigationPixelsExact": false,
+    "contentPixelsExact": false,
+    "cropHeight": 650,
+    "encodings": [
+      {
+        "format": "jpeg",
+        "width": 375,
+        "height": 812,
+        "cssWidth": 390,
+        "cssHeight": 844
+      },
+      {
+        "format": "jpeg",
+        "width": 375,
+        "height": 812,
+        "cssWidth": 390,
+        "cssHeight": 844
+      },
+      {
+        "format": "jpeg",
+        "width": 375,
+        "height": 812,
+        "cssWidth": 390,
+        "cssHeight": 844
+      }
+    ],
+    "losslessPixelCertification": false,
+    "limitation": "Browser screenshot channel returned resized lossy JPEG. Different document offsets also change resampling phase. Not a lossless pixel comparison; use DOM geometry evidence and visual review separately."
+  }
+]

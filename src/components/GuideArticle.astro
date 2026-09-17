@@ -4,7 +4,7 @@ import External from './External.astro';
 import GuideFactTable from './GuideFactTable.astro';
 import Icon from './Icon.astro';
 import { editorialGuides, guidePath, guideSources } from '../lib/content.js';
-import { official } from '../lib/site.js';
+import { official, resourceHref } from '../lib/site.js';
 
 const { guide } = Astro.props;
 const related = guide.related.map((id) => editorialGuides.find((item) => item.guideId === id)).filter(Boolean);
@@ -17,7 +17,7 @@ const showLeadMedia = guide.showLeadImage !== false;
 <article class="guide-article" id="guide-content">
   <header class="guide-article-header container"><span class="eyebrow">{guide.category}</span><h1>{guide.title}</h1><p class="guide-deck">{guide.summary}</p><div class="guide-meta"><span>Published <!-- -->{guide.published}</span><span>Last reviewed <!-- -->{guide.reviewed || '14 September 2026'}</span><span>{guide.targetModels.join(' · ')}</span></div></header>
   <div class="guide-article-body container"><aside class="quick-answer" aria-label="Quick answer"><span>Quick answer</span><p>{guide.quickAnswer}<Citations ids={guide.sources.slice(0, 4)} {referenceIds} /></p></aside></div>
-  {showLeadMedia && <figure class="guide-lead-media"><External href={guide.image.href}><img src={guide.image.src} alt={guide.image.alt} /></External></figure>}
+  {showLeadMedia && <figure class="guide-lead-media"><External href={guide.image.href}><img src={resourceHref(guide.image.src, Astro.url.pathname)} alt={guide.image.alt} /></External></figure>}
   <div class="guide-article-body container">
     {guide.sections.map((section) => <section class="guide-copy-section"><h2>{section.heading}</h2>{section.paragraphs.map((paragraph, index) => <p>{paragraph}{index === section.paragraphs.length - 1 && <Citations ids={section.sources} {referenceIds} />}</p>)}{section.bullets && <ul>{section.bullets.map((item) => <li>{item}</li>)}</ul>}{section.table && <GuideFactTable table={section.table} heading={section.heading} />}</section>)}
     <section class="guide-notes" aria-labelledby="important-notes"><h2 id="important-notes">What to confirm before buying</h2>{guide.notes.map((note) => <p>{note}</p>)}</section>

@@ -1,0 +1,156 @@
+.parallax__container{clip:rect(0,auto,auto,0);height:100%;left:0;overflow:hidden;position:absolute;top:0;width:100%;z-index:-100}.parallax__container .parallax{background-position:center;background-repeat:no-repeat;background-size:cover;position:fixed;top:0;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);-webkit-transform-style:preserve-3d;transform-style:preserve-3d;width:100%}
+		
+		
+		.effect-container {
+            -webkit-align-items: center;
+            align-items: center;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 15px;
+            position: relative;
+            width: 100%;
+			border-top: 2px solid rgba(0,0,0,.1);
+            border-bottom: 2px solid rgba(0,0,0,.1);
+        }
+        .container--big {
+            height: 175vh;
+        }
+        .container--full {
+            height: 100vh;
+        }
+        .container--small {
+            height: 40vh;
+        }
+        .effect-container .content {
+            border-radius: 8px;
+            color: #333;
+            margin: 0 auto;
+            padding: 20px 20px;
+            text-align: left;
+        }
+        
+        .effect-container .content h1 {
+            font-weight: 300;
+			line-height: 1;
+			letter-spacing: -.05rem;
+        }
+        
+        .effect-container .content h2 {
+            font-weight: 300;
+			line-height: 1;
+			letter-spacing: -.05rem;
+        }
+		
+		.effect-container .content.transparent {
+			background: none;
+		}
+
+		.effect-container .content.transparent h1 {
+            font-size: 3em;
+            padding:0;
+            margin:0;
+			color: #fff;
+        }
+        
+        .effect-container .content.transparent h2 {
+            font-size: 1.6em;
+            padding:0;
+            margin:0;
+            color: #fff;
+        }
+		
+        .effect-container .content.left {
+            margin: 0px;
+			margin-left: 110px;
+        }
+        
+        .effect-container .content.right {
+            margin: 0px;
+            right: 40px;
+           position: absolute;
+        }
+        
+            
+        
+        .parallax__container {
+            clip: rect(0, auto, auto, 0);
+            height: 100%;
+            left: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -100;
+			
+        }
+		
+		
+        .parallax__container .parallax {
+            /* can be put in a seperate class for better control */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* --------------------------- */
+            position: fixed;
+            top: 0 !important;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            width: 100%;
+        }
+        
+        @media only screen and (max-width: 600px) {
+			
+			
+			.effect-container .content.left {
+				margin-left: 0px;
+				margin:auto;
+			}
+			
+			.effect-container .content.right {
+				margin: 0px;
+				right: 10px;
+			}
+
+            .parallax__container .parallax:not('.full-size') {
+                background-size: auto 100vh !important;
+                top: -100px !important;
+            }
+			
+			.parallax__container .parallax.full-size {
+                background-size: auto 50vh !important;
+                top: -100px !important;
+            }
+			
+			.effect-container .content h1 {
+				font-size: 1.8em;
+	
+			}
+
+			.effect-container .content h2 {
+				font-size: 1.3em;
+	
+			}
+
+        }
+		
+		.blue {
+			background-color: #0c84e4;
+		}
+		
+		.grey {
+			background-color: #222;
+		}
+	
+		.warehouse .parallax__container {
+			background-size: cover;
+    		background-position: center;
+		}
+	

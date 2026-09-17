@@ -7,19 +7,27 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "node scripts/run-astro.mjs dev",
-    "build": "npm run verify:content && node scripts/run-astro.mjs build && npm run verify:build",
+    "dev": "node scripts/prepare-public.mjs && node scripts/run-astro.mjs dev",
+    "build": "npm run verify:content && node scripts/prepare-public.mjs && node scripts/run-astro.mjs build && node scripts/generate-deployment.mjs && npm run verify:build",
+    "build:nav": "node scripts/delivery-mode.mjs navigation build",
+    "build:content": "node scripts/delivery-mode.mjs content build",
+    "package:nav": "node scripts/delivery-mode.mjs navigation package",
+    "package:content": "node scripts/delivery-mode.mjs content package",
+    "nav:snapshot": "node scripts/update-navigation.mjs",
     "preview": "node scripts/run-astro.mjs preview",
-    "test": "npm run verify:content && npm run build",
+    "test": "node --test tests/*.test.mjs && npm run build",
+    "verify:delivery": "node scripts/verify-delivery.mjs",
     "verify:content": "node scripts/verify-content.mjs",
     "verify:original": "node scripts/compare-original.mjs",
     "verify:build": "node scripts/verify-build.mjs",
-    "package": "npm run build && node scripts/generate-manifest.mjs"
+    "package": "npm run build && node scripts/generate-manifest.mjs && node scripts/package-delivery.mjs"
   },
   "dependencies": {
     "astro": "7.3.3"
   },
   "devDependencies": {
-    "@bruits/satteri-wasm32-wasi": "file:vendor/satteri-wasm32-wasi"
+    "@bruits/satteri-wasm32-wasi": "file:vendor/satteri-wasm32-wasi",
+    "fflate": "^0.8.3",
+    "linkedom": "^0.18.13"
   }
 }

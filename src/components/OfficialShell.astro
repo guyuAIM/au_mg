@@ -1,0 +1,12 @@
+---
+import css from '../../public/assets/official-shell.css?raw';
+import snapshot from '../data/navigation-snapshot.json';
+import resources from '../data/official-shell-assets/manifest.json';
+import { renderShell } from '../lib/shell-core.js';
+import { resourceHref } from '../lib/site.js';
+const { part, path } = Astro.props;
+const options = { localAssets: true, assetMap: Object.fromEntries(Object.entries(resources.assetMap).map(([url, file]) => [url, resourceHref('/assets/official-shell/' + file, path)])) };
+---
+<mg-site-shell data-part={part} data-status="snapshot">
+  <template shadowrootmode="open"><link rel="stylesheet" href={resourceHref('/assets/official-shell/bundle.css', path)} /><style data-shell-adapter set:html={css}></style><div data-shell-content set:html={renderShell(snapshot.data, part, options)}></div></template>
+</mg-site-shell>

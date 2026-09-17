@@ -1,0 +1,949 @@
+{
+  "passed": true,
+  "checks": 188,
+  "originalFontsEmbeddedExactly": 5,
+  "originalCssDeclarationsExact": true,
+  "localFilePathsResolved": 15,
+  "nginxResults": [
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/",
+      "status": 301,
+      "location": "/explore/ev-guides"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/index.html",
+      "status": 301,
+      "location": "/explore/ev-guides"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/affordable-electric-cars",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/affordable-electric-cars/",
+      "status": 301,
+      "location": "/explore/ev-guides/affordable-electric-cars"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/affordable-electric-cars/index.html",
+      "status": 301,
+      "location": "/explore/ev-guides/affordable-electric-cars"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/small-electric-car-city-guide",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/small-electric-car-city-guide/",
+      "status": 301,
+      "location": "/explore/ev-guides/small-electric-car-city-guide"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/small-electric-car-city-guide/index.html",
+      "status": 301,
+      "location": "/explore/ev-guides/small-electric-car-city-guide"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/how-to-choose-an-electric-car",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/how-to-choose-an-electric-car/",
+      "status": 301,
+      "location": "/explore/ev-guides/how-to-choose-an-electric-car"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/how-to-choose-an-electric-car/index.html",
+      "status": 301,
+      "location": "/explore/ev-guides/how-to-choose-an-electric-car"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/family-electric-suv-buying-guide",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/family-electric-suv-buying-guide/",
+      "status": 301,
+      "location": "/explore/ev-guides/family-electric-suv-buying-guide"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/family-electric-suv-buying-guide/index.html",
+      "status": 301,
+      "location": "/explore/ev-guides/family-electric-suv-buying-guide"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/how-to-compare-family-electric-suvs",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/how-to-compare-family-electric-suvs/",
+      "status": 301,
+      "location": "/explore/ev-guides/how-to-compare-family-electric-suvs"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/how-to-compare-family-electric-suvs/index.html",
+      "status": 301,
+      "location": "/explore/ev-guides/how-to-compare-family-electric-suvs"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-car-running-costs",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-car-running-costs/",
+      "status": 301,
+      "location": "/explore/ev-guides/electric-car-running-costs"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-car-running-costs/index.html",
+      "status": 301,
+      "location": "/explore/ev-guides/electric-car-running-costs"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/how-electric-cars-work",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/how-electric-cars-work/",
+      "status": 301,
+      "location": "/explore/ev-guides/how-electric-cars-work"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/how-electric-cars-work/index.html",
+      "status": 301,
+      "location": "/explore/ev-guides/how-electric-cars-work"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/ev-hybrid-plug-in-hybrid-differences",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/ev-hybrid-plug-in-hybrid-differences/",
+      "status": 301,
+      "location": "/explore/ev-guides/ev-hybrid-plug-in-hybrid-differences"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/ev-hybrid-plug-in-hybrid-differences/index.html",
+      "status": 301,
+      "location": "/explore/ev-guides/ev-hybrid-plug-in-hybrid-differences"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/ac-and-dc-ev-charging",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/ac-and-dc-ev-charging/",
+      "status": 301,
+      "location": "/explore/ev-guides/ac-and-dc-ev-charging"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/ac-and-dc-ev-charging/index.html",
+      "status": 301,
+      "location": "/explore/ev-guides/ac-and-dc-ev-charging"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/how-long-does-ev-charging-take",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/how-long-does-ev-charging-take/",
+      "status": 301,
+      "location": "/explore/ev-guides/how-long-does-ev-charging-take"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/how-long-does-ev-charging-take/index.html",
+      "status": 301,
+      "location": "/explore/ev-guides/how-long-does-ev-charging-take"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/owning-an-ev-without-home-charging",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/owning-an-ev-without-home-charging/",
+      "status": 301,
+      "location": "/explore/ev-guides/owning-an-ev-without-home-charging"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/owning-an-ev-without-home-charging/index.html",
+      "status": 301,
+      "location": "/explore/ev-guides/owning-an-ev-without-home-charging"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-car-range-explained",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-car-range-explained/",
+      "status": 301,
+      "location": "/explore/ev-guides/electric-car-range-explained"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-car-range-explained/index.html",
+      "status": 301,
+      "location": "/explore/ev-guides/electric-car-range-explained"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-car-battery-life-and-warranty",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-car-battery-life-and-warranty/",
+      "status": 301,
+      "location": "/explore/ev-guides/electric-car-battery-life-and-warranty"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-car-battery-life-and-warranty/index.html",
+      "status": 301,
+      "location": "/explore/ev-guides/electric-car-battery-life-and-warranty"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-car-maintenance",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-car-maintenance/",
+      "status": 301,
+      "location": "/explore/ev-guides/electric-car-maintenance"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-car-maintenance/index.html",
+      "status": 301,
+      "location": "/explore/ev-guides/electric-car-maintenance"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-cars-under-30000-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/affordable-electric-cars"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-cars-under-40000-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/affordable-electric-cars"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/cheapest-new-electric-cars-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/affordable-electric-cars"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/best-value-electric-cars-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/affordable-electric-cars"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/small-electric-cars-worth-considering-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/small-electric-car-city-guide"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-hatchbacks-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/small-electric-car-city-guide"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/byd-dolphin-alternatives-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/small-electric-car-city-guide"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/geely-ex2-alternatives-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/small-electric-car-city-guide"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-cars-to-consider-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/how-to-choose-an-electric-car"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/family-electric-suvs-under-50000-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/family-electric-suv-buying-guide"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/family-electric-suvs-under-60000-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/family-electric-suv-buying-guide"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-suvs-to-consider-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/family-electric-suv-buying-guide"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/mid-size-electric-suvs-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/family-electric-suv-buying-guide"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-cars-for-families-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/family-electric-suv-buying-guide"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/best-value-electric-suvs-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/family-electric-suv-buying-guide"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/byd-sealion-7-alternatives-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/how-to-compare-family-electric-suvs"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/kia-ev5-alternatives-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/how-to-compare-family-electric-suvs"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/geely-ex5-alternatives-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/how-to-compare-family-electric-suvs"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/cheapest-electric-cars-to-run-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/electric-car-running-costs"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/affordable-electric-cars-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/affordable-electric-cars"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/small-electric-car-city-guide-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/small-electric-car-city-guide"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/how-to-choose-an-electric-car-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/how-to-choose-an-electric-car"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/family-electric-suv-buying-guide-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/family-electric-suv-buying-guide"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/how-to-compare-family-electric-suvs-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/how-to-compare-family-electric-suvs"
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/electric-car-running-costs-australia",
+      "status": 301,
+      "location": "/explore/ev-guides/electric-car-running-costs"
+    },
+    {
+      "url": "http://127.0.0.1:4331/missing-au-mg-route",
+      "status": 404,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/missing-article",
+      "status": 404,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/about/faqs",
+      "status": 404,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/vehicles/mgs6-ev",
+      "status": 404,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/sitemap.xml",
+      "status": 404,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/robots.txt",
+      "status": 404,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/assets/styles.css",
+      "status": 404,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/sitemap_evguide.xml",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/faq-banner-mobile.jpg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/faq-banner.jpg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/Favorites.woff2",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/FavoritStd-Bold.woff2",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/FavoritStd-Italic.woff",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/FavoritStd-Light.woff2",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/FavoritStd-LightItalic.woff",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/FavoritStd-Medium.woff2",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/FavoritStd-Regular.woff2",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/geo-static.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/ionicons.min.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/ionicons.ttf",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/logo-morris-garages.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/mg-logo.jpg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/mg4-ev-urban.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/mg4-urban-cargo.jpg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/mg4-urban-hero.jpg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/mg4-urban-side.jpg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/mg4-urban-tech.jpg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/mgs6-ev.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/mgs6-family.jpg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/mgs6-hero-desktop.jpg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/mgs6-hero-mobile.jpg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/mgs6-hero.jpg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/mgs6-interior.jpg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/mgs6-side.jpg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/scripts/file-navigation.js",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/scripts/official-shell.js",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/scripts/site-interactions.js",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/scripts/official-shell-core.js",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/04954d18e7f5303b.eot",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/08364af4019d8e5f.svg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/0ca7128d9e93e95a.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/1774bfb2fb37dc3e.eot",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/1d1db5ed98b97ca5.eot",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/1d399ef40c3816de.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/28b609ebf12b59ef.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/386d5d8c4a58f94e.ttf",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/3b30219379757aea.woff2",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/3c6e3a090ff310a3.eot",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/3c97afa9f30c53d7.eot",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/3cb78d7b663186e7.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/3d14ba0394460995.woff",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/415d6f2b42f63e74.woff",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/43a5733ed08808af.jpg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/460ccb83547c6d54.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/46641e591cdd3f50.woff",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/4acb6e740b1c4634.woff2",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/4c3b34b938b80169.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/4f367ca9f4cadb23.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/4f3db02a52f0e9a2.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/5334e7eb04ee4125.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/539c5e35c571b298.woff2",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/55b1b09520a4f6dd.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/585e04389bc006d2.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/62e9d0dc32aa57b1.woff",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/6564282ccfcb56d2.ttf",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/657f75fc18572816.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/6fbe9b278ff67764.svg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/71d11561489d0792.eot",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/72e0dce290030f54.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/7412e6bbdd44391c.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/771c0080f450ab37.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/7781055cab4d7682.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/7adc4266f24797b4.woff2",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/7d94e7fa45c453c6.woff",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/80c116a5f190f6b9.svg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/8293f4523b2aab2d.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/82bd66ae3b7f7ffe.eot",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/843f169a584b0568.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/88a821a8e44339de.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/8a313ac6ed07aeef.eot",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/8f13844f38de001d.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/92e0f691255c2755.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/942d1c37a215835d.eot",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/9794cee3c315d4fc.eot",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/a1cd142906561868.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/a94c7ce0d0a98f34.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/aa8ecedcb6a70e46.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/b08c863da1e33cec.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/b0df662a07f5e049.eot",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/b608b7098b2e0186.eot",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/bc3ab0d42d3abc3d.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/bd128d6d6e64b7b4.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/bdfa46428149503e.woff",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/bundle.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/c7e98e26f68bb4fc.eot",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/c981dbbd32dfb7ff.woff",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/c9824489f2cd7f2b.png",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/d697d53caad72835.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/d9213690d398c49d.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/dc9e315c1056ad7a.woff",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/dd1c2c68fb1e968c.eot",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/deec8e8032d570ca.svg",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/e3d333848ad89357.woff",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/e64aa2012cab2c73.eot",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/eaea467bef6b869f.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/eeac251404df9dc1.eot",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/f6f1863f6b34aea2.ttf",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/f913a4394d44bd58.woff2",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/fonts.css",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4331/explore/ev-guides/assets/official-shell/manifest.json",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4333/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4333/robots.txt",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4333/sitemap.xml",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4333/about/faqs",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4333/vehicles/mgs6-ev",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://127.0.0.1:4332/explore/ev-guides",
+      "status": 200,
+      "location": null
+    }
+  ]
+}

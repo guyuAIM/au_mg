@@ -1,0 +1,33 @@
+[
+  {
+    "categories": [
+      "All guides",
+      "EV basics",
+      "Charging",
+      "Range & batteries"
+    ],
+    "exact": true
+  },
+  {
+    "categories": [
+      "Budget & value",
+      "Choosing an EV",
+      "Family electric SUVs",
+      "Ownership costs"
+    ],
+    "exact": true
+  },
+  {
+    "search": [
+      "battery",
+      "zzzz-no-result"
+    ],
+    "exact": true
+  },
+  {
+    "httpBreadcrumbRestoresCategory": true
+  },
+  {
+    "mobileMenuAndExploreExact": true
+  }
+]

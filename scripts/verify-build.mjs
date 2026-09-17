@@ -1,10 +1,11 @@
 import { access, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { canonicalRoutes, editorialGuides, faqData, guideSources } from '../src/lib/content.js';
+import { canonicalRoutes, editorialGuides, guideSources } from '../src/lib/content.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
+const delivery = JSON.parse(await readFile(path.join(dist, 'delivery-config.json'), 'utf8'));
 const htmlFile = (route) => path.join(dist, ...route.slice(1).split('/'), 'index.html');
 const failures = [];
 const htmlByRoute = new Map();
@@ -12,13 +13,26 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
 const escaped = (value) => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 const tableCells = (table) => Array.isArray(table) ? table.flat() : [...(table?.headers || []), ...(table?.rows || []).flat()];
 
-try { await access(path.join(dist, 'index.html')); failures.push('dist/index.html must not exist because this project does not own /'); } catch {}
+const launcher = await readFile(path.join(dist, 'index.html'), 'utf8');
+if (delivery.mode === 'content') {
+  for (const asset of ['official-shell.js', 'official-shell-core.js']) {
+    try { await access(path.join(dist, 'explore/ev-guides/scripts', asset)); failures.push('content mode includes shell runtime: ' + asset); } catch {}
+  }
+}
+check(launcher.includes('noindex') && launcher.includes('location.replace') && launcher.includes('./explore/ev-guides/index.html'), 'root launcher is missing file/HTTP redirect or noindex');
+for (const forbidden of ['about/faqs/index.html', 'vehicles/mgs6-ev/index.html', 'robots.txt', 'sitemap.xml', 'assets', 'scripts']) {
+  try { await access(path.join(dist, forbidden)); failures.push('unexpected output: ' + forbidden); } catch {}
+}
 
 for (const route of canonicalRoutes) {
   const file = htmlFile(route);
   let html = '';
   try { html = await readFile(file, 'utf8'); } catch { failures.push(`missing built route ${route}: ${file}`); continue; }
   htmlByRoute.set(route, html);
+  check(!html.includes('class="hover-cta-container'), route + ' must not contain floating official CTA');
+  check(html.includes(`data-shell-mode="${delivery.mode}"`), route + ' mode mismatch');
+  check((html.match(/<mg-site-shell\b/g) || []).length === (delivery.mode === 'navigation' ? 2 : 0), route + ' shell count mismatch');
+  check(html.includes('id="mg-navigation-config"') === (delivery.mode === 'navigation'), route + ' shell configuration mismatch');
   const h1Count = (html.match(/<h1\b/gi) || []).length;
   check(h1Count === 1, `${route} must contain exactly one h1, found ${h1Count}`);
   check(!html.includes('<div id="root"></div>'), `${route} still contains an empty SPA root`);
@@ -27,18 +41,6 @@ for (const route of canonicalRoutes) {
   const match = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
   if (match) {
     try { JSON.parse(match[1]); } catch (error) { failures.push(`${route} has invalid JSON-LD: ${error.message}`); }
-  }
-}
-
-const faqHtml = await readFile(htmlFile('/about/faqs'), 'utf8');
-for (const faq of faqData.faqs) {
-  check(faqHtml.includes(escaped(faq.question)), `/about/faqs is missing FAQ question ${faq.id}`);
-  for (const paragraph of faq.paragraphs) check(faqHtml.includes(escaped(paragraph)), `/about/faqs is missing paragraph from ${faq.id}`);
-  for (const cell of tableCells(faq.table)) {
-    check(faqHtml.includes(escaped(cell)), `/about/faqs is missing table cell from ${faq.id}: ${cell}`);
-  }
-  for (const sourceId of faq.sources || []) {
-    check(faqHtml.includes(escaped(faqData.sources[sourceId].url)), `/about/faqs is missing source URL ${sourceId}`);
   }
 }
 
@@ -67,28 +69,29 @@ for (const guide of editorialGuides) {
 
 const localTargets = new Set(canonicalRoutes);
 for (const [route, html] of htmlByRoute) {
-  for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
-    const value = match[1].replaceAll('&amp;', '&');
-    if (value.startsWith('#')) {
-      check(html.includes(`id="${value.slice(1)}"`), `${route} has missing anchor ${value}`);
-      continue;
-    }
-    if (!value.startsWith('/') || value.startsWith('//')) continue;
-    const target = value.split(/[?#]/, 1)[0] || route;
-    if (target.startsWith('/assets/') || target.startsWith('/scripts/')) {
-      await access(path.join(dist, ...target.slice(1).split('/'))).catch(() => failures.push(`${route} references missing asset ${target}`));
-    } else {
-      check(localTargets.has(target), `${route} references non-canonical local route ${target}`);
-      const fragment = value.split('#')[1];
-      if (fragment && htmlByRoute.has(target)) check(htmlByRoute.get(target).includes(`id="${fragment}"`), `${route} references missing anchor ${value}`);
+  check(html.includes(`<base href="${route}/"`), route + ' has wrong HTTP resource base');
+  for (const tag of html.matchAll(/<(?:a|img|source|link|script)\b[^>]*>/g)) {
+    for (const match of tag[0].matchAll(/(?:href|src|srcset)="([^"]+)"/g)) {
+      const value = match[1].replaceAll('&amp;', '&');
+      // Official menu triggers are controls, not canonical content links.
+      if (value === '#' && /\bmega-link\b/.test(tag[0]) && /aria-haspopup=/.test(tag[0])) continue;
+      if (/^(https?:|data:)/.test(value)) continue;
+      const resolved = new URL(value, 'https://mgmotor.com.au' + route + '/');
+      const target = resolved.pathname;
+      if (target.includes('/assets/') || target.includes('/scripts/')) {
+        await access(path.join(dist, ...target.slice(1).split('/'))).catch(() => failures.push(route + ' references missing asset ' + target));
+        check(target.startsWith('/explore/ev-guides/'), 'asset escaped guide namespace: ' + target);
+      } else {
+        check(localTargets.has(target), route + ' references non-canonical route ' + target);
+        if (resolved.hash && htmlByRoute.has(target)) check(htmlByRoute.get(target).includes(`id="${resolved.hash.slice(1)}"`), 'missing anchor: ' + value);
+      }
     }
   }
 }
-
-const sitemap = await readFile(path.join(dist, 'sitemap.xml'), 'utf8');
-check((sitemap.match(/<url>/g) || []).length === 17, 'sitemap must contain exactly 17 URLs');
+const sitemap = await readFile(path.join(dist, 'sitemap_evguide.xml'), 'utf8');
+check((sitemap.match(/<url>/g) || []).length === 15, 'sitemap must contain exactly 15 URLs');
 for (const route of canonicalRoutes) check(sitemap.includes(`<loc>https://mgmotor.com.au${route}</loc>`), `sitemap is missing ${route}`);
-await access(path.join(dist, 'robots.txt'));
+
 await access(path.join(dist, '404.html')).catch(async () => access(path.join(dist, '404', 'index.html')));
 
 const deployment = await readFile(path.join(root, 'deployment/nginx-geo-static.conf'), 'utf8');
@@ -97,5 +100,15 @@ for (const route of canonicalRoutes) check(deployment.includes(`location = ${rou
 const redirects = await readFile(path.join(root, 'deployment/legacy-guide-redirects.conf'), 'utf8');
 check((redirects.match(/return 301 /g) || []).length === 25, 'deployment must contain 25 legacy redirects');
 
+const locations = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
+check(new Set(locations).size === 15, 'sitemap must have 15 unique URLs');
+const latest = editorialGuides.map(guide => guide.modifiedIso).sort().at(-1);
+check(sitemap.includes(`<loc>https://mgmotor.com.au/explore/ev-guides</loc><lastmod>${latest}</lastmod>`), 'hub lastmod must reflect latest guide date');
+for (const guide of editorialGuides) check(sitemap.includes(`<loc>https://mgmotor.com.au/explore/ev-guides/${guide.slug}</loc><lastmod>${guide.modifiedIso}</lastmod>`), 'guide lastmod mismatch');
+check(!/^\s*location\s+=\s+\/(?:index\.html|robots\.txt|sitemap\.xml)\s*\{/m.test(deployment), 'integration must not replace existing MG root files');
+for (const route of canonicalRoutes) {
+  check(deployment.includes(`location = ${route}/index.html { return 301 ${route}; }`), 'index.html redirect missing');
+  check(deployment.includes(`location = ${route}/ { return 301 ${route}; }`), 'trailing slash redirect missing');
+}
 if (failures.length) throw new Error(`Build verification failed (${failures.length}):\n- ${failures.join('\n- ')}`);
-console.log(JSON.stringify({ canonicalRoutes: 17, guideArticles: 14, faqsVerified: 16, h1PerPage: 1, jsonLdPerPage: true, spaRootFound: false, sitemapUrls: 17, tableCellsAndSourcesVerified: true, localLinksAndAssetsVerified: true }, null, 2));
+console.log(JSON.stringify({ canonicalRoutes: 15, guideArticles: 14, h1PerPage: 1, jsonLdPerPage: true, spaRootFound: false, sitemapUrls: 15, tableCellsAndSourcesVerified: true, localLinksAndAssetsVerified: true }, null, 2));

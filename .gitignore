@@ -4,6 +4,8 @@ dist/
 .astro/
 .DS_Store
 Thumbs.db
+.generated/
+release/
 .env
 .env.*
 !.env.example

@@ -1,0 +1,223 @@
+/*
+TERMS & CONDITIONS
+This website is copyright protected and uses strict security protocols. Do not copy, drag or remove anything from this website or its source code.
+https://virtualyard.com/terms-and-conditions for more information.
+*/
+
+:root {
+	--primary-colour-text-hover: #333;
+    --dealer-connect-finance-colour: #22de60;
+    --dealer-connect-finance-text: #fff;
+    --dark-nav-colour: rgba(0,0,0,.5);
+    --dark-nav-colour-scroll: rgba(0,0,0,.5);
+	--swiper-dark-arrow: #0000008f;
+	--swiper-dark-bg: #d2d2d7a3;
+}
+
+body {
+	background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.vehicle-specifics tr {
+    background: rgba(0,0,0,.1);
+}
+
+.vy-icon {
+	border: 1px solid rgba(0,0,0,.5);
+    color: rgba(0,0,0,.5);
+}
+
+.list-icons li span {
+	color: #000;
+}
+.footer-buttons {
+	background-color: #fff;
+}
+
+.footer {
+	background-color: #fff;
+}
+
+.event-details {
+	border: 1px solid rgba(0,0,0,.1);
+	background: white;
+}
+
+#btnResetFilter {
+	border: 2px solid #fff;
+    color: #fff !important;
+}
+.vehicle-pricing small, .vehicle-variant, .vehicle-make {
+	color: rgba(0,0,0,.5);
+}
+
+.vehicle-specifics .title {
+    color: rgba(0,0,0,.5);
+}
+
+.filter-top-bar {
+	background: var(--primary-colour);
+}
+
+.filter-status .action, .filter-count {
+    color: #fff !important;
+}
+
+.sidebar.stock-filter-container.open {
+	background: #fff;
+}
+
+.btn-primary {
+    border-color: #000 !important;
+    color: #000 !important;
+    box-shadow: none !important;
+}
+.key-features .btn-primary, .stock-search-ul .btn-primary, .text-white .btn-primary {
+    border-color: #fff !important;
+    color: #fff !important;
+    box-shadow: none !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--primary-colour);
+}
+
+.filter-sub .filter-item h2 {
+	color: #333;
+}
+
+body:not(.index) .filter-top span {
+	color: #333;
+}
+
+.nav-item.bubble, button.bubble {
+	background: rgba(0,0,0,0.5);
+	color: #fff !important;
+}
+
+.footer-basic {
+	color: rgb(0,0,0);
+    background: rgb(255,255,255);
+}
+
+.vy-scrolling .navbar.navbar-dark {
+    background: rgba(255,255,255,0.7);
+    border-bottom: 0.5px solid #e3e3e3;
+}
+
+
+hr {
+	margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#hero-bottom, #interior .figure-caption {
+	color: #000;
+}
+
+.reserve-button {
+	border: 3px solid #000;
+	color: #000;
+}
+
+.reserve-button.white {
+	border: 3px solid #fff;
+	color: #fff;
+}
+
+
+
+.nav-item.bubble .nav-link {
+	color: #fff !important;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+ 	color: #000;
+}
+
+
+
+
+.with-borders {
+    border: 1px solid rgba(0,0,0,0.26);
+	border-top: 0;
+    border-bottom: 0;
+}
+
+
+
+.text-white {
+	color: #fff;
+}
+
+.footer-basic .reserve-button {
+	color: #fff;
+	background-color: #28ade2;
+    border-color: #029edd;
+}
+
+.footer-basic ul a, .footer-basic .list-inline-item {
+	color: #000;
+}
+
+#vertical-line {
+	background: rgba(0,0,0,.1);
+}
+
+.button-white {
+    border: 3px solid #fff;
+    color: #fff;
+}
+
+.btn-primary:hover, .vy-action-block a.btn:hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled):focus, .show>.btn-primary.dropdown-toggle {
+    background-color: transparent;
+    border-color: var(--primary-colour) !important;
+    color: var(--primary-colour-text-hover);
+}
+
+.btnPaymentMethod {
+	color: black !important;
+}
+
+.getStarted {
+	color: white !important;
+}
+
+.vehicle-content-list .card a {
+	color: #000;
+}
+
+@media (max-width: 991px) {
+	.nav-item.bubble {
+		background: none;
+		border-radius: 0px;
+		padding: 0px;
+	}
+	
+	.nav-item.bubble .nav-link {
+		color: #222 !important;
+	}
+
+}
+
+
+@media (max-width: 768px) {
+	.filter-status {
+		    border-bottom: none;
+    		border-top: none;	
+	}
+	
+	body.vy-scrolling .filter-status {
+		background: var(--primary-colour);
+	}
+	
+	.stock-filter-open .applied-filters {
+		background: #fff;
+		border-top: 1px solid #e3e3e3;
+	}
+	
+	.stock-filter-open .stock-filter .min-height {
+		background: #fff;
+	}
+	
+}

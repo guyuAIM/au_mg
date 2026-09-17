@@ -1,16 +1,16 @@
 ---
 import External from './External.astro';
-import { official } from '../lib/site.js';
+import { official, resourceHref } from '../lib/site.js';
 ---
 <footer>
   <div class="container footer-grid">
-    <img src="/assets/logo-morris-garages.png" width="180" height="63" alt="Morris Garages" />
+    <img src={resourceHref("/assets/logo-morris-garages.png", Astro.url.pathname)} width="180" height="63" alt="Morris Garages" />
     <div>
       <span>Explore MG</span>
       <External href={official('/vehicles/electric')}>Electric vehicles</External>
       <External href={official('/offers')}>Offers</External>
       <a href="/explore/ev-guides">EV Guides &amp; Advice</a>
-      <a href="/about/faqs">FAQs</a>
+      <a href={official("/about/faqs")}>FAQs</a>
     </div>
     <div>
       <span>Owners</span>

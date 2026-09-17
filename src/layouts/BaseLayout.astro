@@ -1,7 +1,7 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { absoluteAsset, canonical, site } from '../lib/site.js';
+import OfficialShell from '../components/OfficialShell.astro';
+import { delivery } from '../lib/delivery.js';
+import { absoluteAsset, canonical, site, resourceHref } from '../lib/site.js';
 
 const {
   title,
@@ -20,6 +20,8 @@ const serializedJsonLd = JSON.stringify(jsonLd).replaceAll('<', '\\u003c');
 <html lang={site.language}>
   <head>
     <meta charset="UTF-8" />
+    <base href={`${path}/`} />
+    <script is:inline>if (location.protocol === 'file:') document.querySelector('base').href = new URL('.', location.href).href;</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta property="og:type" content={ogType} />
@@ -33,16 +35,24 @@ const serializedJsonLd = JSON.stringify(jsonLd).replaceAll('<', '\\u003c');
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
     <link rel="canonical" href={pageUrl} />
-    <link rel="stylesheet" href="/assets/styles.css" />
-    <link rel="stylesheet" href="/assets/geo-static.css" />
+    <link rel="stylesheet" href={resourceHref('/assets/styles.css', path)} />
+    <link rel="stylesheet" href={resourceHref('/assets/geo-static.css', path)} />
     <title>{title}</title>
     <script type="application/ld+json" set:html={serializedJsonLd}></script>
-    <script src="/scripts/site-interactions.js" defer></script>
+    <script is:inline src={resourceHref('/scripts/file-navigation.js', path)} defer></script>
+    <script is:inline src={resourceHref('/scripts/site-interactions.js', path)} defer></script>
+    {delivery.mode === 'navigation' && <>
+      <link rel="stylesheet" href={resourceHref('/assets/official-shell/fonts.css', path)} />
+      <script is:inline type="application/json" id="mg-navigation-config" set:html={JSON.stringify(delivery.navigation).replaceAll('<', '\\u003c')}></script>
+      <script is:inline src={resourceHref('/scripts/official-shell-core.js', path)} defer></script>
+      <script is:inline src={resourceHref('/scripts/official-shell.js', path)} defer></script>
+    </>}
     <noscript><style>.answer[hidden]{display:block!important}</style></noscript>
   </head>
-  <body data-view={view}>
-    <Header view={view} />
+  <body data-view={view} data-page-path={path} data-shell-mode={delivery.mode}>
+    {delivery.mode === 'navigation' && <a class="skip" href={`${path}#guide-content`}>Skip to guide content</a>}
+    {delivery.mode === 'navigation' && <OfficialShell part="header" path={path} />}
     <main><slot /></main>
-    <Footer />
+    {delivery.mode === 'navigation' && <OfficialShell part="footer" path={path} />}
   </body>
 </html>

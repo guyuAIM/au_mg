@@ -20,7 +20,7 @@ for (const [relativePath, expected] of Object.entries(expectedHashes)) {
 }
 
 const summary = validateContent();
-if (canonicalRoutes.length !== 17) throw new Error(`Expected 17 canonical routes, found ${canonicalRoutes.length}`);
+if (canonicalRoutes.length !== 15) throw new Error(`Expected 15 canonical routes, found ${canonicalRoutes.length}`);
 if (Object.keys(guideSources).length !== 25) throw new Error(`Expected 25 guide sources, found ${Object.keys(guideSources).length}`);
 
 const payload = {

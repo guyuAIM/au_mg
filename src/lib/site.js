@@ -9,4 +9,10 @@ export const site = Object.freeze({
 
 export const official = (path) => `${site.origin}${path}`;
 export const canonical = (path) => official(path);
-export const absoluteAsset = (path) => new URL(path, `${site.origin}/`).href;
+export const guideBase = '/explore/ev-guides';
+export const assetPath = (path) => path.replace(/^\/(assets|scripts)\//, `${guideBase}/$1/`);
+export const absoluteAsset = (path) => new URL(assetPath(path), `${site.origin}/`).href;
+export const resourceHref = (asset, pagePath) => {
+  const depth = pagePath.replace(/\/$/, '').split('/').filter(Boolean).length - 2;
+  return '../'.repeat(Math.max(0, depth)) + asset.replace(/^\//, '');
+};

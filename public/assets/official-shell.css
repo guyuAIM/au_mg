@@ -1,0 +1,15 @@
+/* Isolation and interaction adapters only; visual rules come from official CSS. */
+:host{display:block;font-family:Favorit,sans-serif;font-size:16px;font-weight:300;line-height:1.5;color:#212529;text-align:left}
+:host([data-part=header]){position:sticky;top:0;z-index:1030;height:110px}
+:host([data-part=header]) .official-context{background:transparent!important}
+.official-context{font-family:MgOfficialFavorit,sans-serif;font-size:16px;font-weight:300;line-height:1.5;color:#212529;text-align:left;overflow:visible!important}
+.official-context .mega-menu-bg{width:100%}
+[data-shell-sentinel]{display:none!important}
+.official-tiktok{display:inline-block;width:30px;height:30px;font-size:30px;vertical-align:baseline;margin-right:20px;color:white}
+.official-tiktok svg{display:block;width:100%;height:100%;fill:currentColor}
+.official-context .mega-menu-filter-option[aria-pressed]{cursor:pointer}
+.official-context #side-menu .contents:empty{display:none}
+.official-context .mega-menu-filter-option:focus-visible,.official-context .mega-link:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+:host(:not([data-interactive])) .mega-menu-filter{display:none!important}
+:host(:not([data-interactive])) .nav-item:focus-within>.mega-menu{display:block;opacity:1;visibility:visible;pointer-events:auto}
+@media(max-width:991px){:host(:not([data-interactive])){height:auto}:host(:not([data-interactive])) nav .navbar-collapse{display:block!important}:host(:not([data-interactive])) nav{height:auto!important;min-height:110px}}

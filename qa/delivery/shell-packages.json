@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "mode": "content",
+      "pages": 15,
+      "mainHtmlByteExact": true,
+      "sitemapByteExact": true,
+      "originalDerivedCssByteExact": true,
+      "archive": "D:\\gy\\au_mg\\release\\au_mg_evguide_content_2026-09-17T08-42-05-431Z.zip"
+    },
+    {
+      "mode": "navigation",
+      "pages": 15,
+      "mainHtmlByteExact": true,
+      "sitemapByteExact": true,
+      "originalDerivedCssByteExact": true,
+      "archive": "D:\\gy\\au_mg\\release\\au_mg_evguide_navigation_2026-09-17T08-42-13-484Z.zip"
+    }
+  ]
+}

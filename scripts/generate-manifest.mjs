@@ -4,7 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const excludedDirectories = new Set(['node_modules', '.git', '.astro']);
+const excludedDirectories = new Set(['node_modules', '.git', '.astro', '.generated', 'release']);
 const excludedFiles = new Set(['FILE_MANIFEST_SHA256.txt']);
 const files = [];
 const walk = async (directory, prefix = '') => {

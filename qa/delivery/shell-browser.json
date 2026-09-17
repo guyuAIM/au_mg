@@ -1,0 +1,683 @@
+{
+  "layout": [
+    {
+      "route": "/explore/ev-guides",
+      "width": 1280,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        3465.125,
+        3465.125,
+        3465.125
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/affordable-electric-cars",
+      "width": 1280,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        4568.96875,
+        4568.96875,
+        4568.96875
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/small-electric-car-city-guide",
+      "width": 1280,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        4471.7734375,
+        4471.7734375,
+        4471.7734375
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/how-to-choose-an-electric-car",
+      "width": 1280,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        4939.0625,
+        4939.0625,
+        4939.0625
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/family-electric-suv-buying-guide",
+      "width": 1280,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        4926.1171875,
+        4926.1171875,
+        4926.1171875
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/how-to-compare-family-electric-suvs",
+      "width": 1280,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        4823.46875,
+        4823.46875,
+        4823.46875
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/electric-car-running-costs",
+      "width": 1280,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        5062.46875,
+        5062.46875,
+        5062.46875
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/how-electric-cars-work",
+      "width": 1280,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        3054.3515625,
+        3054.3515625,
+        3054.3515625
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/ev-hybrid-plug-in-hybrid-differences",
+      "width": 1280,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        3129.3515625,
+        3129.3515625,
+        3129.3515625
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/ac-and-dc-ev-charging",
+      "width": 1280,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        3443.09375,
+        3443.09375,
+        3443.09375
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/how-long-does-ev-charging-take",
+      "width": 1280,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        3081.8984375,
+        3081.8984375,
+        3081.8984375
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/owning-an-ev-without-home-charging",
+      "width": 1280,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        3241.2890625,
+        3241.2890625,
+        3241.2890625
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/electric-car-range-explained",
+      "width": 1280,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        3945.1328125,
+        3945.1328125,
+        3945.1328125
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/electric-car-battery-life-and-warranty",
+      "width": 1280,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        3412.7890625,
+        3412.7890625,
+        3412.7890625
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/electric-car-maintenance",
+      "width": 1280,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        3622.28125,
+        3622.28125,
+        3622.28125
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides",
+      "width": 390,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        5187.546875,
+        5187.546875,
+        5187.546875
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/affordable-electric-cars",
+      "width": 390,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        5783.953125,
+        5783.953125,
+        5783.953125
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/small-electric-car-city-guide",
+      "width": 390,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        5560.890625,
+        5560.890625,
+        5560.890625
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/how-to-choose-an-electric-car",
+      "width": 390,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        6261.625,
+        6261.625,
+        6261.625
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/family-electric-suv-buying-guide",
+      "width": 390,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        6342.625,
+        6342.625,
+        6342.625
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/how-to-compare-family-electric-suvs",
+      "width": 390,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        6005.8671875,
+        6005.8671875,
+        6005.8671875
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/electric-car-running-costs",
+      "width": 390,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        6956.6484375,
+        6956.6484375,
+        6956.6484375
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/how-electric-cars-work",
+      "width": 390,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        3944.59375,
+        3944.59375,
+        3944.59375
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/ev-hybrid-plug-in-hybrid-differences",
+      "width": 390,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        4046.34375,
+        4046.34375,
+        4046.34375
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/ac-and-dc-ev-charging",
+      "width": 390,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        4282.140625,
+        4282.140625,
+        4282.140625
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/how-long-does-ev-charging-take",
+      "width": 390,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        4000.25,
+        4000.25,
+        4000.25
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/owning-an-ev-without-home-charging",
+      "width": 390,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        4267.3046875,
+        4267.3046875,
+        4267.3046875
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/electric-car-range-explained",
+      "width": 390,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        4897.1328125,
+        4897.1328125,
+        4897.1328125
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/electric-car-battery-life-and-warranty",
+      "width": 390,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        4611.53125,
+        4611.53125,
+        4611.53125
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "route": "/explore/ev-guides/electric-car-maintenance",
+      "width": 390,
+      "textExact": true,
+      "layoutExact": true,
+      "heights": [
+        4330.0078125,
+        4330.0078125,
+        4330.0078125
+      ],
+      "mainTop": [
+        110,
+        110,
+        0
+      ],
+      "images": true,
+      "overflow": false
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario": "unavailable",
+      "h1": "EV Guides & Advice",
+      "mainWidth": 1265,
+      "status": [
+        "fallback",
+        "fallback"
+      ]
+    },
+    {
+      "scenario": "invalid",
+      "h1": "EV Guides & Advice",
+      "mainWidth": 1265,
+      "status": [
+        "fallback",
+        "fallback"
+      ]
+    },
+    {
+      "scenario": "timeout",
+      "h1": "EV Guides & Advice",
+      "mainWidth": 1265,
+      "status": [
+        "fallback",
+        "fallback"
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "1280-hub-baseline.jpg",
+      "width": 1280,
+      "height": 900,
+      "route": "/explore/ev-guides",
+      "variant": "baseline",
+      "mainTop": 110,
+      "mainHeight": 3465.125
+    },
+    {
+      "name": "1280-hub-navigation.jpg",
+      "width": 1280,
+      "height": 900,
+      "route": "/explore/ev-guides",
+      "variant": "navigation",
+      "mainTop": 110,
+      "mainHeight": 3465.125
+    },
+    {
+      "name": "1280-hub-content.jpg",
+      "width": 1280,
+      "height": 900,
+      "route": "/explore/ev-guides",
+      "variant": "content",
+      "mainTop": 0,
+      "mainHeight": 3465.125
+    },
+    {
+      "name": "1280-article-baseline.jpg",
+      "width": 1280,
+      "height": 900,
+      "route": "/explore/ev-guides/affordable-electric-cars",
+      "variant": "baseline",
+      "mainTop": 110,
+      "mainHeight": 4568.96875
+    },
+    {
+      "name": "1280-article-navigation.jpg",
+      "width": 1280,
+      "height": 900,
+      "route": "/explore/ev-guides/affordable-electric-cars",
+      "variant": "navigation",
+      "mainTop": 110,
+      "mainHeight": 4568.96875
+    },
+    {
+      "name": "1280-article-content.jpg",
+      "width": 1280,
+      "height": 900,
+      "route": "/explore/ev-guides/affordable-electric-cars",
+      "variant": "content",
+      "mainTop": 0,
+      "mainHeight": 4568.96875
+    },
+    {
+      "name": "390-hub-baseline.jpg",
+      "width": 390,
+      "height": 844,
+      "route": "/explore/ev-guides",
+      "variant": "baseline",
+      "mainTop": 110,
+      "mainHeight": 5187.546875
+    },
+    {
+      "name": "390-hub-navigation.jpg",
+      "width": 390,
+      "height": 844,
+      "route": "/explore/ev-guides",
+      "variant": "navigation",
+      "mainTop": 110,
+      "mainHeight": 5187.546875
+    },
+    {
+      "name": "390-hub-content.jpg",
+      "width": 390,
+      "height": 844,
+      "route": "/explore/ev-guides",
+      "variant": "content",
+      "mainTop": 0,
+      "mainHeight": 5187.546875
+    },
+    {
+      "name": "390-article-baseline.jpg",
+      "width": 390,
+      "height": 844,
+      "route": "/explore/ev-guides/affordable-electric-cars",
+      "variant": "baseline",
+      "mainTop": 110,
+      "mainHeight": 5783.953125
+    },
+    {
+      "name": "390-article-navigation.jpg",
+      "width": 390,
+      "height": 844,
+      "route": "/explore/ev-guides/affordable-electric-cars",
+      "variant": "navigation",
+      "mainTop": 110,
+      "mainHeight": 5783.953125
+    },
+    {
+      "name": "390-article-content.jpg",
+      "width": 390,
+      "height": 844,
+      "route": "/explore/ev-guides/affordable-electric-cars",
+      "variant": "content",
+      "mainTop": 0,
+      "mainHeight": 5783.953125
+    }
+  ]
+}
