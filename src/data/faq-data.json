@@ -1084,7 +1084,7 @@
     },
     {
       "id": "F35",
-      "question": "How should buyers compare budget-friendly electric vehicles?",
+      "question": "Which MG electric vehicle best fits my budget and driving needs?",
       "category": "Budget & offers",
       "models": [
         "urban",
@@ -1093,8 +1093,8 @@
         "s6"
       ],
       "paragraphs": [
-        "Compare the final drive-away quote, usable range for your routine, charging access, passenger and luggage fit, standard equipment, warranty and expected running costs. Within MG's current EV range, use the MG4 EV Urban and MG4 EV as hatchback reference points, and the MGS5 EV and MGS6 EV as compact and mid-size SUV reference points.",
-        "Compare those MG models with alternatives using the same postcode, registration type, delivery timing and ownership period. Add insurance, charging equipment and electricity costs rather than treating the advertised vehicle price as the full cost."
+        "Start with the vehicle type that suits your everyday use. Compare the MG4 EV Urban and MG4 EV if you want an electric hatchback; compare the MGS5 EV and MGS6 EV if you need an electric SUV. Then check passenger and luggage fit, regular-trip range, charging access and the equipment fitted to the exact variant.",
+        "Set a complete budget using a current drive-away quote for your postcode, then add insurance, charging equipment and expected electricity and servicing costs. The lowest advertised price is only the best fit when the vehicle also meets your space, range and charging needs."
       ],
       "sources": [
         "evbuy",
@@ -1110,7 +1110,7 @@
         "F43"
       ],
       "cta": "offers",
-      "keywords": "budget friendly affordable electric cars value drive away price australia",
+      "keywords": "which MG electric vehicle budget driving needs MG4 EV Urban MG4 EV MGS5 EV MGS6 EV",
       "expiry": false,
       "owner": "/explore/ev-guides/affordable-electric-cars",
       "promptIds": []
