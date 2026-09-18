@@ -3,7 +3,7 @@ import { editorialGuides, guideSources, legacyGuideAliases } from '../data/edito
 
 export { faqData, editorialGuides, guideSources, legacyGuideAliases };
 
-export const faqCategories = ['All topics', 'Budget & offers', 'Choosing your MG', 'Compare models', 'Space & family', 'Ownership & warranty'];
+export const faqCategories = ['All topics', 'Budget & offers', 'Choosing an EV', 'Compare models', 'Space & family', 'Driving & charging', 'Ownership & warranty'];
 export const faqModels = [['all', 'All models'], ['urban', 'MG4 EV Urban'], ['mg4', 'MG4 EV'], ['s5', 'MGS5 EV'], ['s6', 'MGS6 EV'], ['hybrid', 'MG hybrids']];
 export const guideCategories = ['All guides', 'EV basics', 'Charging', 'Range & batteries', 'Budget & value', 'Choosing an EV', 'Family electric SUVs', 'Ownership costs'];
 export const guidePath = (slug) => `/explore/ev-guides/${slug}`;
@@ -20,7 +20,16 @@ function assert(condition, message) {
 }
 
 export function validateContent() {
-  assert(faqData.faqs.length === 16, `expected 16 FAQs, found ${faqData.faqs.length}`);
+  assert(faqData.faqs.length === 27, `expected 27 FAQs, found ${faqData.faqs.length}`);
+  assert(Array.isArray(faqData.actionToQna) && faqData.actionToQna.length === 14, 'expected 14 Peec action mappings');
+  const mappedFaqIds = new Set(faqData.faqs.map((faq) => faq.id));
+  const actionNames = new Set();
+  for (const mapping of faqData.actionToQna) {
+    assert(mapping.action && !actionNames.has(mapping.action), `duplicate or missing action mapping: ${mapping.action || '(unnamed)'}`);
+    assert(Array.isArray(mapping.questionIds) && mapping.questionIds.length > 0, `action has no Q&A coverage: ${mapping.action}`);
+    mapping.questionIds.forEach((id) => assert(mappedFaqIds.has(id), `action references unknown Q&A: ${id}`));
+    actionNames.add(mapping.action);
+  }
   assert(editorialGuides.length === 14, `expected 14 guides, found ${editorialGuides.length}`);
   assert(Object.keys(legacyGuideAliases).length === 25, `expected 25 legacy aliases, found ${Object.keys(legacyGuideAliases).length}`);
   assert(new Set(editorialGuides.map((guide) => guide.slug)).size === editorialGuides.length, 'guide slugs must be unique');
@@ -37,6 +46,7 @@ export function validateContent() {
     for (const id of faq.related || []) assert(faqIds.has(id), `FAQ ${faq.id} references missing FAQ ${id}`);
     for (const id of faq.sources || []) assert(faqSourceIds.has(id), `FAQ ${faq.id} references missing source ${id}`);
     assert(faqSourceIds.has(faq.cta), `FAQ ${faq.id} references missing CTA source ${faq.cta}`);
+    if (faq.owner?.startsWith('/explore/ev-guides/')) assert(canonicalRoutes.includes(faq.owner), `FAQ ${faq.id} references missing owner route ${faq.owner}`);
   }
 
   for (const guide of editorialGuides) {

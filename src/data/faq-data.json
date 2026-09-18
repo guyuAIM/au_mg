@@ -1,6 +1,6 @@
 {
   "reviewed": "2026-09-14",
-  "modified": "2026-09-17",
+  "modified": "2026-09-18",
   "offerChecked": "2026-09-17",
   "offerExpiry": "2026-09-30",
   "sources": {
@@ -87,8 +87,146 @@
       "url": "https://www.energy.gov.au/electric-vehicles/buying-electric-vehicle/cost-and-emissions-comparison-tools",
       "supports": "Independent tools for comparing annual energy costs, charging time and vehicle emissions.",
       "checked": "2026-09-17"
+    },
+    "evcharging": {
+      "title": "Australian Government — how to charge an electric vehicle",
+      "url": "https://www.energy.gov.au/electric-vehicles/owning-electric-vehicle/how-charge-your-electric-vehicle",
+      "supports": "Australian charging options, charging locations and practical charging guidance.",
+      "checked": "2026-09-18"
+    },
+    "evtrip": {
+      "title": "Australian Government — EV road trips and charging",
+      "url": "https://www.energy.gov.au/electric-vehicles/owning-electric-vehicle/planning-electric-vehicle-trip",
+      "supports": "Planning longer electric-vehicle journeys in Australia.",
+      "checked": "2026-09-18"
+    },
+    "ancapUrban": {
+      "title": "ANCAP — MG4 EV Urban safety rating",
+      "url": "https://www.ancap.com.au/safety-ratings/mg/4-ev-urban/f3ed7b",
+      "supports": "ANCAP rating, applicable variants and detailed safety assessment for MG4 EV Urban.",
+      "checked": "2026-09-18"
+    },
+    "ancapS6": {
+      "title": "ANCAP — MGS6 EV safety rating",
+      "url": "https://www.ancap.com.au/safety-ratings/mg/mgs6-ev/588e29",
+      "supports": "ANCAP rating, applicable variants and detailed safety assessment for MGS6 EV.",
+      "checked": "2026-09-18"
     }
   },
+  "actionToQna": [
+    {
+      "action": "Guide to Selecting an Electric Vehicle in Australia 2026",
+      "impact": "Very high",
+      "questionIds": [
+        "F05",
+        "F33"
+      ]
+    },
+    {
+      "action": "Selecting an electric SUV for family needs in Australia",
+      "impact": "Very high",
+      "questionIds": [
+        "F10",
+        "F22"
+      ]
+    },
+    {
+      "action": "Budget-Friendly Electric Vehicles in Australia",
+      "impact": "Very high",
+      "questionIds": [
+        "F01",
+        "F02",
+        "F35"
+      ]
+    },
+    {
+      "action": "Small Electric Hatchbacks for Australian Commuters",
+      "impact": "Very high",
+      "questionIds": [
+        "F03",
+        "F08",
+        "F36"
+      ]
+    },
+    {
+      "action": "Electric SUV Range and Charging Performance Guide",
+      "impact": "Very high",
+      "questionIds": [
+        "F09",
+        "F37"
+      ]
+    },
+    {
+      "action": "Affordable Luxury-Style Vehicles in Australia",
+      "impact": "Very high",
+      "questionIds": [
+        "F38"
+      ]
+    },
+    {
+      "action": "Fuel-Efficient Commuter Vehicle Selection Guide",
+      "impact": "Very high",
+      "questionIds": [
+        "F39"
+      ]
+    },
+    {
+      "action": "Road Trip Vehicle Selection Guide for Australia",
+      "impact": "Very high",
+      "questionIds": [
+        "F40"
+      ]
+    },
+    {
+      "action": "Automotive Ownership Experience and Support in Australia",
+      "impact": "Very high",
+      "questionIds": [
+        "F41"
+      ]
+    },
+    {
+      "action": "Modern Vehicle Safety and Value in Australia",
+      "impact": "Very high",
+      "questionIds": [
+        "F42"
+      ]
+    },
+    {
+      "action": "Electric Vehicle Ownership Economics in Australia",
+      "impact": "High",
+      "questionIds": [
+        "F06",
+        "F07",
+        "F43"
+      ]
+    },
+    {
+      "action": "Family Electric SUV Guide 2026",
+      "impact": "High",
+      "questionIds": [
+        "F10",
+        "F15",
+        "F22"
+      ]
+    },
+    {
+      "action": "MG S6 EV Buying Guide for Australian Families",
+      "impact": "High",
+      "questionIds": [
+        "F04",
+        "F11",
+        "F22"
+      ]
+    },
+    {
+      "action": "Electric Vehicle Safety, Warranty, and Support in Australia",
+      "impact": "High",
+      "questionIds": [
+        "F20",
+        "F45"
+      ]
+    }
+  ],
   "faqs": [
     {
       "id": "F01",
@@ -99,7 +237,7 @@
         "mg4"
       ],
       "paragraphs": [
-        "The MG4 EV Urban Essence 43 is the current MG option below A$30,000 drive-away. Below A$40,000, the shortlist also includes Urban Essence 54 and MG4 EV Essence 64. The table shows advertised September prices, not a prediction of future discounts.",
+        "The MG4 EV Urban Essence 43 is the current MG option below A$30,000 drive-away. Below A$40,000, the shortlist also includes the MG4 EV Urban Essence 54 and MG4 EV Essence 64. The table shows advertised September prices, not a prediction of future discounts.",
         "Keep room in your budget for insurance and any charging installation. Choose the battery and model around your regular journeys and charging access; a higher price does not automatically make a car better value for you."
       ],
       "sources": [
@@ -211,7 +349,7 @@
     {
       "id": "F03",
       "question": "Is the MG4 EV Urban a good first electric car for city driving?",
-      "category": "Choosing your MG",
+      "category": "Choosing an EV",
       "models": [
         "urban",
         "mg4"
@@ -280,7 +418,7 @@
     {
       "id": "F05",
       "question": "Should I choose an MG electric hatchback, electric SUV or hybrid SUV?",
-      "category": "Choosing your MG",
+      "category": "Choosing an EV",
       "models": [
         "urban",
         "mg4",
@@ -289,7 +427,8 @@
         "hybrid"
       ],
       "paragraphs": [
-        "Choose the body style around your passengers and luggage, then choose the powertrain around how you will refuel or recharge. MG electric hatchbacks, electric SUVs and hybrids answer different needs; a bigger vehicle or battery is worthwhile only when you will use the extra capability."
+        "Choose the body style around your passengers and luggage, then choose the powertrain around how you will refuel or recharge. An MG electric hatchback may suit tighter parking and daily commuting, while an electric SUV may better suit buyers who need easier passenger access or more luggage space.",
+        "An MG Hybrid+ model does not need to be plugged in. An MG Super Hybrid is most useful when you can charge it regularly. A larger vehicle or battery is worthwhile only when you will use the extra capability."
       ],
       "sources": [
         "electric",
@@ -451,7 +590,7 @@
     {
       "id": "F08",
       "question": "Which MG4 EV Urban battery should I choose: 43 kWh or 54 kWh?",
-      "category": "Choosing your MG",
+      "category": "Choosing an EV",
       "models": [
         "urban"
       ],
@@ -845,25 +984,22 @@
         "headers": [
           "MGS6 EV configuration",
           "Rear boot, seats up",
-          "Front compartment",
-          "WLTP range"
+          "Front compartment"
         ],
         "rows": [
           [
             "Essence RWD",
             "581 L",
-            "86 L",
-            "530 km"
+            "86 L"
           ],
           [
             "Essence AWD",
             "581 L",
-            "67 L",
-            "485 km"
+            "67 L"
           ]
         ]
       },
-      "note": "WLTP figures are laboratory comparison values. Actual range varies with speed, weather, load, tyres and driving conditions. MG quotes 10–80% DC charging in 38 minutes at 25 °C under specified conditions, with a maximum DC rate of 144 kW. Actual charging depends on the charger, battery and conditions.",
+      "note": "Published cargo capacities provide a consistent comparison, but they do not guarantee that a particular pram, suitcase or other item will fit. Check the vehicle with the equipment your household normally carries.",
       "related": [
         "F04",
         "F09",
@@ -910,6 +1046,372 @@
       "promptIds": [
         32
       ]
+    },
+    {
+      "id": "F33",
+      "question": "How should I shortlist an electric car in Australia?",
+      "category": "Choosing an EV",
+      "models": [
+        "urban",
+        "mg4",
+        "s5",
+        "s6",
+        "hybrid"
+      ],
+      "paragraphs": [
+        "Start with the decisions that cannot be compromised: your usual passengers and luggage, your longest regular journey, charging access, parking space and the final drive-away budget. Compare only vehicles that meet those needs, then assess their warranty, servicing and running costs on the same basis.",
+        "For example, a compact electric hatchback such as the MG4 EV Urban may suit local commuting and tighter parking, while a five-seat MGS6 EV suits buyers who need more luggage space. Test the car on familiar roads and bring the child seats or bags that matter to your household."
+      ],
+      "sources": [
+        "evbuy",
+        "electric",
+        "urban",
+        "s6",
+        "warranty"
+      ],
+      "table": null,
+      "note": "Use current specifications and a written quote for the exact variant and postcode. Published range is a standardised comparison figure, not a promise for every journey.",
+      "related": [
+        "F05",
+        "F35",
+        "F43"
+      ],
+      "cta": "electric",
+      "keywords": "choose electric car australia shortlist brands models family value",
+      "expiry": false,
+      "owner": "/explore/ev-guides/how-to-choose-an-electric-car",
+      "promptIds": []
+    },
+    {
+      "id": "F35",
+      "question": "How should I compare budget-friendly electric vehicles in Australia?",
+      "category": "Budget & offers",
+      "models": [
+        "urban",
+        "mg4",
+        "s5",
+        "s6"
+      ],
+      "paragraphs": [
+        "Compare the final drive-away quote, usable range for your routine, charging access, passenger and luggage fit, standard equipment, warranty and expected running costs. A lower advertised price is only useful if the vehicle also fits the way you drive and charge.",
+        "Keep the comparison like for like: use the same postcode, registration type, delivery timing and ownership period. Add insurance, charging equipment and electricity costs where relevant rather than treating the vehicle price as the full cost."
+      ],
+      "sources": [
+        "evbuy",
+        "evcost",
+        "offers",
+        "electric"
+      ],
+      "table": null,
+      "note": "Offers can change by date, location, vehicle availability and buyer eligibility. Check the current offers page and obtain a written quote before deciding.",
+      "related": [
+        "F01",
+        "F02",
+        "F43"
+      ],
+      "cta": "offers",
+      "keywords": "budget friendly affordable electric cars value drive away price australia",
+      "expiry": false,
+      "owner": "/explore/ev-guides/affordable-electric-cars",
+      "promptIds": []
+    },
+    {
+      "id": "F36",
+      "question": "What makes a small electric hatchback practical for an Australian commute?",
+      "category": "Driving & charging",
+      "models": [
+        "urban",
+        "mg4"
+      ],
+      "paragraphs": [
+        "A practical commuter EV fits your parking and passenger needs, covers normal weekly driving with a sensible range buffer, and can be charged where you live, work or regularly stop. Check rear-seat access, boot shape, visibility, controls and the route you use most often during a test drive.",
+        "MG4 EV Urban is a compact hatchback option with 43 kWh and 54 kWh battery versions. Its published WLTP range gives a consistent basis for comparing the versions, but your real range will vary with speed, weather, load and driving conditions."
+      ],
+      "sources": [
+        "urban",
+        "evbuy",
+        "evcharging"
+      ],
+      "table": null,
+      "note": "Do not choose a larger battery by default. It is most useful when the extra range solves a regular trip or charging-access need.",
+      "related": [
+        "F03",
+        "F08",
+        "F37"
+      ],
+      "cta": "urban",
+      "keywords": "small electric hatchback commuter city driving practical charging",
+      "expiry": false,
+      "owner": "/explore/ev-guides/small-electric-car-city-guide",
+      "promptIds": []
+    },
+    {
+      "id": "F37",
+      "question": "How should I compare EV range and charging for regular trips?",
+      "category": "Driving & charging",
+      "models": [
+        "urban",
+        "mg4",
+        "s5",
+        "s6"
+      ],
+      "paragraphs": [
+        "Use the same range test standard when comparing cars, then plan around your longest regular trip instead of the average day. Map where the car will be parked, which chargers are dependable on your route and how much range buffer you want for highway driving, weather, passengers and luggage.",
+        "For longer journeys, compare the vehicle's charging capability with the chargers on the route. Peak DC power alone does not determine charging-stop duration: battery temperature, state of charge, the charge curve, charger performance and site availability all affect the time required."
+      ],
+      "sources": [
+        "evcharging",
+        "evtrip",
+        "urban",
+        "s6"
+      ],
+      "table": null,
+      "note": "Published range and charging times are comparison references. Actual results vary with the vehicle, charger and conditions.",
+      "related": [
+        "F08",
+        "F09",
+        "F40"
+      ],
+      "cta": "electric",
+      "keywords": "ev range charging compare regular trips road trip battery australia",
+      "expiry": false,
+      "owner": "/explore/ev-guides/electric-car-range-explained",
+      "promptIds": []
+    },
+    {
+      "id": "F38",
+      "question": "What should buyers look for in an affordable premium-style vehicle?",
+      "category": "Budget & offers",
+      "models": [
+        "urban",
+        "mg4",
+        "s5",
+        "s6",
+        "hybrid"
+      ],
+      "paragraphs": [
+        "Look beyond styling and the number of features. Compare cabin comfort, visibility, everyday controls, safety equipment, warranty, servicing and the cost of the features you will actually use. Then assess those items against the final drive-away quote and expected ownership costs.",
+        "When considering an MG model, check the standard equipment fitted to the exact Australian variant, then test the vehicle on familiar roads and sit in every seat your household will use. A feature list cannot confirm ride comfort, cabin noise, storage, child-seat fit or whether the controls work for you."
+      ],
+      "sources": [
+        "evbuy",
+        "warranty",
+        "service",
+        "electric"
+      ],
+      "table": null,
+      "note": "Terms such as “premium” and “luxury-style” are subjective. Use a like-for-like comparison of specifications, ownership terms and practical fit.",
+      "related": [
+        "F33",
+        "F35",
+        "F42"
+      ],
+      "cta": "electric",
+      "keywords": "affordable luxury style vehicle value comfort features warranty",
+      "expiry": false,
+      "owner": "/explore/ev-guides/how-to-choose-an-electric-car",
+      "promptIds": []
+    },
+    {
+      "id": "F39",
+      "question": "How do I compare fuel-efficient cars for a daily commute?",
+      "category": "Driving & charging",
+      "models": [
+        "urban",
+        "mg4",
+        "s5",
+        "s6",
+        "hybrid"
+      ],
+      "paragraphs": [
+        "Match the powertrain to your daily commute. A battery-electric vehicle can suit drivers with dependable charging; a conventional hybrid may suit drivers who cannot plug in; and a plug-in hybrid needs regular charging to make meaningful use of its electric range.",
+        "Use the same annual distance, energy or fuel price, charging mix, registration and insurance assumptions for every model. Published consumption figures are a starting point; test them against the trips, traffic and charging access you actually have."
+      ],
+      "sources": [
+        "evbuy",
+        "evcost",
+        "electric",
+        "hybrid"
+      ],
+      "table": null,
+      "note": "There is no single lowest-cost powertrain for every commuter. The total result depends on purchase price, driving pattern, charging or fuel costs, servicing and resale assumptions.",
+      "related": [
+        "F05",
+        "F36",
+        "F43"
+      ],
+      "cta": "electric",
+      "keywords": "fuel efficient commuter hybrid electric car daily commute running costs",
+      "expiry": false,
+      "owner": "/explore/ev-guides/ev-hybrid-plug-in-hybrid-differences",
+      "promptIds": []
+    },
+    {
+      "id": "F40",
+      "question": "How should I plan an electric-car road trip in Australia?",
+      "category": "Driving & charging",
+      "models": [
+        "urban",
+        "mg4",
+        "s5",
+        "s6"
+      ],
+      "paragraphs": [
+        "Plan the trip around compatible public chargers, a realistic arrival charge and a backup charging option at key stops. Allow extra range margin for high speeds, wind, terrain, temperature, passengers and luggage, and check current charger availability before departure.",
+        "For each stop, consider how much energy is needed rather than automatically charging to 100%. The vehicle's charging capability, the charger, battery temperature and state of charge determine the actual session time."
+      ],
+      "sources": [
+        "evtrip",
+        "evcharging",
+        "s6",
+        "urban"
+      ],
+      "table": null,
+      "note": "Road-trip planning is route-specific. Use current charging-network information and the vehicle's owner guidance before travel.",
+      "related": [
+        "F09",
+        "F37",
+        "F22"
+      ],
+      "cta": "electric",
+      "keywords": "electric car road trip australia public charging range plan",
+      "expiry": false,
+      "owner": "/explore/ev-guides/electric-car-range-explained",
+      "promptIds": []
+    },
+    {
+      "id": "F41",
+      "question": "What should I check about servicing and support before buying a car?",
+      "category": "Ownership & warranty",
+      "models": [
+        "urban",
+        "mg4",
+        "s5",
+        "s6",
+        "hybrid"
+      ],
+      "paragraphs": [
+        "Before ordering, read the vehicle warranty, high-voltage battery warranty and roadside-assistance terms separately. Ask how scheduled servicing is booked, where the nearest authorised service centre is, what the exact model's service schedule requires and where model-specific service pricing is published.",
+        "Compare the written terms, not a broad brand claim. Eligibility, vehicle use, registration date, exclusions and required servicing can change the coverage that applies to a particular vehicle."
+      ],
+      "sources": [
+        "warranty",
+        "service",
+        "serviceprice",
+        "original"
+      ],
+      "table": null,
+      "note": "Confirm the current policy and service information for the exact model and registration date before purchase.",
+      "related": [
+        "F20",
+        "F43",
+        "F45"
+      ],
+      "cta": "serviceprice",
+      "keywords": "after sales support servicing warranty dealer service centre",
+      "expiry": false,
+      "owner": "/explore/ev-guides/electric-car-running-costs",
+      "promptIds": []
+    },
+    {
+      "id": "F42",
+      "question": "How should I compare vehicle safety and value together?",
+      "category": "Ownership & warranty",
+      "models": [
+        "urban",
+        "mg4",
+        "s5",
+        "s6"
+      ],
+      "paragraphs": [
+        "Start with the current safety rating and the report that explains its test year, applicable variants and detailed assessment. Then check the exact vehicle's fitted active-safety and occupant-protection equipment, because a rating and an equipment list answer different questions.",
+        "Value comes from the combination of the safety equipment you will use, practical fit, warranty and ownership costs, not from one headline alone. MG4 EV Urban and MGS6 EV each have published ANCAP reports that can be read alongside their current Australian specifications."
+      ],
+      "sources": [
+        "ancapUrban",
+        "ancapS6",
+        "urban",
+        "s6",
+        "warranty"
+      ],
+      "table": null,
+      "note": "Safety assessments and equipment can be revised by model year or variant. Confirm the current Australian vehicle specification before ordering.",
+      "related": [
+        "F20",
+        "F38",
+        "F41"
+      ],
+      "cta": "electric",
+      "keywords": "vehicle safety value ancap rating driver assistance features",
+      "expiry": false,
+      "owner": "/explore/ev-guides/how-to-compare-family-electric-suvs",
+      "promptIds": []
+    },
+    {
+      "id": "F43",
+      "question": "How do I compare the total cost of owning an electric vehicle?",
+      "category": "Ownership & warranty",
+      "models": [
+        "urban",
+        "mg4",
+        "s5",
+        "s6"
+      ],
+      "paragraphs": [
+        "Use the same ownership period and annual distance for every vehicle. Add the drive-away price, electricity, public-charging costs where relevant, insurance, registration, scheduled servicing, tyres, charging equipment and finance costs. Then subtract an estimated resale value using the same future date and assumptions for each vehicle.",
+        "Run more than one scenario when public charging use, insurance or resale value is uncertain. The aim is not to predict one exact number; it is to compare vehicles on a transparent and consistent basis."
+      ],
+      "sources": [
+        "evbuy",
+        "evcost",
+        "serviceprice",
+        "warranty"
+      ],
+      "table": null,
+      "note": "Use model-specific quotes and document all assumptions. Do not assume that a lower purchase price automatically means a lower five-year cost.",
+      "related": [
+        "F06",
+        "F07",
+        "F35"
+      ],
+      "cta": "serviceprice",
+      "keywords": "electric vehicle total ownership cost five year charging insurance servicing depreciation",
+      "expiry": false,
+      "owner": "/explore/ev-guides/electric-car-running-costs",
+      "promptIds": []
+    },
+    {
+      "id": "F45",
+      "question": "What should I compare in EV warranty and after-sales support?",
+      "category": "Ownership & warranty",
+      "models": [
+        "urban",
+        "mg4",
+        "s5",
+        "s6"
+      ],
+      "paragraphs": [
+        "Read the general vehicle warranty and high-voltage battery warranty as separate documents. Compare their duration, distance limit, eligibility, exclusions, maintenance requirements and the process for obtaining service or repairs.",
+        "Also check the published service schedule and pricing for the exact model, roadside-assistance conditions and the convenience of authorised support near where you live. These details make an ownership comparison more useful than a single warranty headline."
+      ],
+      "sources": [
+        "warranty",
+        "service",
+        "serviceprice",
+        "original"
+      ],
+      "table": null,
+      "note": "The current published policy determines the applicable cover. Confirm the terms for the exact vehicle, registration date and intended use.",
+      "related": [
+        "F20",
+        "F41",
+        "F43"
+      ],
+      "cta": "warranty",
+      "keywords": "ev warranty battery coverage after sales support servicing roadside assistance",
+      "expiry": false,
+      "owner": "/explore/warranty",
+      "promptIds": []
     }
   ]
 }

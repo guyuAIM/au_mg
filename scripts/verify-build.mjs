@@ -116,4 +116,4 @@ for (const guide of editorialGuides) check(sitemap.includes(`<loc>https://mgmoto
 check(!/^\s*location\s+=\s+\/(?:index\.html|robots\.txt|sitemap\.xml)\s*\{/m.test(deployment), 'integration must not replace existing MG root files');
 check(deployment.includes(`location = ${guideBase}/index.html { return 301 ${guideBase}; }`) && deployment.includes('(?<mg_evguide_suffix>/index[.]html|/)?$'), 'canonical alias normalization missing');
 if (failures.length) throw new Error(`Build verification failed (${failures.length}):\n- ${failures.join('\n- ')}`);
-console.log(JSON.stringify({ canonicalRoutes: 16, guideArticles: 14, questions: 16, h1PerPage: 1, jsonLdPerPage: true, spaRootFound: false, sitemapUrls: 16, tableCellsAndSourcesVerified: true, localLinksAndAssetsVerified: true }, null, 2));
+console.log(JSON.stringify({ canonicalRoutes: 16, guideArticles: 14, questions: faqData.faqs.length, h1PerPage: 1, jsonLdPerPage: true, spaRootFound: false, sitemapUrls: 16, tableCellsAndSourcesVerified: true, localLinksAndAssetsVerified: true }, null, 2));
