@@ -41,19 +41,27 @@ const faqNode = (path, faqs) => ({
   '@type': 'FAQPage',
   '@id': `${canonical(path)}#faq`,
   isPartOf: { '@id': `${canonical(path)}#webpage` },
-  mainEntity: faqs.map((faq) => ({
-    '@type': 'Question',
-    name: faq.question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: faq.answer
-    }
-  }))
+  mainEntity: faqs.map((faq) => {
+    const url = faq.id ? `${canonical(path)}#${faq.id}` : canonical(path);
+    return {
+      '@type': 'Question',
+      name: faq.question,
+      url,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+        url
+      }
+    };
+  })
 });
 
-export function faqPageSchema({ path, title, description, faqs, vehicle = false }) {
+export function faqPageSchema({ path, title, description, faqs, vehicle = false, dateModified, lastReviewed }) {
   const graph = baseGraph({ path, title, description, pageType: 'FAQPage' });
   graph[2].mainEntity = faqNode(path, faqs).mainEntity;
+  graph[2].reviewedBy = { '@id': ids.organization };
+  if (dateModified) graph[2].dateModified = dateModified;
+  if (lastReviewed) graph[2].lastReviewed = lastReviewed;
   if (vehicle) {
     graph.push({
       '@type': ['Product', 'Vehicle'],

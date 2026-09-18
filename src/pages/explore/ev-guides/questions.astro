@@ -13,7 +13,14 @@ const answerText = (faq) => {
   if (faq.note) parts.push(faq.note);
   return parts.join(' ');
 };
-const jsonLd = faqPageSchema({ path, title, description, faqs: faqData.faqs.map((faq) => ({ question: faq.question, answer: answerText(faq) })) });
+const jsonLd = faqPageSchema({
+  path,
+  title,
+  description,
+  dateModified: faqData.modified,
+  lastReviewed: faqData.reviewed,
+  faqs: faqData.faqs.map((faq) => ({ id: faq.id, question: faq.question, answer: answerText(faq) }))
+});
 ---
 <BaseLayout {title} {description} {path} image="/assets/faq-banner.jpg" view="questions" {jsonLd}>
   <FaqContent view="hub" />

@@ -47,8 +47,13 @@ for (const route of canonicalRoutes) {
 
 const guideHub = await readFile(htmlFile('/explore/ev-guides'), 'utf8');
 const questionsHtml = await readFile(htmlFile(questionsPath), 'utf8');
+check(questionsHtml.includes(`"dateModified":"${faqData.modified}"`), `${questionsPath} is missing its structured-data modification date`);
+check(questionsHtml.includes(`"lastReviewed":"${faqData.reviewed}"`), `${questionsPath} is missing its structured-data review date`);
+check(questionsHtml.includes('"reviewedBy":{"@id":"https://mgmotor.com.au/#organization"}'), `${questionsPath} is missing its structured-data reviewer`);
+check(!/class="answer"[^>]*role="region"/.test(questionsHtml), `${questionsPath} must not expose every answer as a landmark region`);
 for (const faq of faqData.faqs) {
   check(questionsHtml.includes(escaped(faq.question)), `${questionsPath} is missing FAQ question ${faq.id}`);
+  check(questionsHtml.includes(`https://mgmotor.com.au${questionsPath}#${faq.id}`), `${questionsPath} is missing structured-data URL for ${faq.id}`);
   for (const paragraph of faq.paragraphs) check(questionsHtml.includes(escaped(paragraph)), `${questionsPath} is missing paragraph from ${faq.id}`);
   for (const cell of tableCells(faq.table)) check(questionsHtml.includes(escaped(cell)), `${questionsPath} is missing table cell from ${faq.id}: ${cell}`);
   for (const sourceId of faq.sources || []) check(questionsHtml.includes(escaped(faqData.sources[sourceId].url)), `${questionsPath} is missing source URL ${sourceId}`);

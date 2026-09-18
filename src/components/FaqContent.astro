@@ -51,7 +51,7 @@ const formatDate = (value) => new Intl.DateTimeFormat('en-AU', { day: 'numeric',
     {visibleFaqs.map((faq) => (
       <article class="faq" id={faq.id} data-faq-item data-category={faq.category} data-models={faq.models.join(' ')} data-search={`${faq.question} ${faq.keywords} ${faq.paragraphs.join(' ')} ${JSON.stringify(faq.table || '')}`}>
         <h3><button type="button" id={`trigger-${faq.id}`} aria-expanded="false" aria-controls={`answer-${faq.id}`} data-faq-trigger><span>{faq.question}</span><Icon name="down" /></button></h3>
-        <div class="answer" id={`answer-${faq.id}`} role="region" aria-labelledby={`trigger-${faq.id}`} hidden>
+        <div class="answer" id={`answer-${faq.id}`} aria-labelledby={`trigger-${faq.id}`} hidden>
           {faq.expiry && <div class="date-note">{offerExpired ? 'This September 2026 offer snapshot has expired. ' : `Prices checked ${formatDate(faqData.offerChecked)} · Offers end ${formatDate(faqData.offerExpiry)}. `}{offerExpired && <External href={official('/offers')}>View current MG offers</External>}</div>}
           {offerExpired && faq.expiry ? (
             <p>See the current offers page for available vehicles, prices and eligibility. The September promotion previously shown on this page is no longer presented as a current offer.</p>
