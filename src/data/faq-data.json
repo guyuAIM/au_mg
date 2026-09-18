@@ -1,5 +1,5 @@
 {
-  "reviewed": "2026-09-14",
+  "reviewed": "2026-09-18",
   "modified": "2026-09-18",
   "offerChecked": "2026-09-17",
   "offerExpiry": "2026-09-30",
@@ -69,6 +69,12 @@
       "url": "https://mgmotor.com.au/about/service-pricing-guide",
       "supports": "Model-specific servicing lookup. No five-year total is asserted.",
       "checked": "2026-09-14"
+    },
+    "roadside": {
+      "title": "MG Australia roadside assistance",
+      "url": "https://mgmotor.com.au/about/roadside-assist",
+      "supports": "Current roadside-assistance eligibility, services and contact information.",
+      "checked": "2026-09-18"
     },
     "original": {
       "title": "Existing MG Australia FAQs",
@@ -499,14 +505,14 @@
     },
     {
       "id": "F06",
-      "question": "What costs should I include when comparing an MG electric hatchback over five years?",
+      "question": "What costs should I include when estimating five-year ownership of an MG4 EV?",
       "category": "Ownership & warranty",
       "models": [
         "urban",
         "mg4"
       ],
       "paragraphs": [
-        "Add the drive-away price, charging, insurance, registration, scheduled servicing, tyres, home-charger installation and finance costs where relevant, then subtract an estimated resale value. Use the same five-year period and annual distance for every car.",
+        "Include the current drive-away price, charging, insurance, registration, scheduled servicing, tyres, home-charger installation and finance costs where relevant, then subtract an estimated resale value. Use the same five-year period and annual distance for every vehicle you compare.",
         "Use model-specific servicing and insurance quotes. Treat resale value as a range and calculate a second scenario with more public charging, because the charging mix can materially change the result."
       ],
       "sources": [
@@ -1049,7 +1055,7 @@
     },
     {
       "id": "F33",
-      "question": "How should I shortlist an electric car in Australia?",
+      "question": "How should I shortlist an electric car?",
       "category": "Choosing an EV",
       "models": [
         "urban",
@@ -1117,15 +1123,15 @@
     },
     {
       "id": "F36",
-      "question": "What makes a small electric hatchback practical for a daily commute?",
+      "question": "Is the MG4 EV Urban practical for a daily commute?",
       "category": "Driving & charging",
       "models": [
         "urban",
         "mg4"
       ],
       "paragraphs": [
-        "A practical commuter EV fits your parking and passenger needs, covers normal weekly driving with a sensible range buffer, and can be charged where you live, work or regularly stop. Check rear-seat access, boot shape, visibility, controls and the route you use most often during a test drive.",
-        "MG4 EV Urban is a compact hatchback option with 43 kWh and 54 kWh battery versions. Its published WLTP range gives a consistent basis for comparing the versions, but your real range will vary with speed, weather, load and driving conditions."
+        "The MG4 EV Urban can be practical for a daily commute when its hatchback space suits your passengers and luggage, and either battery covers your normal week with a sensible range buffer. Its compact format, 360-degree camera and physical climate and volume controls are useful points to assess in traffic and tight parking.",
+        "Essence 43 is rated at 316 km WLTP and Essence 54 at 405 km WLTP. Choose between them using your longest regular trip, dependable charging access and the current price difference, then test rear-seat access, boot shape and visibility on roads similar to your commute."
       ],
       "sources": [
         "urban",
@@ -1147,7 +1153,7 @@
     },
     {
       "id": "F37",
-      "question": "How should drivers compare EV range and charging for regular trips?",
+      "question": "How do I compare MG EV range and charging for regular trips?",
       "category": "Driving & charging",
       "models": [
         "urban",
@@ -1156,8 +1162,8 @@
         "s6"
       ],
       "paragraphs": [
-        "Use the same range test standard when comparing cars, then plan around your longest regular trip instead of the average day. Within MG's range, use the MG4 EV Urban as a compact-hatchback reference and the MGS6 EV as a family-SUV reference when comparing published range and charging figures.",
-        "Map where the car will be parked, which chargers are dependable on your route and how much range buffer you want. Peak DC power alone does not determine charging-stop duration: battery temperature, state of charge, the charge curve, charger performance and site availability all affect the time required."
+        "Start with your longest regular trip and dependable charging access. MG4 EV Urban offers 316 km or 405 km WLTP depending on the battery, while MGS6 EV offers 530 km in RWD form or 485 km in AWD form. Use these like-for-like laboratory figures to shortlist a model, then allow a practical buffer for real driving.",
+        "Published 10–80% DC charging times are 28 or 30 minutes for the two MG4 EV Urban versions and 38 minutes for either MGS6 EV version at 25 °C. Compare routine AC charging as well as trip-based DC charging; battery temperature, state of charge, charger performance and site availability can all change the actual stop time."
       ],
       "sources": [
         "evcharging",
@@ -1180,27 +1186,26 @@
     },
     {
       "id": "F38",
-      "question": "What should buyers look for in an affordable premium-style vehicle?",
+      "question": "Which MG features matter most when comparing comfort and value?",
       "category": "Budget & offers",
       "models": [
         "urban",
-        "mg4",
-        "s5",
-        "s6",
-        "hybrid"
+        "s6"
       ],
       "paragraphs": [
-        "Look beyond styling and the number of features. Compare cabin comfort, visibility, everyday controls, safety equipment, warranty, servicing and the cost of the features you will actually use. Then assess those items against the final drive-away quote and expected ownership costs.",
-        "When considering an MG model, check the standard equipment fitted to the exact Australian variant, then test the vehicle on familiar roads and sit in every seat your household will use. A feature list cannot confirm ride comfort, cabin noise, storage, child-seat fit or whether the controls work for you."
+        "Prioritise features that change everyday use: seating comfort, visibility, parking assistance, physical controls, passenger and luggage space, safety equipment and charging convenience. Confirm the exact MG variant because equipment can differ between versions.",
+        "For example, MG4 EV Urban includes physical climate and volume controls and a 360-degree camera as standard. MGS6 EV adds heated and ventilated front seats, a kick-sensing powered tailgate and a head-up display, while its panoramic glass roof is limited to the AWD variant. Decide which features your household will use, then compare them with the final drive-away quote and expected ownership costs."
       ],
       "sources": [
-        "evbuy",
+        "urban",
+        "s6",
+        "s6pdf",
+        "offers",
         "warranty",
-        "service",
-        "electric"
+        "service"
       ],
       "table": null,
-      "note": "Terms such as “premium” and “luxury-style” are subjective. Use a like-for-like comparison of specifications, ownership terms and practical fit.",
+      "note": "Comfort and value are personal judgements. Use a like-for-like comparison of specifications, ownership terms and practical fit.",
       "related": [
         "F33",
         "F35",
@@ -1214,7 +1219,7 @@
     },
     {
       "id": "F39",
-      "question": "How should commuters compare fuel-efficient cars?",
+      "question": "Which MG powertrain can suit a fuel-efficient daily commute?",
       "category": "Driving & charging",
       "models": [
         "urban",
@@ -1224,8 +1229,8 @@
         "hybrid"
       ],
       "paragraphs": [
-        "Match the powertrain to your daily commute. In MG's range, that means comparing battery-electric models such as the MG4 EV Urban and MGS6 EV with MG hybrid models according to your charging access.",
-        "A battery-electric vehicle can suit drivers with dependable charging, while a conventional hybrid may suit drivers who cannot plug in. Use the same annual distance, energy or fuel price, charging mix, registration and insurance assumptions for every model."
+        "If you have dependable charging, a battery-electric MG such as the MG4 EV Urban can suit daily commuting because routine journeys can be charged at home, work or a regular public location. If you cannot plug in, an MG Hybrid+ model can reduce fuel use without adding a charging routine.",
+        "An MG Super Hybrid can suit drivers who can charge regularly but also want petrol-engine flexibility for longer journeys. Compare the same annual distance, drive-away price, electricity or fuel price, charging mix, insurance, registration and servicing assumptions for every model, then test the shortlisted powertrain on a route similar to your commute."
       ],
       "sources": [
         "evbuy",
@@ -1281,7 +1286,7 @@
     },
     {
       "id": "F41",
-      "question": "What should buyers check about servicing and support before buying a car?",
+      "question": "What should I check about MG servicing and support before buying?",
       "category": "Ownership & warranty",
       "models": [
         "urban",
@@ -1291,14 +1296,14 @@
         "hybrid"
       ],
       "paragraphs": [
-        "Before ordering an MG, read MG Australia's vehicle warranty, high-voltage battery warranty and roadside-assistance terms separately. Check the exact model's service schedule, published service pricing and the nearest authorised service centre.",
-        "Compare the written terms rather than a broad brand claim. Eligibility, vehicle use, registration date, exclusions and required servicing can change the coverage that applies to a particular vehicle."
+        "Before ordering an MG, read the vehicle warranty, high-voltage battery warranty and roadside-assistance terms separately. Check the exact model's service schedule and published service pricing, and confirm that an authorised service centre is convenient for you.",
+        "MG Precise Price Servicing publishes the scheduled items and price for each listed service. Compare those written details with warranty eligibility, vehicle-use limits, exclusions and roadside-assistance conditions rather than relying on a broad support claim."
       ],
       "sources": [
         "warranty",
         "service",
         "serviceprice",
-        "original"
+        "roadside"
       ],
       "table": null,
       "note": "Confirm the current policy and service information for the exact model and registration date before purchase.",
@@ -1315,7 +1320,7 @@
     },
     {
       "id": "F42",
-      "question": "How should buyers compare vehicle safety and value?",
+      "question": "How do I compare safety and value across MG electric vehicles?",
       "category": "Ownership & warranty",
       "models": [
         "urban",
@@ -1324,8 +1329,8 @@
         "s6"
       ],
       "paragraphs": [
-        "Start with the current safety rating and the report that explains its test year, applicable variants and detailed assessment. For MG shoppers, the published ANCAP reports for the MG4 EV Urban and MGS6 EV provide model-specific evidence to check against each vehicle's current fitted safety equipment.",
-        "Value comes from the combination of the safety equipment you will use, practical fit, warranty and ownership costs, not from one headline alone. Compare the MG4 EV Urban and MGS6 EV on the same evidence: current safety equipment, practical fit, warranty, price and ownership costs."
+        "Start with the current ANCAP report, including its test year, applicable variants and detailed assessment. MG4 EV Urban and MGS6 EV both carry five-star ratings under 2025 criteria, applying to all Australian variants covered by their respective reports.",
+        "Then compare the safety equipment fitted to the exact vehicle with its passenger and luggage fit, warranty, final drive-away price and expected ownership costs. A safety star or a long feature list cannot establish value on its own; the evidence needs to match the model and the way your household will use it."
       ],
       "sources": [
         "ancapUrban",
@@ -1349,7 +1354,7 @@
     },
     {
       "id": "F43",
-      "question": "How do I compare the total cost of owning an electric vehicle?",
+      "question": "What should I include in the total cost of owning an MG electric vehicle?",
       "category": "Ownership & warranty",
       "models": [
         "urban",
@@ -1358,8 +1363,8 @@
         "s6"
       ],
       "paragraphs": [
-        "Use the same ownership period and annual distance for every vehicle. Add the drive-away price, electricity, public-charging costs where relevant, insurance, registration, scheduled servicing, tyres, charging equipment and finance costs. Then subtract an estimated resale value using the same future date and assumptions for each vehicle.",
-        "Run more than one scenario when public charging use, insurance or resale value is uncertain. The aim is not to predict one exact number; it is to compare vehicles on a transparent and consistent basis."
+        "Start with a current drive-away quote for the exact MG model and variant. Add electricity, public-charging costs where relevant, insurance, registration, MG scheduled servicing, tyres, charging equipment and finance costs, then subtract an estimated resale value using the same future date and assumptions for every vehicle.",
+        "Use the same ownership period and annual distance when comparing the MG4 EV Urban, MG4 EV, MGS5 EV or MGS6 EV. Run more than one scenario when public charging use, insurance or resale value is uncertain; the purpose is a transparent comparison, not one guaranteed future cost."
       ],
       "sources": [
         "evbuy",
@@ -1382,7 +1387,7 @@
     },
     {
       "id": "F45",
-      "question": "What should I compare in EV warranty and after-sales support?",
+      "question": "Which MG EV warranty and after-sales support terms should I check?",
       "category": "Ownership & warranty",
       "models": [
         "urban",
@@ -1391,14 +1396,14 @@
         "s6"
       ],
       "paragraphs": [
-        "Read the general vehicle warranty and high-voltage battery warranty as separate documents. Compare their duration, distance limit, eligibility, exclusions, maintenance requirements and the process for obtaining service or repairs.",
-        "Also check the published service schedule and pricing for the exact model, roadside-assistance conditions and the convenience of authorised support near where you live. These details make an ownership comparison more useful than a single warranty headline."
+        "MG passenger vehicles have a seven-year, unlimited-kilometre standard warranty, with service-activated cover available up to 10 years or 250,000 km for eligible personal-use vehicles. High-voltage battery cover is separate at seven years or 150,000 km. Eligibility, exclusions and servicing conditions apply.",
+        "Also check the published service schedule and pricing for the exact MG model, roadside-assistance conditions and the convenience of authorised support near where you live. These details provide a more useful ownership picture than the vehicle-warranty headline alone."
       ],
       "sources": [
         "warranty",
         "service",
         "serviceprice",
-        "original"
+        "roadside"
       ],
       "table": null,
       "note": "The current published policy determines the applicable cover. Confirm the terms for the exact vehicle, registration date and intended use.",
