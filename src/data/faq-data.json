@@ -1262,8 +1262,8 @@
         "s6"
       ],
       "paragraphs": [
-        "For an Australian road trip, plan around compatible public chargers, a realistic arrival charge and a backup charging option at key stops. For an MG, check whether the published range and charging capability of the MG4 EV Urban or MGS6 EV fit the route, passenger load and planned stops.",
-        "Allow extra range margin for speed, wind, terrain, temperature and luggage, and check current charger availability before departure. At each stop, consider how much energy is needed rather than automatically charging to 100%; the vehicle, charger, battery temperature and state of charge determine the actual session time."
+        "For an Australian road trip in an MG electric vehicle, plan around compatible public chargers, a realistic arrival charge and a backup charging option at key stops. Check the exact model and variant against the route: MG4 EV Urban is rated at 316 km or 405 km WLTP, while MGS6 EV is rated at 530 km in RWD form or 485 km in AWD form.",
+        "Allow extra range margin for speed, wind, terrain, temperature, passengers and luggage, then check current charger availability before departure. Plan each stop around the energy needed to reach the next dependable charger rather than automatically charging to 100%; the MG model, charger, battery temperature and state of charge all affect the actual session time."
       ],
       "sources": [
         "evtrip",
