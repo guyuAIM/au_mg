@@ -6,7 +6,7 @@ import { canonicalRoutes, editorialGuides, faqData, guideSources, legacyGuideAli
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const expectedHashes = {
-  'src/data/faq-data.json': 'bd56faa8405376f4ac24c378acd3185590a19facd3a92454e1f9a2892b44a24f',
+  'src/data/faq-data.json': '1bf93fe29d11bb412ed0760f41208e8d8f1ebd3ed358ad4405262d7f3b039cc8',
   'src/data/p0-guides.js': 'e71c308ac13eac31c62dba8ad0cbdd8cd24c86fd284f95eeb4957f3cfc3ae0e5',
   'src/data/editorial-guides.js': 'dca61ea8b421a8f1cc2f7e68f75ce50e75dbec04890925c998922b2a0714588d',
   'src/data/education-guides.js': '1805915ee59eb5f9bc9385219c9d02b06e9166b8dabd7de3a2f8ea0c22fa53f9',
