@@ -1,20 +1,20 @@
 {
-  "reviewed": "2026-09-21",
-  "modified": "2026-09-21",
-  "offerChecked": "2026-09-21",
+  "reviewed": "2026-09-28",
+  "modified": "2026-09-28",
+  "offerChecked": "2026-09-28",
   "offerExpiry": "2026-09-30",
   "sources": {
     "offers": {
       "title": "MG Australia offers — September 2026",
       "url": "https://mgmotor.com.au/offers",
       "supports": "Advertised drive-away prices, eligibility, end dates and bonus conditions.",
-      "checked": "2026-09-21"
+      "checked": "2026-09-28"
     },
     "urban": {
       "title": "MG4 EV Urban — Australian model page",
       "url": "https://mgmotor.com.au/vehicles/mg4-ev-urban",
       "supports": "Essence 43/54, WLTP range, equipment and boot definition.",
-      "checked": "2026-09-21"
+      "checked": "2026-09-28"
     },
     "mg4": {
       "title": "MG4 EV — Australian model page",
@@ -26,13 +26,13 @@
       "title": "MGS6 EV — Australian model page",
       "url": "https://mgmotor.com.au/vehicles/mgs6-ev",
       "supports": "RWD/AWD variants, range and family equipment.",
-      "checked": "2026-09-21"
+      "checked": "2026-09-28"
     },
     "s6pdf": {
       "title": "MGS6 EV — 2026 Australian brochure",
       "url": "https://mgmotor.com.au/brochures/MGS6_EV_2026.pdf",
       "supports": "Specification table, PDF page 20: cargo, dimensions, charging and equipment.",
-      "checked": "2026-09-21"
+      "checked": "2026-09-28"
     },
     "s5": {
       "title": "MGS5 EV — Australian model page",
@@ -44,37 +44,37 @@
       "title": "MG electric vehicle range",
       "url": "https://mgmotor.com.au/vehicles/electric",
       "supports": "MG electric model range.",
-      "checked": "2026-09-14"
+      "checked": "2026-09-28"
     },
     "hybrid": {
       "title": "MG hybrid range",
       "url": "https://mgmotor.com.au/vehicles/hybrid",
       "supports": "Hybrid model choices; distinguish Hybrid+ from plug-in Super Hybrid.",
-      "checked": "2026-09-14"
+      "checked": "2026-09-28"
     },
     "warranty": {
       "title": "MG Australia warranty policy",
       "url": "https://mgmotor.com.au/explore/warranty",
       "supports": "Standard, service-activated, commercial and high-voltage battery cover.",
-      "checked": "2026-09-21"
+      "checked": "2026-09-28"
     },
     "service": {
       "title": "MG servicing",
       "url": "https://mgmotor.com.au/about/servicing",
       "supports": "Service pricing process and authorised service support.",
-      "checked": "2026-09-14"
+      "checked": "2026-09-28"
     },
     "serviceprice": {
       "title": "MG service pricing guide",
       "url": "https://mgmotor.com.au/about/service-pricing-guide",
       "supports": "Model-specific servicing lookup. No five-year total is asserted.",
-      "checked": "2026-09-14"
+      "checked": "2026-09-28"
     },
     "roadside": {
       "title": "MG Australia roadside assistance",
       "url": "https://mgmotor.com.au/about/roadside-assist",
       "supports": "Current roadside-assistance eligibility, services and contact information.",
-      "checked": "2026-09-14"
+      "checked": "2026-09-28"
     },
     "original": {
       "title": "Existing MG Australia FAQs",
@@ -86,37 +86,37 @@
       "title": "Australian Government — preparing to buy an electric vehicle",
       "url": "https://www.energy.gov.au/electric-vehicles/buying-electric-vehicle/preparing-buy-electric-vehicle",
       "supports": "Independent guidance on purchase price, energy, insurance, registration, servicing and charging access.",
-      "checked": "2026-09-17"
+      "checked": "2026-09-28"
     },
     "evcost": {
       "title": "Australian Government — EV cost and emissions comparison tools",
       "url": "https://www.energy.gov.au/electric-vehicles/buying-electric-vehicle/cost-and-emissions-comparison-tools",
       "supports": "Independent tools for comparing annual energy costs, charging time and vehicle emissions.",
-      "checked": "2026-09-17"
+      "checked": "2026-09-28"
     },
     "evcharging": {
       "title": "Australian Government — how to charge an electric vehicle",
       "url": "https://www.energy.gov.au/electric-vehicles/owning-electric-vehicle/how-charge-your-electric-vehicle",
       "supports": "Australian charging options, charging locations and practical charging guidance.",
-      "checked": "2026-09-17"
+      "checked": "2026-09-28"
     },
     "evtrip": {
       "title": "Australian Government — EV road trips and charging",
       "url": "https://www.energy.gov.au/electric-vehicles/owning-electric-vehicle/planning-electric-vehicle-trip",
       "supports": "Planning longer electric-vehicle journeys in Australia.",
-      "checked": "2026-09-21"
+      "checked": "2026-09-28"
     },
     "ancapUrban": {
       "title": "ANCAP — MG4 EV Urban safety rating",
       "url": "https://www.ancap.com.au/safety-ratings/mg/4-ev-urban/f3ed7b",
       "supports": "ANCAP rating, applicable variants and detailed safety assessment for MG4 EV Urban.",
-      "checked": "2026-09-21"
+      "checked": "2026-09-28"
     },
     "ancapS6": {
       "title": "ANCAP — MGS6 EV safety rating",
       "url": "https://www.ancap.com.au/safety-ratings/mg/mgs6-ev/588e29",
       "supports": "ANCAP rating, applicable variants and detailed safety assessment for MGS6 EV.",
-      "checked": "2026-09-21"
+      "checked": "2026-09-28"
     }
   },
   "actionToQna": [
@@ -243,8 +243,8 @@
         "mg4"
       ],
       "paragraphs": [
-        "The MG4 EV Urban Essence 43 is the current MG option below A$30,000 drive-away. Below A$40,000, the shortlist also includes the MG4 EV Urban Essence 54 and MG4 EV Essence 64. The table shows advertised September prices, not a prediction of future discounts.",
-        "Keep room in your budget for insurance and any charging installation. Choose the battery and model around your regular journeys and charging access; a higher price does not automatically make a car better value for you."
+        "As at 28 September 2026, the MG4 EV Urban Essence 43 is advertised at A$29,990 drive-away. Below A$40,000, the shortlist also includes the MG4 EV Urban Essence 54 at A$32,990 and MG4 EV Essence 64 at A$39,990.",
+        "The advertised drive-away price includes registration, compulsory third-party insurance, dealer delivery and estimated stamp duty, but excludes options. Allow separately for insurance, charging equipment and running costs, then choose the battery and model around your regular journeys and charging access."
       ],
       "sources": [
         "offers",
@@ -275,7 +275,7 @@
           ]
         ]
       },
-      "note": "Price snapshot: 21 September 2026. Offers end 30 September 2026, subject to eligible sale and delivery, participating dealer stock and full offer terms. Options may cost extra. Urban prices already include the advertised A$2,000 cashback.",
+      "note": "Price checked 28 September 2026. These offers apply to eligible vehicles sold and delivered by 30 September 2026 through participating dealers, while stocks last. Fleet, government and rental buyers are excluded. Urban prices already include the advertised A$2,000 cashback. Check the full offer terms and a written quotation before ordering.",
       "related": [
         "F14",
         "F06",
@@ -301,8 +301,8 @@
         "s6"
       ],
       "paragraphs": [
-        "Under A$50,000 drive-away, MG’s September offers include MGS5 EV Essence 49, MGS5 EV Essence 62 and MGS6 EV Essence RWD. The MGS6 EV Essence AWD sits below A$60,000. Start with the space you need, then compare range and equipment within your budget.",
-        "If you need a larger boot, compare the MGS6 EV RWD with the MGS5 EV in person. Choose AWD if all-wheel drive and its additional equipment matter to you; RWD has the longer published WLTP range."
+        "As at 28 September 2026, MG electric SUVs advertised below A$50,000 drive-away are the MGS5 EV Essence 49 at A$41,990, MGS5 EV Essence 62 at A$46,990 and MGS6 EV Essence RWD at A$49,990. The MGS6 EV Essence AWD is advertised at A$56,990, placing it below A$60,000.",
+        "Start with passenger and luggage space, then compare range, drivetrain and equipment within your budget. The MGS6 EV RWD has the longer published WLTP range; choose AWD when all-wheel drive and its additional performance or equipment matter more to your household."
       ],
       "sources": [
         "offers",
@@ -338,7 +338,7 @@
           ]
         ]
       },
-      "note": "Price snapshot: 21 September 2026. Offers end 30 September 2026, subject to eligible sale and delivery, participating dealer stock and full offer terms. Options may cost extra.",
+      "note": "Price checked 28 September 2026. These offers apply to eligible vehicles sold and delivered by 30 September 2026 through participating dealers, while stocks last. Fleet, government and rental buyers are excluded. Options may cost extra; check the full offer terms and a written quotation before ordering.",
       "related": [
         "F15",
         "F04"
@@ -361,15 +361,16 @@
         "mg4"
       ],
       "paragraphs": [
-        "It can be a good first EV when its hatchback layout fits your passengers, luggage and parking space, and you have dependable charging access. The standard 360-degree camera and physical climate and volume controls are useful everyday features for a first-time EV buyer.",
-        "Essence 43 is rated at 316 km WLTP and Essence 54 at 405 km WLTP. Compare that range with your normal week and charging access, then use a test drive to check parking, rear-seat access and your usual luggage."
+        "The MG4 EV Urban can be a practical first EV when its compact hatchback layout fits your passengers, luggage and parking space, and you have a dependable place to charge. A 360-degree camera and physical climate and volume controls are standard and can make everyday city use easier.",
+        "Essence 43 is rated at 316 km WLTP and Essence 54 at 405 km WLTP. Compare that range with your longest regular day, including errands and detours. If you expect to rely on public charging, check the location, connector, payment method and typical availability of the chargers you would actually use."
       ],
       "sources": [
         "urban",
-        "electric"
+        "electric",
+        "evcharging"
       ],
       "table": null,
-      "note": "WLTP figures are laboratory comparison values. Actual range varies with speed, weather, load, tyres and driving conditions.",
+      "note": "WLTP figures are standardised laboratory comparison values. Actual range varies with speed, weather, load, tyres, accessory use and driving conditions. Confirm that the exact vehicle and your usual charging locations work together before ordering.",
       "related": [
         "F14",
         "F05"
@@ -601,8 +602,8 @@
         "urban"
       ],
       "paragraphs": [
-        "Choose Essence 43 if its 316 km WLTP range covers your regular driving and charging routine. Choose Essence 54 if the 405 km WLTP range provides useful extra margin for your journeys and justifies the price difference.",
-        "Both versions have LFP batteries and the same published boot capacity. Start with your longest regular journey, then check the current quote, charging access and equipment fitted to the exact vehicle."
+        "Choose Essence 43 if its 316 km WLTP range covers your longest regular day with a practical buffer. Choose Essence 54 if the additional 89 km of published range materially reduces charging stops or supports journeys you make often enough to justify the price difference.",
+        "Both versions use LFP batteries and have the same published storage capacity, so the decision is mainly about range, charging routine, equipment and price. Include school runs, shopping, detours and seasonal conditions rather than comparing only an average commute."
       ],
       "sources": [
         "urban",
@@ -652,8 +653,8 @@
         "s6"
       ],
       "paragraphs": [
-        "Choose RWD if the longer published range is the priority: it is rated at 530 km WLTP. Choose AWD if all-wheel drive and higher combined output matter more; it is rated at 485 km WLTP. Both list a 144 kW peak DC charging rate and 38 minutes for a 10–80% charge at 25 °C.",
-        "For family trips, compare the route, charging stops, luggage load and a sensible range buffer, then obtain a current drive-away quote for the exact variant."
+        "Choose RWD when longer published range is the priority: it is rated at 530 km WLTP and produces 180 kW. Choose AWD when all-wheel drive and higher output matter more: it is rated at 485 km WLTP and produces 266 kW.",
+        "Both versions list the same 144 kW peak DC charging rate and the same 38-minute 10–80% charging time at 25 °C, so AWD does not shorten the quoted charging stop. For family travel, also compare luggage load, front storage, planned charging stops and a realistic range buffer."
       ],
       "sources": [
         "s6",
@@ -703,12 +704,14 @@
         "s6"
       ],
       "paragraphs": [
-        "Start with seating, child-seat fit, usable luggage space, regular driving range, charging access and the complete drive-away price. Check the exact version because battery, drivetrain and equipment can change the comparison.",
-        "In MG's range, the MGS6 EV is a relevant family-SUV reference: it has five seats, 581 L of published boot space with the rear seats upright, and RWD and AWD variants. Take your usual family equipment to the test drive, then check rear-seat access, parking visibility, controls and ride comfort on roads similar to your normal journeys."
+        "Build the comparison around a real family week: school runs, work, shopping, weekend sport and visits to family. Check child-seat fit, adult rear-seat comfort, usable luggage space, the longest regular day, garage or driveway fit, charging access and the complete drive-away price.",
+        "The MGS6 EV is a useful five-seat reference, with 581 L of published rear boot space, RWD and AWD variants and a 360-degree camera. Take your child seats, pram and regular bags to the test drive, and obtain a licensed electrician’s advice if a home charger or electrical upgrade may be required."
       ],
       "sources": [
         "s6",
-        "s6pdf"
+        "s6pdf",
+        "evbuy",
+        "evcharging"
       ],
       "table": {
         "headers": [
@@ -719,27 +722,32 @@
         "rows": [
           [
             "Passenger fit",
-            "Child seats and rear-seat comfort must work in practice",
-            "Five-seat electric SUV"
+            "Child seats and adult comfort must work in practice",
+            "Five seats; outer rear ISOFIX positions"
           ],
           [
             "Luggage",
-            "Boot shape matters as well as the published volume",
+            "Boot shape matters as well as published volume",
             "581 L seats up; 1,690 L folded"
           ],
           [
             "Regular trips",
-            "Use a realistic range buffer",
+            "Use the longest repeat journey and a realistic buffer",
             "530 km RWD; 485 km AWD WLTP"
           ],
           [
             "Charging",
-            "Vehicle and charger limits both affect stop time",
-            "144 kW peak DC; 38 minutes 10–80% at 25 °C"
+            "Home fit, vehicle limits and charger access affect convenience",
+            "11 kW onboard AC; 144 kW peak DC"
+          ],
+          [
+            "Parking",
+            "Garage, driveway and public parking dimensions are practical constraints",
+            "Check the vehicle in your usual spaces"
           ]
         ]
       },
-      "note": "Published specifications support initial comparison but do not replace a physical fit check, test drive or current location-specific quotation.",
+      "note": "Published specifications support an initial comparison but do not replace a physical fit check, test drive, licensed electrical advice or current location-specific quotation.",
       "related": [
         "F04",
         "F22",
@@ -980,7 +988,7 @@
       ],
       "paragraphs": [
         "The MGS6 EV has five seats and 581 L of boot space with the rear seats upright. Folding the rear seats increases the published rear cargo capacity to 1,690 L. The front storage compartment provides 86 L in RWD or 67 L in AWD.",
-        "For a family trip, set the front seats for the actual adults, then check rear-seat comfort and load your usual pram and bags. Rear ISOFIX positions are on the two outer seats."
+        "For a meaningful fit check, set the front seats for the adults who will normally drive, install your actual child seats, then load your pram and typical weekend bags. The two outer rear seats have ISOFIX positions."
       ],
       "sources": [
         "s6pdf",
@@ -1099,8 +1107,8 @@
         "s6"
       ],
       "paragraphs": [
-        "Compare the MG4 EV Urban and MG4 EV if an electric hatchback suits your everyday use; compare the MGS5 EV and MGS6 EV if you need an electric SUV. Then check passenger and luggage fit, regular-trip range, charging access and the equipment fitted to the exact variant.",
-        "Set a complete budget using a current drive-away quote for your postcode, then add insurance, charging equipment and expected electricity and servicing costs. The lowest advertised price is only the best fit when the vehicle also meets your space, range and charging needs."
+        "Start with the needs that cannot be compromised: complete drive-away budget, usual passengers and luggage, longest regular day, charging access and parking space. Then compare the MG4 EV Urban and MG4 EV if a hatchback suits you, or the MGS5 EV and MGS6 EV if you need an SUV.",
+        "Use a current written quote for your postcode and exact variant. Add insurance, charging equipment, electricity, servicing and finance where relevant. The lowest advertised price represents value only when the vehicle also meets your space, range and charging needs."
       ],
       "sources": [
         "evbuy",
@@ -1130,8 +1138,8 @@
         "mg4"
       ],
       "paragraphs": [
-        "The MG4 EV Urban can suit a daily commute when either battery covers your weekly kilometres with a practical buffer and your usual parking or charging location is dependable. Work out how often you would need to charge using your longest regular day, not only the average commute.",
-        "Essence 43 is rated at 316 km WLTP and Essence 54 at 405 km WLTP. Compare the current price difference with the extra charging flexibility, then test visibility, parking, rear-seat access and boot use on roads and stops similar to your routine."
+        "The MG4 EV Urban can suit a daily commute when either battery covers your longest repeat day with a practical buffer and you have dependable charging. Include school runs, shopping and other regular stops rather than calculating only the distance from home to work.",
+        "Essence 43 is rated at 316 km WLTP and Essence 54 at 405 km WLTP. Compare the price difference with how often the extra range would change your charging routine. If public charging is central to the plan, check the chargers you would normally use for location, compatibility, payment and availability."
       ],
       "sources": [
         "urban",
@@ -1139,7 +1147,7 @@
         "evcharging"
       ],
       "table": null,
-      "note": "Do not choose a larger battery by default. It is most useful when the extra range solves a regular trip or charging-access need.",
+      "note": "Do not choose a larger battery by default. It is most useful when the extra range solves a recurring trip or charging-access constraint. WLTP figures are standardised comparison values, not guaranteed real-world range.",
       "related": [
         "F03",
         "F08",
@@ -1153,7 +1161,7 @@
     },
     {
       "id": "F37",
-      "question": "How do I compare MG EV range and charging for regular trips?",
+      "question": "How should I compare MG EV range and charging for my regular trips?",
       "category": "Driving & charging",
       "models": [
         "urban",
@@ -1162,8 +1170,8 @@
         "s6"
       ],
       "paragraphs": [
-        "Start with your longest regular trip and dependable charging access. MG4 EV Urban offers 316 km or 405 km WLTP depending on the battery, while MGS6 EV offers 530 km in RWD form or 485 km in AWD form. Use these like-for-like laboratory figures to shortlist a model, then allow a practical buffer for real driving.",
-        "Published 10–80% DC charging times are 28 or 30 minutes for the two MG4 EV Urban versions and 38 minutes for either MGS6 EV version at 25 °C. Compare routine AC charging as well as trip-based DC charging; battery temperature, state of charge, charger performance and site availability can all change the actual stop time."
+        "Compare vehicles on the same basis. Start with your longest regular trip and dependable charging access: MG4 EV Urban offers 316 km or 405 km WLTP, while MGS6 EV offers 530 km in RWD form or 485 km in AWD form. Use these laboratory figures to shortlist a vehicle, then add a practical real-world buffer.",
+        "For routine use, compare how long the car will be parked and the available AC charging power. For longer trips, compare 10–80% DC times and charger locations: the two MG4 EV Urban versions are quoted at 28 and 30 minutes, while both MGS6 EV versions are quoted at 38 minutes, all at 25 °C under specified test conditions."
       ],
       "sources": [
         "evcharging",
@@ -1219,7 +1227,7 @@
     },
     {
       "id": "F39",
-      "question": "Which MG powertrain can suit a fuel-efficient daily commute?",
+      "question": "Should I choose an MG electric car, hybrid or plug-in hybrid for commuting?",
       "category": "Driving & charging",
       "models": [
         "urban",
@@ -1229,8 +1237,8 @@
         "hybrid"
       ],
       "paragraphs": [
-        "If you have dependable charging, a battery-electric MG such as the MG4 EV Urban can suit daily commuting because routine journeys can be charged at home, work or a regular public location. If you cannot plug in, an MG Hybrid+ model can suit a fuel-efficient commute without adding a charging routine.",
-        "An MG Super Hybrid can suit drivers who can charge regularly but also want petrol-engine flexibility for longer journeys. Compare the same annual distance, drive-away price, electricity or fuel price, charging mix, insurance, registration and servicing assumptions for every model, then test the shortlisted powertrain on a route similar to your commute."
+        "Choose a battery-electric MG when dependable home, workplace or regular public charging fits your routine. Choose an MG Hybrid+ when you cannot plug in and want petrol-electric assistance without adding a charging routine. Consider an MG Super Hybrid when you can charge regularly but also want petrol-engine flexibility for longer journeys.",
+        "Compare each option using the same annual distance, drive-away price, electricity or fuel price, charging mix, insurance, registration, servicing and finance assumptions. A test drive on roads similar to your commute will also show whether the vehicle size, visibility and driving controls suit your everyday use."
       ],
       "sources": [
         "evbuy",
@@ -1262,8 +1270,8 @@
         "s6"
       ],
       "paragraphs": [
-        "For an Australian road trip in an MG electric vehicle, plan around compatible public chargers, a realistic arrival charge and a backup charging option at key stops. Check the exact model and variant against the route: MG4 EV Urban is rated at 316 km or 405 km WLTP, while MGS6 EV is rated at 530 km in RWD form or 485 km in AWD form.",
-        "Allow extra range margin for speed, wind, terrain, temperature, passengers and luggage, then check current charger availability before departure. Plan each stop around the energy needed to reach the next dependable charger rather than automatically charging to 100%; the MG model, charger, battery temperature and state of charge all affect the actual session time."
+        "Plan an EV road trip around the exact vehicle, realistic arrival charge and compatible charging sites. Check the distance and terrain between stops, charging speed, current site availability, access or payment requirements and at least one backup option. Peak holiday periods can increase charger demand.",
+        "Allow extra range for speed, wind, temperature, passengers and luggage. Charging to 100% before leaving home can maximise the starting range; at intermediate stops, charging to around 80% is often more time-efficient unless the next leg needs more energy, because charging can slow above 80%."
       ],
       "sources": [
         "evtrip",
@@ -1271,8 +1279,35 @@
         "s6",
         "urban"
       ],
-      "table": null,
-      "note": "Road-trip planning is route-specific. Use current charging-network information and the vehicle's owner guidance before travel.",
+      "table": {
+        "headers": [
+          "Planning step",
+          "What to confirm"
+        ],
+        "rows": [
+          [
+            "Vehicle",
+            "Exact variant, connector, realistic route range and charging limits"
+          ],
+          [
+            "Route",
+            "Primary and backup chargers, distance, terrain and two-hour rest stops"
+          ],
+          [
+            "Access",
+            "Provider app or account, payment method, cable requirements and mobile coverage"
+          ],
+          [
+            "Conditions",
+            "Weather, speed, passengers, luggage and peak-period charger demand"
+          ],
+          [
+            "At the charger",
+            "Charge only to the level needed for the next dependable stop, then move the vehicle when finished"
+          ]
+        ]
+      },
+      "note": "Road-trip planning is route-specific. Use current charging-network information and the vehicle’s owner guidance before travel.",
       "related": [
         "F09",
         "F37",
@@ -1296,8 +1331,8 @@
         "hybrid"
       ],
       "paragraphs": [
-        "Before ordering an MG, read the vehicle warranty, high-voltage battery warranty and roadside-assistance terms separately. Check the exact model's service schedule and published service pricing, and confirm that an authorised service centre is convenient for you.",
-        "MG Precise Price Servicing publishes the scheduled items and price for each listed service. The standard and extended warranties have different servicing requirements: the extended period requires eligible servicing within the authorised MG dealer network, while the standard warranty permits a suitably qualified Australian repairer when the policy's servicing, timing and record-upload requirements are met."
+        "Before ordering an MG, check the warranty that applies to the registration date and intended use, the high-voltage battery cover, the exact model’s service schedule and pricing, roadside-assistance conditions and the location of suitable service support.",
+        "Under the current MG policy, the service-activated extended warranty requires scheduled servicing through an authorised MG dealer. During the standard warranty, a suitably qualified Australian repairer may service the vehicle within 30 days and 2,000 km of the scheduled interval; if the repairer is not an authorised MG dealer, the service record must be uploaded to MG’s online service portal within 10 days."
       ],
       "sources": [
         "warranty",
@@ -1306,7 +1341,7 @@
         "roadside"
       ],
       "table": null,
-      "note": "Confirm the current policy and service information for the exact model and registration date before purchase.",
+      "note": "MG’s current policy applies to MG vehicles first registered on or after 1 July 2025 and may be varied. Confirm the current terms for the exact vehicle, registration date and intended use before purchase.",
       "related": [
         "F20",
         "F43",
@@ -1329,8 +1364,8 @@
         "s6"
       ],
       "paragraphs": [
-        "Start with the current ANCAP report, including its test year, applicable variants and detailed assessment. MG4 EV Urban and MGS6 EV both carry five-star ratings under 2025 criteria, applying to all Australian variants covered by their respective reports.",
-        "Then compare the safety equipment fitted to the exact vehicle with its passenger and luggage fit, warranty, final drive-away price and expected ownership costs. A safety star or a long feature list cannot establish value on its own; the evidence needs to match the model and the way your household will use it."
+        "Start with the current ANCAP report for the exact model, including its rating year, applicable variants and four assessment areas. The MG4 EV Urban and MGS6 EV both have five-star ANCAP ratings under 2025 criteria, and each report applies to all Australian variants listed by ANCAP.",
+        "Then confirm the safety equipment fitted to the exact vehicle and test the practical fit of the people and equipment your household carries. Compare that evidence with warranty, complete drive-away price and expected ownership costs; a star rating or a long feature list does not establish value on its own."
       ],
       "sources": [
         "ancapUrban",
@@ -1339,8 +1374,36 @@
         "s6",
         "warranty"
       ],
-      "table": null,
-      "note": "Safety assessments and equipment can be revised by model year or variant. Confirm the current Australian vehicle specification before ordering.",
+      "table": {
+        "headers": [
+          "ANCAP 2025 assessment",
+          "MG4 EV Urban",
+          "MGS6 EV"
+        ],
+        "rows": [
+          [
+            "Adult Occupant Protection",
+            "87%",
+            "92%"
+          ],
+          [
+            "Child Occupant Protection",
+            "86%",
+            "87%"
+          ],
+          [
+            "Vulnerable Road User Protection",
+            "85%",
+            "84%"
+          ],
+          [
+            "Safety Assist",
+            "82%",
+            "81%"
+          ]
+        ]
+      },
+      "note": "These ANCAP reports cover MG4 EV Urban vehicles on sale from March 2026 and MGS6 EV vehicles on sale from June 2026, and apply to all variants listed in the respective reports. Safety assessments and equipment can change by model year or variant.",
       "related": [
         "F20",
         "F38",
