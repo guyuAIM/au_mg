@@ -22,6 +22,6 @@ const jsonLd = faqPageSchema({
   faqs: faqData.faqs.map((faq) => ({ id: faq.id, question: faq.question, answer: answerText(faq) }))
 });
 ---
-<BaseLayout {title} {description} {path} image="/assets/faq-banner.jpg" view="questions" {jsonLd}>
+<BaseLayout {title} {description} {path} image="/assets/ev-guides-hero.jpg" view="questions" {jsonLd}>
   <FaqContent view="hub" />
 </BaseLayout>

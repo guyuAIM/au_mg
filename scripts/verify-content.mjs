@@ -6,10 +6,10 @@ import { canonicalRoutes, editorialGuides, faqData, guideSources, legacyGuideAli
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const expectedHashes = {
-  'src/data/faq-data.json': 'c12f494c2fac26942a01d6873de6af018b822e8236e96dd119591b2bc630474a',
-  'src/data/p0-guides.js': 'e71c308ac13eac31c62dba8ad0cbdd8cd24c86fd284f95eeb4957f3cfc3ae0e5',
-  'src/data/editorial-guides.js': 'dca61ea8b421a8f1cc2f7e68f75ce50e75dbec04890925c998922b2a0714588d',
-  'src/data/education-guides.js': '1805915ee59eb5f9bc9385219c9d02b06e9166b8dabd7de3a2f8ea0c22fa53f9',
+  'src/data/faq-data.json': '216dda416dcb213c24b5568c012323f1f3f62be963fd141759c5f56ba09bb2c9',
+  'src/data/p0-guides.js': '4904c62a2b89831294d5f3950973d09563caf51d796b2f126244fd7e5e1d7135',
+  'src/data/editorial-guides.js': 'fadd916e4201ad86adb7c419a1f4f706c4bc765d75f0acf211450ee1e142a45e',
+  'src/data/education-guides.js': 'fac0cf56daf9f296391fd754f449c8d528d5f49042f89b0430515e4d62318164',
   'public/assets/styles.css': 'bfbc421a410f8cd5d936e09a606fb9118d8d20738c4a164a146232f435983ac8'
 };
 
@@ -21,7 +21,7 @@ for (const [relativePath, expected] of Object.entries(expectedHashes)) {
 
 const summary = validateContent();
 if (canonicalRoutes.length !== 16) throw new Error(`Expected 16 canonical routes, found ${canonicalRoutes.length}`);
-if (Object.keys(guideSources).length !== 25) throw new Error(`Expected 25 guide sources, found ${Object.keys(guideSources).length}`);
+if (Object.keys(guideSources).length !== 28) throw new Error(`Expected 28 guide sources, found ${Object.keys(guideSources).length}`);
 
 const payload = {
   ...summary,

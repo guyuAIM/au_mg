@@ -15,7 +15,7 @@ const showLeadMedia = guide.showLeadImage !== false;
 ---
 <nav class="guide-breadcrumb container" aria-label="Breadcrumb"><a href="/explore/ev-guides">EV Guides &amp; Advice</a><span aria-hidden="true">/</span><span>{guide.category}</span></nav>
 <article class="guide-article" id="guide-content">
-  <header class="guide-article-header container"><span class="eyebrow">{guide.category}</span><h1>{guide.title}</h1><p class="guide-deck">{guide.summary}</p><div class="guide-meta"><span>Published <!-- -->{guide.published}</span><span>Last reviewed <!-- -->{guide.reviewed || '14 September 2026'}</span><span>{guide.targetModels.join(' · ')}</span></div></header>
+  <header class="guide-article-header container"><span class="eyebrow">{guide.category}</span><h1>{guide.title}</h1><p class="guide-deck">{guide.summary}</p><div class="guide-meta"><span>Last reviewed <!-- -->{guide.reviewed || '14 September 2026'}</span><span>{Number(guide.guideId.slice(1)) >= 7 ? 'General advice · MG examples' : guide.targetModels.join(' · ')}</span></div></header>
   <div class="guide-article-body container"><aside class="quick-answer" aria-label="Quick answer"><span>Quick answer</span><p>{guide.quickAnswer}<Citations ids={guide.sources.slice(0, 4)} {referenceIds} /></p></aside></div>
   {showLeadMedia && <figure class="guide-lead-media"><External href={guide.image.href}><img src={resourceHref(guide.image.src, Astro.url.pathname)} alt={guide.image.alt} /></External></figure>}
   <div class="guide-article-body container">

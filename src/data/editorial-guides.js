@@ -57,7 +57,7 @@ const decisionGuides = [
     ],
     notes: byId[2].notes,
     faq: [
-      ['Can an electric car cost less than A$30,000 drive-away?', 'It can during a qualifying offer. On 14 September 2026, the MG4 EV Urban Essence 43 was displayed online at A$29,990 drive-away for an eligible purchase. Check the current price, postcode, stock and offer conditions before ordering.'],
+      ['Can an electric car cost less than A$30,000 drive-away?', 'It can during a qualifying offer, but a past promotional price is not a current quote. Check the latest MG offers, your postcode, stock and buyer eligibility before treating any version as under A$30,000 drive-away.'],
       ['What should I compare below A$40,000?', 'Compare the final drive-away price, useful range, charging access, cabin and luggage fit, insurance, servicing and warranty conditions.'],
       ['Does the cheapest EV offer the best value?', 'Not necessarily. A lower-priced vehicle can be poor value if it does not suit your regular trips or charging situation.'],
       ['Which MG4 EV Urban version has more WLTP range?', 'Essence 54 has an official WLTP range of 405 km, compared with 316 km for Essence 43.'],
@@ -100,16 +100,16 @@ const decisionGuides = [
     guideId: 'G03',
     slug: 'how-to-choose-an-electric-car',
     category: 'Choosing an EV',
-    targetModels: ['MG4 EV Urban', 'MGS6 EV'],
+    targetModels: ['MG4 EV Urban', 'MG4 EV', 'MGS5 EV', 'MGS6 EV'],
     coveredQuestionIds: [8],
     monitoringPrompts: sourcePrompts([8]),
     title: 'How to choose an electric car: price, range, charging and space',
     summary: 'Turn a broad EV search into a useful shortlist based on body style, regular trips, charging, space and budget.',
-    quickAnswer: 'Choose an EV by starting with the trips, people and luggage it must handle. The MG4 EV Urban is the compact MG option, offering 316 km or 405 km of WLTP range. The MGS6 EV is the family SUV option, offering 530 km in RWD form or 485 km in AWD form, plus 581 L of boot space. Compare models that meet similar needs and sit within the same price range.',
+    quickAnswer: 'Choose an EV by starting with the trips, people and luggage it must handle. MG4 EV Urban and MG4 EV are hatchback options; MGS5 EV and MGS6 EV are SUV options. Check the current MG electric range for other body styles, then compare the exact variants that fit your budget, charging access and everyday routine.',
     sections: [
       { heading: 'List what you need from the car', paragraphs: ['Record your longest regular journey, where the vehicle normally parks, home or workplace charging access, passenger count, luggage, towing needs and maximum drive-away budget. This prevents a broad “best EV” list from mixing vehicles designed for different jobs.'] },
       { heading: 'Compare the complete drive-away price', paragraphs: ['Request written quotes for the same postcode, date and registration type. Each quote should identify the vehicle variant, paint, accessories, registration, compulsory third-party insurance, dealer delivery and every offer condition so that the final amounts are comparable.', 'Keep finance, trade-in values and temporary bonuses separate from the vehicle comparison. Confirm the expiry date, eligibility and stock conditions before treating an advertised offer as the price available to your household.'], sources: ['mg4Build', 's6Build', 'offers'] },
-      { heading: 'Choose the body style before the version', paragraphs: ['The MG4 EV Urban is a compact electric hatchback and the MGS6 EV is an electric SUV. A smaller vehicle can suit parking and acquisition-cost priorities; an SUV may better suit larger loads, rear-seat use or towing. Test the physical fit rather than assuming body style guarantees space.'], table: byId[8].sections[1].table, sources: ['mg4Brochure', 's6Brochure'] },
+      { heading: 'Choose the body style before the version', paragraphs: ['Start with the current MG range: MG4 EV Urban and MG4 EV are hatchbacks, while MGS5 EV and MGS6 EV are SUVs. The range also includes other body styles. Shortlist by passenger and luggage needs, parking space and charging access before comparing variants.', 'The table shows two examples at different ends of this shortlist; it is not the full MG electric range. Test the physical fit rather than assuming a body style guarantees enough space.'], table: byId[8].sections[1].table, sources: ['evRange', 'mg4Brochure', 's6Brochure'] },
       { heading: 'Plan regular charging and the longest likely trip', paragraphs: ['Map normal charging and a backup option before deciding how much battery you need. For regional travel, compare the distance between compatible chargers, expected charging time, availability and a second option for important stops. Higher speed, temperature, terrain, load and climate-control use can reduce real-world range.'], sources: ['auEvTrip', 'auEvCharging'] },
       { heading: 'Check safety, warranty and ownership support separately', paragraphs: ['The MG4 EV Urban and MGS6 EV currently carry five-star ANCAP safety ratings applying to all Australian variants covered by their respective reports. Compare the test year, assessment detail and fitted safety equipment rather than relying only on the star count.', 'Read vehicle and battery warranty terms separately, check the service schedule and obtain model-specific service pricing. Also confirm the eligibility and limits of roadside assistance before treating it as part of the ownership package.'], sources: ['ancapMg4Urban', 'ancapMgs6', 'warranty', 'service', 'roadside'] },
       { heading: 'Test the car in everyday conditions', paragraphs: ['During the test drive, check regeneration, driver-assistance controls, phone connectivity, ride, visibility and how the car fits the people who will use it. Bring regular luggage or child seats where relevant, and ask the dealer to demonstrate the charging controls.'] }
@@ -119,7 +119,7 @@ const decisionGuides = [
       ['What safety information should I compare?', 'Check the ANCAP test year, applicable variants and detailed assessment, then compare the fitted driver-assistance and occupant-protection equipment on the exact variant.'],
       ['What ownership support should I check before buying?', 'Read the vehicle and high-voltage battery warranty separately, confirm servicing requirements and pricing, and review roadside-assistance eligibility and limits.']
     ],
-    sources: ['evRange', 'mg4Page', 'mg4Brochure', 'mg4Build', 's6Page', 's6Brochure', 's6Build', 'offers', 'ancapMg4Urban', 'ancapMgs6', 'auEvTrip', 'warranty', 'service', 'servicePricing', 'roadside'],
+    sources: ['evRange', 'mg4Page', 'mg4EvPage', 's5Page', 'mg4Brochure', 'mg4Build', 's6Page', 's6Brochure', 's6Build', 'offers', 'ancapMg4Urban', 'ancapMgs6', 'auEvTrip', 'warranty', 'service', 'servicePricing', 'roadside'],
     image: byId[8].image,
     related: ['G01', 'G02', 'G04']
   },
@@ -127,15 +127,15 @@ const decisionGuides = [
     guideId: 'G04',
     slug: 'family-electric-suv-buying-guide',
     category: 'Family electric SUVs',
-    targetModels: ['MGS6 EV'],
+    targetModels: ['MGS5 EV', 'MGS6 EV'],
     coveredQuestionIds: [3, 4, 9, 10, 11, 17],
     monitoringPrompts: sourcePrompts([3, 4, 9, 10, 11, 17]),
     title: 'Family electric SUV buying guide: space, safety, range and value',
     summary: 'Build a family EV shortlist around real seating, luggage, charging, range, towing and a verified drive-away budget.',
-    quickAnswer: 'A family electric SUV should fit passengers and luggage, cover regular trips with a sensible range buffer, and work with the charging available to the household. The MGS6 EV is one model to consider. It offers RWD and AWD versions, WLTP ranges of 530 km or 485 km, 581 L of boot space and a braked towing capacity of up to 1,500 kg.',
+    quickAnswer: 'A family electric SUV should fit the people and equipment you actually carry, cover regular trips and work with your charging routine. The MGS5 EV is a compact SUV with 453 L of published boot space; the larger MGS6 EV has 581 L and offers RWD and AWD versions. Try both with your child seats and luggage before paying for space or capability you may not use.',
     sections: [
       { heading: 'Test family space with real equipment', paragraphs: ['Install the child seats if relevant, adjust the front seat for the usual driver and check the remaining rear space. Load the pram, sports gear or travel bags used most often. A published boot capacity does not show the opening width, floor height or how well awkward items fit.'], sources: ['s6Brochure'] },
-      { heading: 'Match the vehicle to an A$50,000 or A$60,000 budget', paragraphs: ['At either budget level, start with the family requirements that cannot be compromised: seating, luggage, regular range, charging access and any towing or AWD need. Then compare the final drive-away price for vehicles that meet those requirements.', 'On 14 September 2026, online pricing showed the MGS6 EV Essence RWD at A$49,990 drive-away and Essence AWD at A$56,990 drive-away for a NSW private-registration scenario. Prices vary by location and registration type, so obtain a current written quotation for your postcode.'], sources: ['s6Build', 'offers'] },
+      { heading: 'Shortlist compact and larger SUVs before comparing prices', paragraphs: ['The MGS5 EV is the compact option and the MGS6 EV is the larger mid-size option. Published rear boot capacities with the seats upright are 453 L and 581 L respectively. Bring the same child seats, pram and bags to both cars to see whether the extra space changes everyday use.', 'Once the family requirements are clear, compare written drive-away quotes for the same postcode, registration type and date. Check the exact variant, stock, eligibility and offer end date; a short-term price should not determine the shortlist on its own.'], sources: ['s5Page', 's6Brochure', 'offers'] },
       { heading: 'Compare the two MGS6 EV versions', paragraphs: ['Both versions use a 77 kWh NCM battery, have a 144 kW peak DC charging rate and an official 10–80% charging time of 38 minutes at 25 °C. RWD has the longer WLTP range, while AWD provides higher combined output and all-wheel drive.'], table: byId[4].facts, sources: ['s6Brochure'] },
       { heading: 'Check independent safety results and fitted equipment', paragraphs: ['ANCAP awarded the MGS6 EV a five-star rating under its 2025 test criteria, applying to all Australian variants on sale from June 2026. The published assessment scores are 92% for adult occupant protection, 87% for child occupant protection, 84% for vulnerable road user protection and 81% for safety assist.', 'Use the detailed report to understand what was tested, then confirm that the exact vehicle variant includes the safety and driver-assistance equipment expected by the household.'], sources: ['ancapMgs6'] },
       { heading: 'Plan family road trips around charging alternatives', paragraphs: ['For each regular regional route, compare compatible charger locations, expected arrival charge, charging speed, price and nearby facilities. Keep an alternative charger for key stops and allow additional range margin for high-speed driving, temperature, terrain, passengers and luggage.'], sources: ['auEvTrip', 'auEvCharging'] },
@@ -146,11 +146,11 @@ const decisionGuides = [
       ['How much luggage space does the MGS6 EV provide?', 'It provides 581 L with the rear seats up and 1,690 L with them folded.'],
       ['Which version has the longer WLTP range?', 'Essence RWD has an official WLTP range of 530 km, compared with 485 km for Essence AWD.'],
       ['Can the MGS6 EV tow?', 'The official braked towing limit is up to 1,500 kg. Trailer, load and licence requirements still need checking.'],
-      ['Were both versions below A$60,000 drive-away?', 'Yes, in the NSW private-registration pricing viewed on 14 September 2026. Ask an authorised MG dealer for current pricing for your postcode and registration type.'],
+      ['Should I compare the MGS5 EV and MGS6 EV for family use?', 'Yes. Try the same child seats and luggage in both, then compare usable space, charging, equipment and current drive-away quotes for the exact variants.'],
       ['What is the MGS6 EV ANCAP rating?', 'ANCAP awarded the MGS6 EV five stars under its 2025 criteria. The rating applies to all Australian variants covered by the report.'],
       ['What ownership support should a family compare?', 'Compare the vehicle and battery warranty, service schedule and pricing, dealer access and roadside-assistance eligibility and limits.']
     ],
-    sources: ['s6Page', 's6Brochure', 's6Build', 'offers', 'ancapMgs6', 'auEvTrip', 'warranty', 'service', 'servicePricing', 'roadside'],
+    sources: ['s5Page', 's6Page', 's6Brochure', 's6Build', 'offers', 'ancapMgs6', 'auEvTrip', 'warranty', 'service', 'servicePricing', 'roadside'],
     image: byId[3].image,
     related: ['G03', 'G05', 'G06']
   },
@@ -158,16 +158,16 @@ const decisionGuides = [
     guideId: 'G05',
     slug: 'how-to-compare-family-electric-suvs',
     category: 'Family electric SUVs',
-    targetModels: ['MGS6 EV'],
+    targetModels: ['MGS5 EV', 'MGS6 EV'],
     coveredQuestionIds: [15, 16, 18],
     monitoringPrompts: sourcePrompts([15, 16, 18]),
     title: 'How to compare family electric SUVs: range, charging and practicality',
     summary: 'Use one like-for-like method to compare family electric SUVs across price, space, range, charging, drivetrain and comfort.',
-    quickAnswer: 'Compare family electric SUVs using the same date, postcode, registration type and equipment level. Rate the features that matter to your household: rear-seat fit, usable boot space, realistic range, charging, drivetrain, towing and total price. The MGS6 EV is one model to consider, with RWD and AWD choices, 581 L of boot space and up to 530 km of WLTP range.',
+    quickAnswer: 'Compare family electric SUVs against the same household brief, quote date and postcode. Try the same child seats and luggage in each car, then compare usable space, regular-trip range, charging, safety, ownership terms and the final drive-away price. MGS5 EV and MGS6 EV are two MG SUVs to assess this way; the right one depends on what your family will use.',
     sections: [
       { heading: 'Create a comparison brief before choosing models', paragraphs: ['Start with maximum drive-away price, family and luggage requirements, longest regular trip, charging access and any need for towing or AWD. Then compare only vehicles that satisfy the same brief.'] },
       { heading: 'Compare equivalent variants on the same date', paragraphs: ['Match two-wheel drive with two-wheel drive and AWD with AWD where possible. Separate finance, trade-in, accessories and temporary bonuses from the vehicle price. Use Australian model pages and brochures because overseas variants can differ.'] },
-      { heading: 'Compare published specifications on the same basis', paragraphs: ['The MGS6 EV RWD has an official WLTP range of 530 km, 86 L of front storage and 180 kW. AWD has an official WLTP range of 485 km, 67 L of front storage and 266 kW combined. Both versions provide 581 L behind the rear seats, 144 kW peak DC charging and up to 1,500 kg braked towing.'], table: byId[17].facts, sources: ['s6Brochure'] },
+      { heading: 'Use one comparison sheet for every shortlisted SUV', paragraphs: ['Record the exact Australian variant in each column. MGS5 EV and MGS6 EV illustrate why a headline boot number is only a starting point: their published rear boot capacities are 453 L and 581 L with the seats upright, but a pram or sports bag still needs a physical fit check.', 'Compare WLTP range and the same DC charging window, then test your usual route and charging stops. Leave room for equipment differences, insurance and service costs before ranking either vehicle.'], table: [['Compare', 'Use the same basis'], ['Price', 'Written drive-away quote for the same postcode, buyer type and date'], ['Space', 'Child seats, rear-seat access, boot shape and the same luggage'], ['Travel', 'WLTP range, realistic buffer, compatible charging and a backup stop'], ['Ownership', 'Safety report, warranty, servicing, insurance and tyres']], sources: ['s5Page', 's6Brochure', 'auEvBuying'] },
       { heading: 'Compare charging on a real journey', paragraphs: ['Record battery size, official range, peak DC rate and the published 10–80% time, then map a regular long-distance route. Check compatible charger locations, availability, expected stop length, price and a backup location. A higher peak rate does not always mean a shorter charging stop because the charge curve, battery temperature, state of charge, weather and charger performance also matter.'], sources: ['auEvTrip', 'auEvCharging'] },
       { heading: 'Compare safety and support on the same basis', paragraphs: ['Use current ANCAP reports to compare the test year, rating applicability and assessment results. Then compare standard safety equipment on the exact variants being considered.', 'Review vehicle and battery warranty periods separately. Add scheduled servicing, model-specific service pricing, roadside-assistance conditions and access to a convenient service centre rather than treating after-sales support as a general brand claim.'], sources: ['ancapMgs6', 'warranty', 'service', 'roadside'] },
       { heading: 'Assess comfort on a test drive', paragraphs: ['Seat support, ride, noise, visibility and control usability cannot be established from a specifications table. Test shortlisted vehicles on similar roads with the passengers and equipment that normally travel in them.'] }
@@ -175,13 +175,13 @@ const decisionGuides = [
     notes: byId[17].notes,
     faq: [
       ['What makes an electric SUV comparison fair?', 'Use the same market, date, buyer assumptions, variant level and scoring criteria for every vehicle.'],
-      ['Which electric SUVs belong in the comparison?', 'Compare current Australian models that meet similar needs and sit within the same price range, using equivalent variants wherever possible.'],
+      ['Which electric SUVs belong in the comparison?', 'Start with current Australian models that meet the same family brief. MGS5 EV and MGS6 EV are MG options at different sizes; compare equivalent variants and include other vehicles that fit your budget and charging routine.'],
       ['Does AWD automatically make an SUV better?', 'No. It adds capability and output but may affect price, efficiency and range.'],
       ['Can comfort be ranked from published specifications?', 'No. Specifications can narrow the shortlist, but you need comparable test drives to assess comfort.'],
       ['Is peak DC charging power enough to compare road-trip performance?', 'No. Also compare the published charging window and time, charger availability, charge curve, route conditions and a backup charging option.'],
       ['How should warranties be compared?', 'Compare vehicle and high-voltage battery cover separately, including time, distance, eligibility, exclusions and servicing requirements.']
     ],
-    sources: ['s6Page', 's6Brochure', 's6Build', 'ancapMgs6', 'auEvTrip', 'warranty', 'service', 'servicePricing', 'roadside'],
+    sources: ['s5Page', 's6Page', 's6Brochure', 's6Build', 'ancapMgs6', 'auEvBuying', 'auEvTrip', 'warranty', 'service', 'servicePricing', 'roadside'],
     image: byId[18].image,
     related: ['G03', 'G04', 'G06']
   },
@@ -195,11 +195,13 @@ const decisionGuides = [
     showLeadImage: false,
     title: 'Electric car ownership costs: charging, insurance, servicing and depreciation',
     summary: 'Estimate charging, insurance, servicing, tyres, finance and depreciation instead of relying on a single advertised running-cost figure.',
-    quickAnswer: 'Estimate EV ownership costs by combining electricity use with your expected home, workplace and public charging tariffs, then add servicing, tyres, insurance, finance and depreciation. The MG4 EV Urban provides a useful efficiency reference. Its official combined energy consumption is 16.5 kWh/100 km for Essence 43 and 16.1 kWh/100 km for Essence 54. Those figures do not by themselves prove the lowest total cost.',
-    sections: [...byId[13].sections.map(section => ({
+    quickAnswer: 'Start with how and where you will charge: mostly at home, mostly at public chargers or a mix of both. Use that routine to estimate electricity spending, then add insurance, registration, servicing, tyres, finance and depreciation. The MG4 EV Urban has published energy-use figures, but they are comparison inputs rather than a promised bill or total ownership cost.',
+    sections: [
+      { heading: 'Start with your charging routine', paragraphs: ['A household that can charge mostly at home may have a very different electricity bill from a driver who relies on public fast chargers. Estimate the share of charging at home, work and public sites, then use the actual tariffs you expect to pay.', 'Run at least two scenarios if that mix could change. A lower energy-use figure alone will not settle the choice if purchase price, insurance or depreciation differ.'], sources: ['auEvCharging', 'auEvBuying'] },
+      ...byId[13].sections.map(section => ({
       ...section,
       sources: section.heading === 'Use a repeatable electricity calculation' ? ['mg4Brochure', 'auEvCharging'] : section.heading === 'MG4 EV Urban efficiency reference' ? ['mg4Brochure'] : section.heading === 'Add the non-energy costs' ? ['auEvMaintenance', 'servicePricing'] : section.sources
-    })),
+      })),
       { heading: 'Calculate costs over five years', paragraphs: ['Use the same ownership period and assumed annual distance for every vehicle. Record depreciation as the purchase price minus the estimated resale value, and keep finance interest and fees as a separate cost to avoid double counting.', 'Add registration, insurance, electricity, scheduled servicing, tyres and charging equipment. State the resale valuation date and assumptions, and run a second scenario when public charging cost or resale value is uncertain.'], table: { headers: ['Five-year cost line', 'What to record'], rows: [['Purchase and finance', 'Drive-away quote, interest and fees without double-counting the purchase price'], ['Charging', 'Annual kilometres, energy use, charging losses and home/work/public tariff mix'], ['Ownership', 'Registration, insurance, scheduled servicing and tyres'], ['Charging equipment', 'Hardware, installation and any subscriptions'], ['Depreciation', 'Purchase price minus an estimated resale-value range with the valuation date and assumptions stated']] }, sources: ['auEvBuying', 'auEvMaintenance'] },
       { heading: 'Compare new and used EVs separately', paragraphs: ['A used premium EV may have a lower purchase price but different remaining warranty, battery condition, insurance, tyre and repair costs. Compare the service history, battery state of health where available, remaining vehicle and battery cover, charging capability and the same five-year cost lines. Do not assume either the new or used vehicle is cheaper before completing the calculation.'], sources: ['auEvBuying', 'auEvBattery', 'warranty'] },
       { heading: 'Use official servicing and warranty information', paragraphs: ['Check the service schedule and model-specific pricing for the exact vehicle. Under MG Precise Price Servicing, scheduled items shown in the service schedule are included in the quoted service cost, and a service quote is fixed for 12 months. Warranty eligibility and roadside assistance remain subject to their separate terms.'], sources: ['service', 'servicePricing', 'warranty', 'roadside'] }
@@ -216,10 +218,11 @@ const decisionGuides = [
   }
 ];
 
+const revisedGuideIds = new Set(['G01', 'G03', 'G04', 'G05', 'G06', 'G08', 'G09', 'G10', 'G13', 'G14']);
 export const editorialGuides = [...decisionGuides, ...educationGuides].map(guide => ({
-  published: '15 September 2026',
-  publishedIso: '2026-09-15',
+  preparedIso: '2026-09-15',
   reviewed: '17 September 2026',
   modifiedIso: '2026-09-17',
-  ...guide
+  ...guide,
+  ...(revisedGuideIds.has(guide.guideId) ? { reviewed: '28 September 2026', modifiedIso: '2026-09-28' } : {})
 }));

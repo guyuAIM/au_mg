@@ -1,10 +1,12 @@
-import faqData from '../data/faq-data.json' with { type: 'json' };
+import approvedFaqData from '../data/faq-data.json' with { type: 'json' };
+import { evFaqBasics } from '../data/ev-faq-basics.js';
 import { editorialGuides, guideSources, legacyGuideAliases } from '../data/editorial-guides.js';
 
-export { faqData, editorialGuides, guideSources, legacyGuideAliases };
+export const faqData = { ...approvedFaqData, faqs: [...evFaqBasics, ...approvedFaqData.faqs] };
+export { editorialGuides, guideSources, legacyGuideAliases };
 
 export const faqCategories = ['All topics', 'Budget & offers', 'Choosing an EV', 'Compare models', 'Space & family', 'Driving & charging', 'Ownership & warranty'];
-export const faqModels = [['all', 'All models'], ['urban', 'MG4 EV Urban'], ['mg4', 'MG4 EV'], ['s5', 'MGS5 EV'], ['s6', 'MGS6 EV'], ['hybrid', 'MG hybrids']];
+export const faqModels = [['all', 'All models'], ['urban', 'MG4 EV Urban'], ['mg4', 'MG4 EV'], ['s5', 'MGS5 EV'], ['s6', 'MGS6 EV'], ['im5', 'IM5'], ['im6', 'IM6'], ['cyberster', 'Cyberster'], ['u9ev', 'MGU9 EV'], ['hybrid', 'MG hybrids']];
 export const guideCategories = ['All guides', 'EV basics', 'Charging', 'Range & batteries', 'Budget & value', 'Choosing an EV', 'Family electric SUVs', 'Ownership costs'];
 export const guidePath = (slug) => `/explore/ev-guides/${slug}`;
 export const questionsPath = '/explore/ev-guides/questions';
@@ -20,7 +22,11 @@ function assert(condition, message) {
 }
 
 export function validateContent() {
-  assert(faqData.faqs.length === 27, `expected 27 FAQs, found ${faqData.faqs.length}`);
+  assert(approvedFaqData.faqs.length === 27, `expected 27 approved model FAQs, found ${approvedFaqData.faqs.length}`);
+  assert(evFaqBasics.length === 6, `expected six cross-model EV questions, found ${evFaqBasics.length}`);
+  for (const category of faqCategories.slice(1)) {
+    assert(evFaqBasics.filter((faq) => faq.category === category && faq.audience === 'all-evs').length === 1, `expected one cross-model EV question for ${category}`);
+  }
   assert(Array.isArray(faqData.actionToQna) && faqData.actionToQna.length === 14, 'expected 14 Peec action mappings');
   const mappedFaqIds = new Set(faqData.faqs.map((faq) => faq.id));
   const actionNames = new Set();

@@ -37,6 +37,7 @@ const serializedJsonLd = JSON.stringify(jsonLd).replaceAll('<', '\\u003c');
     <link rel="canonical" href={pageUrl} />
     <link rel="stylesheet" href={resourceHref('/assets/styles.css', path)} />
     <link rel="stylesheet" href={resourceHref('/assets/geo-static.css', path)} />
+    {view === 'questions' && <link rel="stylesheet" href={resourceHref('/assets/faq-architecture.css', path)} />}
     <title>{title}</title>
     <script type="application/ld+json" set:html={serializedJsonLd}></script>
     <script is:inline src={resourceHref('/scripts/file-navigation.js', path)} defer></script>

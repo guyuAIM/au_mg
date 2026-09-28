@@ -103,7 +103,7 @@ export function guideArticleSchema(guide, sourceUrls) {
     '@id': `${canonical(path)}#article`,
     headline: guide.title,
     description: guide.summary,
-    datePublished: guide.publishedIso,
+    ...(guide.livePublishedIso ? { datePublished: guide.livePublishedIso } : {}),
     dateModified: guide.modifiedIso,
     inLanguage: site.language,
     mainEntityOfPage: { '@id': `${canonical(path)}#webpage` },

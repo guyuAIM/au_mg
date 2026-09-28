@@ -1,20 +1,25 @@
 ---
 import External from './External.astro';
+import FaqItems from './FaqItems.astro';
 import Icon from './Icon.astro';
 import { faqCategories, faqData, faqModels, questionsPath } from '../lib/content.js';
+import { budgetBands, evModels, evPriceSnapshot, modelBudgetBands } from '../data/ev-models.js';
 import { official, resourceHref } from '../lib/site.js';
 
 const { view = 'hub' } = Astro.props;
 const isHub = view === 'hub';
-const visibleFaqs = isHub ? faqData.faqs : faqData.faqs.filter((faq) => faq.models.includes('s6'));
-const source = (id) => faqData.sources[id];
-const offerExpired = new Date() > new Date(`${faqData.offerExpiry}T23:59:59+10:00`);
+const modelFaqs = faqData.faqs.filter((faq) => faq.audience !== 'all-evs');
+const visibleFaqs = isHub ? faqData.faqs : modelFaqs.filter((faq) => faq.models.includes('s6'));
+const priceSnapshotExpired = new Date() > new Date(`${evPriceSnapshot.validUntil}T23:59:59+10:00`);
 const formatDate = (value) => new Intl.DateTimeFormat('en-AU', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Australia/Sydney' }).format(new Date(`${value}T12:00:00+10:00`));
+const formatShortDate = (value) => new Intl.DateTimeFormat('en-AU', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Australia/Sydney' }).format(new Date(`${value}T12:00:00+10:00`));
+const modelById = new Map(evModels.map((model) => [model.id, model]));
+const hubFaqCategories = ['All topics', 'EV essentials', ...faqCategories.slice(1)];
 ---
 {isHub ? (
   <>
     <section class="hero faq-hero guides-hero" aria-labelledby="page-title">
-      <picture><source media="(max-width: 767px)" srcset={resourceHref('/assets/faq-banner-mobile.jpg', Astro.url.pathname)} /><img src={resourceHref('/assets/faq-banner.jpg', Astro.url.pathname)} alt="Red MG Cyberster on an Australian road" /></picture>
+      <picture><source media="(max-width: 767px)" srcset={resourceHref('/assets/ev-guides-hero.jpg', Astro.url.pathname)} /><img src={resourceHref('/assets/ev-guides-hero.jpg', Astro.url.pathname)} alt="MG electric vehicles at a campsite" /></picture>
       <div class="hero-copy container"><span class="hero-eyebrow">EV Guides &amp; Advice</span><h1 id="page-title">EV Questions &amp; Answers</h1><p>Practical answers for choosing, charging and owning an electric car.</p></div>
     </section>
     <nav class="content-switch container" aria-label="EV Guides and Advice sections"><a href="/explore/ev-guides">Guides &amp; Advice</a><a class="selected" aria-current="page" href={questionsPath}>Questions &amp; Answers</a></nav>
@@ -30,48 +35,39 @@ const formatDate = (value) => new Intl.DateTimeFormat('en-AU', { day: 'numeric',
   </>
 )}
 
-<section class="container questions-section" id="questions" data-faq-root data-view={view}>
+<section class="container questions-section" id="questions" data-faq-root data-view={view} data-budget-expiry={evPriceSnapshot.validUntil}>
   <div class="intro">
     <h2>{isHub ? <>EV questions, <br /><strong>answered.</strong></> : <>Your MGS6 EV <br /><strong>questions</strong></>}</h2>
     <div>
-      <p>{isHub ? 'From choosing your first electric car to comparing family SUVs, find practical answers to help you choose and own your MG.' : 'Explore the space, range, ownership costs and model comparisons that matter when choosing your next family SUV.'}</p>
-      <p class="muted">Looking for something specific? Search a question or browse by topic.</p>
+      <p>{isHub ? 'Get the EV basics first, then explore questions about the MG model and variant that fits your needs.' : 'Explore the space, range, ownership costs and model comparisons that matter when choosing your next family SUV.'}</p>
+      <p class="muted">Looking for something specific? Search questions or use the filters below.</p>
     </div>
   </div>
   <div class="search-row">
     <label class="search-field"><Icon name="search" /><span class="sr-only">Search questions</span><input type="search" placeholder="Search budget, battery, warranty…" data-faq-search /><button type="button" aria-label="Clear search" data-faq-search-clear hidden><Icon name="close" /></button></label>
-    {isHub && <label class="model-select"><span class="sr-only">Filter by model</span><select data-faq-model>{faqModels.map(([value, label]) => <option value={value}>{label}</option>)}</select><Icon name="down" /></label>}
   </div>
-  <div class="topics" aria-label="Filter by topic">{faqCategories.map((category, index) => <button type="button" aria-pressed={index === 0 ? 'true' : 'false'} class={index === 0 ? 'selected' : ''} data-faq-category={category}>{category}</button>)}</div>
+  {isHub && <div class="model-question-discovery" id="explore-by-budget" data-faq-budget-section>
+    <div class="discovery-filters" aria-label="Filter EV questions">
+      <div class="discovery-filter-row"><span class="sr-only" id="model-topic-label">Topic</span><div class="topics" role="group" aria-labelledby="model-topic-label">{hubFaqCategories.map((category, index) => <button type="button" aria-pressed={index === 0 ? 'true' : 'false'} class={index === 0 ? 'selected' : ''} data-faq-category={category}>{category}</button>)}</div></div>
+      <div class="discovery-filter-row" data-faq-budget-row><span class="sr-only" id="budget-filter-label">Price range</span><div class="discovery-filter-control"><div class="budget-filter" data-faq-budget-filter role="group" aria-labelledby="budget-filter-label"><button type="button" class="selected" aria-pressed="true" data-budget="all">Any price</button>{budgetBands.map((band) => <button type="button" aria-pressed="false" data-budget={band.id}>{band.label}</button>)}</div><p class="price-filter-paused" data-price-filter-paused hidden={!priceSnapshotExpired}>Price filters are being updated.</p></div></div>
+      <div class="discovery-filter-row" data-faq-model-row><span class="sr-only" id="model-filter-label">MG model</span><div class="model-filter" role="group" aria-labelledby="model-filter-label">{faqModels.map(([value, label], index) => {
+        const model = modelById.get(value);
+        return <button type="button" class={index === 0 ? 'selected' : ''} aria-pressed={index === 0 ? 'true' : 'false'} data-faq-model={value} data-bands={model ? modelBudgetBands(model).join(' ') : ''} data-url={model ? official(model.url) : ''} data-model-name={label}>{label}</button>;
+      })}</div></div>
+      <p class="budget-note" data-budget-current hidden={priceSnapshotExpired}>Indicative NSW private-registration drive-away prices, checked {formatShortDate(evPriceSnapshot.checked)}. Offers end {formatShortDate(evPriceSnapshot.validUntil)}; price and availability vary by postcode and eligibility. <External href={official('/offers')}>Check current MG offers</External>.</p>
+      <p class="budget-note" data-budget-expired hidden={!priceSnapshotExpired}>The price snapshot has expired, so price filtering is paused. <External href={official('/offers')}>Check current MG offers</External> for prices and eligibility.</p>
+    </div>
+    <div class="model-empty" data-model-empty hidden><p data-model-empty-copy>Model-specific answers for this selection are being updated.</p><External data-model-empty-link href={official('/vehicles/electric')} hidden>Explore this model <Icon name="out" /></External></div>
+  </div>}
+  {!isHub && <div class="topics" aria-label="Filter by topic">{faqCategories.map((category, index) => <button type="button" aria-pressed={index === 0 ? 'true' : 'false'} class={index === 0 ? 'selected' : ''} data-faq-category={category}>{category}</button>)}</div>}
   <div class="results-bar">
-    <p role="status" aria-live="polite"><span data-faq-count>{visibleFaqs.length} questions</span><button type="button" class="text-button reset" data-faq-reset hidden>Reset filters</button></p>
+    <p role="status" aria-live="polite"><span data-faq-count>{visibleFaqs.length} questions</span><button type="button" class="text-button reset" data-faq-reset hidden>Clear filters</button></p>
     <button type="button" class="text-button" data-faq-expand-all>Expand all</button>
   </div>
-  <div class="faq-list">
-    {visibleFaqs.map((faq) => (
-      <article class="faq" id={faq.id} data-faq-item data-category={faq.category} data-models={faq.models.join(' ')} data-search={`${faq.question} ${faq.keywords} ${faq.paragraphs.join(' ')} ${JSON.stringify(faq.table || '')}`}>
-        <h3><button type="button" id={`trigger-${faq.id}`} aria-expanded="false" aria-controls={`answer-${faq.id}`} data-faq-trigger><span>{faq.question}</span><Icon name="down" /></button></h3>
-        <div class="answer" id={`answer-${faq.id}`} aria-labelledby={`trigger-${faq.id}`} hidden>
-          {faq.expiry && <div class="date-note">{offerExpired ? 'This September 2026 offer snapshot has expired. ' : `Prices checked ${formatDate(faqData.offerChecked)} · Offers end ${formatDate(faqData.offerExpiry)}. `}{offerExpired && <External href={official('/offers')}>View current MG offers</External>}</div>}
-          {offerExpired && faq.expiry ? (
-            <p>See the current offers page for available vehicles, prices and eligibility. The September promotion previously shown on this page is no longer presented as a current offer.</p>
-          ) : (
-            <>
-              {faq.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
-              {faq.table && <div class="table-wrap" tabindex="0" role="region" aria-label={`Comparison table for ${faq.question}`}><table><thead><tr>{faq.table.headers.map((header) => <th scope="col">{header}</th>)}</tr></thead><tbody>{faq.table.rows.map((row) => <tr>{row.map((cell, index) => index === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>)}</tr>)}</tbody></table></div>}
-              {faq.note && <p class="answer-note">{faq.note}</p>}
-            </>
-          )}
-          <div class="sources"><strong>References</strong>{faq.sources.map((id) => <External href={source(id).url}>{source(id).title}<Icon name="out" /></External>)}</div>
-        </div>
-      </article>
-    ))}
-  </div>
+  <div class="faq-list"><FaqItems faqs={visibleFaqs} /></div>
   <div class="empty" data-faq-empty hidden><h3>No matching questions</h3><p>Try a model name, “30k”, “family” or “warranty”, or clear the filters to see all questions.</p><button type="button" class="button dark" data-faq-reset>Show all questions</button></div>
   <p class="updated">Information checked {formatDate(faqData.modified)}. See each answer for its source and applicable conditions.</p>
 </section>
-
-{isHub && <section class="container model-feature"><div><span class="eyebrow">Explore your next MG</span><h2>A little more <br /><strong>room to explore.</strong></h2><p>Take a closer look at the MGS6 EV, with family questions answered where you choose your car.</p><External class="button dark" href={official('/vehicles/mgs6-ev')}>Explore the MGS6 EV <Icon name="right" /></External></div><img src={resourceHref('/assets/mgs6-ev.png', Astro.url.pathname)} alt="MGS6 EV" /></section>}
 
 <section class="owner-section"><div class="container owner-inner"><div><span class="eyebrow">Already an MG owner?</span><h2>Here for your <br /><strong>everyday questions.</strong></h2></div><div class="owner-links"><External href={official('/about/faqs')}>Vehicle care and existing owner FAQs <Icon name="right" /></External><External href={official('/about/servicing')}>Servicing your MG <Icon name="right" /></External><External href={official('/explore/warranty')}>Warranty and ownership cover <Icon name="right" /></External></div></div></section>
 <section class="container final-cta"><h2>Find your next MG.</h2><p>Explore the range and talk through your questions with your local MG dealer.</p><div><External class="button dark" href={official('/vehicles/electric')}>Explore electric vehicles <Icon name="right" /></External><External class="button outline" href={official('/about/find-a-dealer')}>Find a dealer <Icon name="right" /></External></div></section>
