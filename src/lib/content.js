@@ -1,12 +1,13 @@
 import approvedFaqData from '../data/faq-data.json' with { type: 'json' };
 import { evFaqBasics } from '../data/ev-faq-basics.js';
+import { evModels } from '../data/ev-models.js';
 import { editorialGuides, guideSources, legacyGuideAliases } from '../data/editorial-guides.js';
 
 export const faqData = { ...approvedFaqData, faqs: [...evFaqBasics, ...approvedFaqData.faqs] };
 export { editorialGuides, guideSources, legacyGuideAliases };
 
 export const faqCategories = ['All topics', 'Budget & offers', 'Choosing an EV', 'Compare models', 'Space & family', 'Driving & charging', 'Ownership & warranty'];
-export const faqModels = [['all', 'All models'], ['urban', 'MG4 EV Urban'], ['mg4', 'MG4 EV'], ['s5', 'MGS5 EV'], ['s6', 'MGS6 EV'], ['im5', 'IM5'], ['im6', 'IM6'], ['cyberster', 'Cyberster'], ['u9ev', 'MGU9 EV'], ['hybrid', 'MG hybrids']];
+export const faqModels = [['all', 'All models'], ['urban', 'MG4 EV Urban'], ['mg4', 'MG4 EV'], ['s5', 'MGS5 EV'], ['s6', 'MGS6 EV'], ['im5', 'IM5'], ['im6', 'IM6'], ['cyberster', 'Cyberster'], ['u9ev', 'MGU9 EV']];
 export const guideCategories = ['All guides', 'EV basics', 'Charging', 'Range & batteries', 'Budget & value', 'Choosing an EV', 'Family electric SUVs', 'Ownership costs'];
 export const guidePath = (slug) => `/explore/ev-guides/${slug}`;
 export const questionsPath = '/explore/ev-guides/questions';
@@ -46,9 +47,13 @@ export function validateContent() {
   const guideIds = new Set(editorialGuides.map((guide) => guide.guideId));
   const sourceIds = new Set(Object.keys(guideSources));
   const faqSourceIds = new Set(Object.keys(faqData.sources));
+  const modelIds = new Set(evModels.map((model) => model.id));
+
+  for (const [id] of faqModels.slice(1)) assert(modelIds.has(id), `FAQ model filter references a non-model: ${id}`);
 
   for (const faq of faqData.faqs) {
     assert(faq.question && faq.paragraphs?.length, `FAQ ${faq.id} is missing visible content`);
+    for (const id of faq.models || []) assert(modelIds.has(id), `FAQ ${faq.id} is tagged with a non-model: ${id}`);
     for (const id of faq.related || []) assert(faqIds.has(id), `FAQ ${faq.id} references missing FAQ ${id}`);
     for (const id of faq.sources || []) assert(faqSourceIds.has(id), `FAQ ${faq.id} references missing source ${id}`);
     assert(faqSourceIds.has(faq.cta), `FAQ ${faq.id} references missing CTA source ${faq.cta}`);

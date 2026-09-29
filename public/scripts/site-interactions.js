@@ -78,7 +78,7 @@
     };
 
     const update = () => {
-      const query = search?.value || '';
+      const query = search?.value.trim() || '';
       const essentialsOnly = category === 'EV essentials';
       if (budgetRow) budgetRow.hidden = essentialsOnly;
       if (modelRow) modelRow.hidden = essentialsOnly;
@@ -91,9 +91,11 @@
         const faqModels = (item.dataset.models || '').split(' ');
         const isGeneral = item.dataset.faqKind === 'general';
         const matchesCategory = category === 'All topics' || (essentialsOnly ? isGeneral : item.dataset.category === category);
-        const matchesModel = isGeneral || (selectedModel === 'all'
-          ? !allowedModels || faqModels.some((id) => allowedModels.has(id))
-          : faqModels.includes(selectedModel) && (!allowedModels || allowedModels.has(selectedModel)));
+        const matchesModel = isGeneral
+          ? selectedModel === 'all' && budget === 'all'
+          : selectedModel === 'all'
+            ? !allowedModels || faqModels.some((id) => allowedModels.has(id))
+            : faqModels.includes(selectedModel) && (!allowedModels || allowedModels.has(selectedModel));
         const matchesSearch = matchesQuery(item, query);
         item.hidden = !(matchesCategory && matchesModel && matchesSearch);
         return !item.hidden;
@@ -109,10 +111,14 @@
         const copy = modelEmpty.querySelector('[data-model-empty-copy]');
         const link = modelEmpty.querySelector('[data-model-empty-link]');
         if (copy) {
-          copy.textContent = selectedModel !== 'all' && allowedModels && !allowedModels.has(selectedModel)
-            ? (selectedOption?.dataset.bands ? `${selectedName} is outside this price range. Choose another price range or model.` : `Price filtering is not available for ${selectedName}. Choose Any price to see its answers.`)
-            : selectedModel !== 'all' && !modelHasAnswers
-              ? `Answers about ${selectedName} are being updated.`
+          copy.textContent = selectedModel !== 'all' && !modelHasAnswers
+            ? allowedModels && !allowedModels.has(selectedModel)
+              ? selectedOption?.dataset.bands
+                ? `${selectedName} is outside this price range. Model-specific answers are being updated.`
+                : `Price filtering is not available for ${selectedName} yet. Model-specific answers are being updated.`
+              : `Answers about ${selectedName} are being updated.`
+            : selectedModel !== 'all' && allowedModels && !allowedModels.has(selectedModel)
+              ? `${selectedName} is outside this price range. Choose another price range or model.`
               : budget !== 'all' && selectedModel === 'all'
                 ? 'No model questions are available for this price range yet. Try another price range or model.'
                 : 'No model questions match these filters. Try another topic or model.';
@@ -127,7 +133,7 @@
       }
       const active = Boolean(query || category !== 'All topics' || selectedModel !== 'all' || budget !== 'all');
       if (count) count.textContent = `${visible.length} ${visible.length === 1 ? 'question' : 'questions'}`;
-      if (empty) empty.hidden = visible.length > 0;
+      if (empty) empty.hidden = visible.length > 0 || (modelEmpty && !modelEmpty.hidden);
       if (searchClear) searchClear.hidden = !query;
       resetButtons.forEach((button) => { button.hidden = !active && !button.closest('[data-faq-empty]'); });
       if (expandAll) {

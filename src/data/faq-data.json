@@ -357,8 +357,7 @@
       "question": "Is the MG4 EV Urban a good first electric car for city driving?",
       "category": "Choosing an EV",
       "models": [
-        "urban",
-        "mg4"
+        "urban"
       ],
       "paragraphs": [
         "The MG4 EV Urban can be a practical first EV when its compact hatchback layout fits your passengers, luggage and parking space, and you have a dependable place to charge. A 360-degree camera and physical climate and volume controls are standard and can make everyday city use easier.",
@@ -430,8 +429,7 @@
         "urban",
         "mg4",
         "s5",
-        "s6",
-        "hybrid"
+        "s6"
       ],
       "paragraphs": [
         "Start with the space you need, then decide how you will charge or refuel. An electric hatchback may suit tighter parking and local trips. An electric SUV may be more useful if rear-seat access and luggage space matter more to your household.",
@@ -509,7 +507,6 @@
       "question": "What costs should I include when estimating five-year ownership of an MG4 EV?",
       "category": "Ownership & warranty",
       "models": [
-        "urban",
         "mg4"
       ],
       "paragraphs": [
@@ -1138,8 +1135,7 @@
       "question": "Is the MG4 EV Urban practical for a daily commute?",
       "category": "Driving & charging",
       "models": [
-        "urban",
-        "mg4"
+        "urban"
       ],
       "paragraphs": [
         "The MG4 EV Urban can suit a daily commute when either battery covers your longest repeat day with a practical buffer and you have dependable charging. Include school runs, shopping and other regular stops rather than calculating only the distance from home to work.",
@@ -1199,7 +1195,7 @@
     {
       "id": "F38",
       "question": "Which MG features matter most when comparing comfort and value?",
-      "category": "Choosing an EV",
+      "category": "Compare models",
       "models": [
         "urban",
         "s6"
@@ -1232,13 +1228,12 @@
     {
       "id": "F39",
       "question": "Should I choose an MG electric car, hybrid or plug-in hybrid for commuting?",
-      "category": "Driving & charging",
+      "category": "Choosing an EV",
       "models": [
         "urban",
         "mg4",
         "s5",
-        "s6",
-        "hybrid"
+        "s6"
       ],
       "paragraphs": [
         "Choose a battery-electric MG when dependable home, workplace or regular public charging fits your routine. Choose an MG Hybrid+ when you cannot plug in and want petrol-electric assistance without adding a charging routine. Consider an MG Super Hybrid when you can charge regularly but also want petrol-engine flexibility for longer journeys.",
@@ -1331,8 +1326,7 @@
         "urban",
         "mg4",
         "s5",
-        "s6",
-        "hybrid"
+        "s6"
       ],
       "paragraphs": [
         "Before ordering an MG, check the warranty that applies to the registration date and intended use, the high-voltage battery cover, the exact model’s service schedule and pricing, roadside-assistance conditions and the location of suitable service support.",
@@ -1360,7 +1354,7 @@
     {
       "id": "F42",
       "question": "How do I compare safety and value across MG electric vehicles?",
-      "category": "Ownership & warranty",
+      "category": "Compare models",
       "models": [
         "urban",
         "mg4",

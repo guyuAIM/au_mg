@@ -19,7 +19,7 @@ const hubFaqCategories = ['All topics', 'EV essentials', ...faqCategories.slice(
 {isHub ? (
   <>
     <section class="hero faq-hero guides-hero" aria-labelledby="page-title">
-      <picture><source media="(max-width: 767px)" srcset={resourceHref('/assets/ev-guides-hero.jpg', Astro.url.pathname)} /><img src={resourceHref('/assets/ev-guides-hero.jpg', Astro.url.pathname)} alt="MG electric vehicles at a campsite" /></picture>
+      <picture><source media="(max-width: 767px)" srcset={resourceHref('/assets/ev-guides-hero.png', Astro.url.pathname)} /><img src={resourceHref('/assets/ev-guides-hero.png', Astro.url.pathname)} alt="MG electric vehicles at a campsite" /></picture>
       <div class="hero-copy container"><span class="hero-eyebrow">EV Guides &amp; Advice</span><h1 id="page-title">EV Questions &amp; Answers</h1><p>Practical answers for choosing, charging and owning an electric car.</p></div>
     </section>
     <nav class="content-switch container" aria-label="EV Guides and Advice sections"><a href="/explore/ev-guides">Guides &amp; Advice</a><a class="selected" aria-current="page" href={questionsPath}>Questions &amp; Answers</a></nav>
