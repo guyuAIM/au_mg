@@ -46,3 +46,4 @@
 /* Compact academic-style inline citations. */
 .guide-citations{display:inline-flex;gap:2px;margin-left:4px;color:#686868}
 .guide-citations a{color:#686868}
+.guide-search input::-webkit-search-cancel-button{display:none}

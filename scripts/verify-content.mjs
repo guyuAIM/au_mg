@@ -10,7 +10,7 @@ const expectedHashes = {
   'src/data/p0-guides.js': '4904c62a2b89831294d5f3950973d09563caf51d796b2f126244fd7e5e1d7135',
   'src/data/editorial-guides.js': 'fadd916e4201ad86adb7c419a1f4f706c4bc765d75f0acf211450ee1e142a45e',
   'src/data/education-guides.js': '41a5a1f41f2286c1cd4b8f8baa5666f403fe011b530923a25215225d3c07ef2c',
-  'public/assets/styles.css': 'bfbc421a410f8cd5d936e09a606fb9118d8d20738c4a164a146232f435983ac8'
+  'public/assets/styles.css': '89fc12bcf234d8cc272ee2e25aee61d3330fe53b094b5caea78edb932f6dc1bb'
 };
 
 const sha256 = (buffer) => createHash('sha256').update(buffer).digest('hex');
