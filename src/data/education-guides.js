@@ -77,7 +77,7 @@ export const educationGuides = [
       ['Should I use DC fast charging every day?', 'Use the charging method that fits the trip and follow the manufacturer’s battery guidance. Routine slower charging can be more convenient and less expensive.']
     ],
     sources: ['auEvDefinitions', 'auEvCharging', 'auEvEquipment', 'mg4Brochure', 's6Brochure'],
-    image: { src: '/assets/mg4-urban-tech.jpg', alt: 'MG4 EV Urban technology and charging-related controls', href: 'https://mgmotor.com.au/vehicles/mg4-ev-urban' },
+    image: { src: '/assets/mg4-ev-recharging.jpg', alt: 'MG4 EV recharging', href: 'https://mgmotor.com.au/vehicles/electric' },
     related: ['G10', 'G11', 'G12']
   },
   {

@@ -1,5 +1,17 @@
 (() => {
-  const normalise = (value) => value.toLowerCase().replace(/a?\$|,/g, '').replace(/\b(30|40|50|60)k\b/g, (_, number) => `${number}000`);
+  const normalise = (value) => String(value || '')
+    .toLowerCase()
+    .replace(/\ba\$/g, '')
+    .replace(/[$,]/g, '')
+    .replace(/\b(\d+(?:\.\d+)?)\s*k\b/g, (_, number) => String(Math.round(Number(number) * 1000)))
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+  const searchTerms = (value) => normalise(value).split(/\s+/).filter(Boolean);
+  const matchesText = (value, query, { budgetContext = false } = {}) => {
+    const haystack = normalise(value);
+    const words = new Set(haystack.split(/\s+/).filter(Boolean));
+    return searchTerms(query).every((term) => /^\d{4,6}$/.test(term) ? budgetContext || words.has(term) : haystack.includes(term));
+  };
 
   const nav = document.querySelector('[data-main-nav]');
   const menuToggle = document.querySelector('[data-menu-toggle]');
@@ -35,34 +47,13 @@
   if (faqRoot) {
     const search = faqRoot.querySelector('[data-faq-search]');
     const searchClear = faqRoot.querySelector('[data-faq-search-clear]');
-    const modelButtons = [...faqRoot.querySelectorAll('[data-faq-model]')];
     const categoryButtons = [...faqRoot.querySelectorAll('[data-faq-category]')];
     const items = [...faqRoot.querySelectorAll('[data-faq-item]')];
-    const budgetSection = faqRoot.querySelector('[data-faq-budget-section]');
-    const budgetRow = faqRoot.querySelector('[data-faq-budget-row]');
-    const modelRow = faqRoot.querySelector('[data-faq-model-row]');
-    const budgetFilter = faqRoot.querySelector('[data-faq-budget-filter]');
-    const budgetButtons = [...faqRoot.querySelectorAll('[data-budget]')];
-    const modelOptions = modelButtons.filter((button) => button.dataset.faqModel !== 'all');
-    const modelEmpty = faqRoot.querySelector('[data-model-empty]');
-    const priceValid = Date.now() <= new Date(`${faqRoot.dataset.budgetExpiry}T23:59:59+10:00`).getTime();
     const count = faqRoot.querySelector('[data-faq-count]');
     const empty = faqRoot.querySelector('[data-faq-empty]');
     const expandAll = faqRoot.querySelector('[data-faq-expand-all]');
     const resetButtons = [...faqRoot.querySelectorAll('[data-faq-reset]')];
     let category = 'All topics';
-    let budget = 'all';
-    let selectedModel = 'all';
-
-    if (budgetSection) {
-      if (budgetFilter) budgetFilter.hidden = !priceValid;
-      const currentNote = budgetSection.querySelector('[data-budget-current]');
-      const expiredNote = budgetSection.querySelector('[data-budget-expired]');
-      const priceFilterPaused = budgetSection.querySelector('[data-price-filter-paused]');
-      if (currentNote) currentNote.hidden = !priceValid;
-      if (expiredNote) expiredNote.hidden = priceValid;
-      if (priceFilterPaused) priceFilterPaused.hidden = priceValid;
-    }
 
     const setOpen = (item, open) => {
       const trigger = item.querySelector('[data-faq-trigger]');
@@ -73,67 +64,24 @@
     };
 
     const matchesQuery = (item, query) => {
-      const haystack = normalise(item.dataset.search || '');
-      return normalise(query).split(/\s+/).filter(Boolean).every((needle) => /^\d+$/.test(needle) ? haystack.split(/\D+/).includes(needle) : haystack.includes(needle));
+      return matchesText(item.dataset.search, query, { budgetContext: item.dataset.category === 'Budget & offers' });
     };
 
     const update = () => {
       const query = search?.value.trim() || '';
       const essentialsOnly = category === 'EV essentials';
-      if (budgetRow) budgetRow.hidden = essentialsOnly;
-      if (modelRow) modelRow.hidden = essentialsOnly;
-      const currentNote = budgetSection?.querySelector('[data-budget-current]');
-      const expiredNote = budgetSection?.querySelector('[data-budget-expired]');
-      if (currentNote) currentNote.hidden = essentialsOnly || !priceValid;
-      if (expiredNote) expiredNote.hidden = essentialsOnly || priceValid;
-      const allowedModels = budget === 'all' || !priceValid ? null : new Set(modelOptions.filter((option) => (option.dataset.bands || '').split(' ').includes(budget)).map((option) => option.dataset.faqModel));
       const visible = items.filter((item) => {
-        const faqModels = (item.dataset.models || '').split(' ');
         const isGeneral = item.dataset.faqKind === 'general';
         const matchesCategory = category === 'All topics' || (essentialsOnly ? isGeneral : item.dataset.category === category);
-        const matchesModel = isGeneral
-          ? selectedModel === 'all' && budget === 'all'
-          : selectedModel === 'all'
-            ? !allowedModels || faqModels.some((id) => allowedModels.has(id))
-            : faqModels.includes(selectedModel) && (!allowedModels || allowedModels.has(selectedModel));
         const matchesSearch = matchesQuery(item, query);
-        item.hidden = !(matchesCategory && matchesModel && matchesSearch);
+        item.hidden = !(matchesCategory && matchesSearch);
         return !item.hidden;
       });
       items.forEach((item) => item.classList.remove('is-last-visible'));
       visible.at(-1)?.classList.add('is-last-visible');
-      const modelCount = visible.filter((item) => item.dataset.faqKind === 'model').length;
-      if (modelEmpty) {
-        modelEmpty.hidden = essentialsOnly || modelCount > 0 || Boolean(query);
-        const selectedOption = modelButtons.find((button) => button.dataset.faqModel === selectedModel);
-        const selectedName = selectedOption?.dataset.modelName || '';
-        const modelHasAnswers = items.some((item) => item.dataset.faqKind === 'model' && (item.dataset.models || '').split(' ').includes(selectedModel));
-        const copy = modelEmpty.querySelector('[data-model-empty-copy]');
-        const link = modelEmpty.querySelector('[data-model-empty-link]');
-        if (copy) {
-          copy.textContent = selectedModel !== 'all' && !modelHasAnswers
-            ? allowedModels && !allowedModels.has(selectedModel)
-              ? selectedOption?.dataset.bands
-                ? `${selectedName} is outside this price range. Model-specific answers are being updated.`
-                : `Price filtering is not available for ${selectedName} yet. Model-specific answers are being updated.`
-              : `Answers about ${selectedName} are being updated.`
-            : selectedModel !== 'all' && allowedModels && !allowedModels.has(selectedModel)
-              ? `${selectedName} is outside this price range. Choose another price range or model.`
-              : budget !== 'all' && selectedModel === 'all'
-                ? 'No model questions are available for this price range yet. Try another price range or model.'
-                : 'No model questions match these filters. Try another topic or model.';
-        }
-        if (link) {
-          link.hidden = modelEmpty.hidden || !selectedOption?.dataset.url;
-          if (selectedOption?.dataset.url) {
-            link.href = selectedOption.dataset.url;
-            link.setAttribute('aria-label', `Explore ${selectedName} on MG Australia`);
-          }
-        }
-      }
-      const active = Boolean(query || category !== 'All topics' || selectedModel !== 'all' || budget !== 'all');
+      const active = Boolean(query || category !== 'All topics');
       if (count) count.textContent = `${visible.length} ${visible.length === 1 ? 'question' : 'questions'}`;
-      if (empty) empty.hidden = visible.length > 0 || (modelEmpty && !modelEmpty.hidden);
+      if (empty) empty.hidden = visible.length > 0;
       if (searchClear) searchClear.hidden = !query;
       resetButtons.forEach((button) => { button.hidden = !active && !button.closest('[data-faq-empty]'); });
       if (expandAll) {
@@ -142,61 +90,22 @@
       }
     };
 
-    const clearFacetSelections = () => {
-      selectedModel = 'all';
-      modelButtons.forEach((candidate) => {
-        const selected = candidate.dataset.faqModel === 'all';
-        candidate.classList.toggle('selected', selected);
-        candidate.setAttribute('aria-pressed', String(selected));
-      });
+    const clearTopicSelection = () => {
       category = 'All topics';
-      budget = 'all';
-      budgetButtons.forEach((candidate, index) => {
-        candidate.classList.toggle('selected', index === 0);
-        candidate.setAttribute('aria-pressed', String(index === 0));
-      });
       categoryButtons.forEach((candidate, index) => {
         candidate.classList.toggle('selected', index === 0);
         candidate.setAttribute('aria-pressed', String(index === 0));
       });
     };
     search?.addEventListener('input', update);
+    search?.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter') return;
+      event.preventDefault();
+      update();
+    });
     searchClear?.addEventListener('click', () => { search.value = ''; update(); search.focus(); });
-    modelButtons.forEach((button) => button.addEventListener('click', () => {
-      selectedModel = button.dataset.faqModel;
-      modelButtons.forEach((candidate) => {
-        const selected = candidate === button;
-        candidate.classList.toggle('selected', selected);
-        candidate.setAttribute('aria-pressed', String(selected));
-      });
-      update();
-    }));
-    budgetButtons.forEach((button) => button.addEventListener('click', () => {
-      if (!priceValid) return;
-      budget = button.dataset.budget;
-      budgetButtons.forEach((candidate) => {
-        const selected = candidate === button;
-        candidate.classList.toggle('selected', selected);
-        candidate.setAttribute('aria-pressed', String(selected));
-      });
-      update();
-    }));
     categoryButtons.forEach((button) => button.addEventListener('click', () => {
       category = button.dataset.faqCategory;
-      if (category === 'EV essentials') {
-        selectedModel = 'all';
-        budget = 'all';
-        modelButtons.forEach((candidate) => {
-          const selected = candidate.dataset.faqModel === 'all';
-          candidate.classList.toggle('selected', selected);
-          candidate.setAttribute('aria-pressed', String(selected));
-        });
-        budgetButtons.forEach((candidate) => {
-          const selected = candidate.dataset.budget === 'all';
-          candidate.classList.toggle('selected', selected);
-          candidate.setAttribute('aria-pressed', String(selected));
-        });
-      }
       categoryButtons.forEach((candidate) => {
         const selected = candidate === button;
         candidate.classList.toggle('selected', selected);
@@ -216,7 +125,7 @@
     });
     const resetFilters = () => {
       if (search) search.value = '';
-      clearFacetSelections();
+      clearTopicSelection();
       update();
     };
     resetButtons.forEach((button) => button.addEventListener('click', resetFilters));
@@ -274,9 +183,10 @@
     }));
 
     const update = () => {
-      const query = (search?.value || '').trim().toLowerCase();
+      const query = (search?.value || '').trim();
       const visible = cards.filter((card) => {
-        const show = (category === 'All guides' || card.dataset.category === category) && (!query || (card.dataset.search || '').toLowerCase().includes(query));
+        const show = (category === 'All guides' || card.dataset.category === category)
+          && matchesText(card.dataset.search, query, { budgetContext: card.dataset.category === 'Budget & value' });
         card.hidden = !show;
         return show;
       });
@@ -294,6 +204,11 @@
     };
 
     search?.addEventListener('input', update);
+    search?.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter') return;
+      event.preventDefault();
+      update();
+    });
     clear?.addEventListener('click', () => { search.value = ''; update(); search.focus(); });
     categoryButtons.forEach((button) => button.addEventListener('click', () => {
       category = button.dataset.guideCategory;

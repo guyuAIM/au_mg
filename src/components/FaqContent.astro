@@ -2,18 +2,14 @@
 import External from './External.astro';
 import FaqItems from './FaqItems.astro';
 import Icon from './Icon.astro';
-import { faqCategories, faqData, faqModels, questionsPath } from '../lib/content.js';
-import { budgetBands, evModels, evPriceSnapshot, modelBudgetBands } from '../data/ev-models.js';
+import { faqCategories, faqData, questionsPath } from '../lib/content.js';
 import { official, resourceHref } from '../lib/site.js';
 
 const { view = 'hub' } = Astro.props;
 const isHub = view === 'hub';
 const modelFaqs = faqData.faqs.filter((faq) => faq.audience !== 'all-evs');
 const visibleFaqs = isHub ? faqData.faqs : modelFaqs.filter((faq) => faq.models.includes('s6'));
-const priceSnapshotExpired = new Date() > new Date(`${evPriceSnapshot.validUntil}T23:59:59+10:00`);
 const formatDate = (value) => new Intl.DateTimeFormat('en-AU', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Australia/Sydney' }).format(new Date(`${value}T12:00:00+10:00`));
-const formatShortDate = (value) => new Intl.DateTimeFormat('en-AU', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Australia/Sydney' }).format(new Date(`${value}T12:00:00+10:00`));
-const modelById = new Map(evModels.map((model) => [model.id, model]));
 const hubFaqCategories = ['All topics', 'EV essentials', ...faqCategories.slice(1)];
 ---
 {isHub ? (
@@ -35,29 +31,21 @@ const hubFaqCategories = ['All topics', 'EV essentials', ...faqCategories.slice(
   </>
 )}
 
-<section class="container questions-section" id="questions" data-faq-root data-view={view} data-budget-expiry={evPriceSnapshot.validUntil}>
+<section class="container questions-section" id="questions" data-faq-root data-view={view}>
   <div class="intro">
     <h2>{isHub ? <>EV questions, <br /><strong>answered.</strong></> : <>Your MGS6 EV <br /><strong>questions</strong></>}</h2>
     <div>
       <p>{isHub ? 'Get the EV basics first, then explore questions about the MG model and variant that fits your needs.' : 'Explore the space, range, ownership costs and model comparisons that matter when choosing your next family SUV.'}</p>
-      <p class="muted">Looking for something specific? Search questions or use the filters below.</p>
+      <p class="muted">Looking for something specific? Search questions or choose a topic below.</p>
     </div>
   </div>
   <div class="search-row">
     <label class="search-field"><Icon name="search" /><span class="sr-only">Search questions</span><input type="search" placeholder="Search budget, battery, warranty…" data-faq-search /><button type="button" aria-label="Clear search" data-faq-search-clear hidden><Icon name="close" /></button></label>
   </div>
-  {isHub && <div class="model-question-discovery" id="explore-by-budget" data-faq-budget-section>
+  {isHub && <div class="model-question-discovery" id="explore-by-topic">
     <div class="discovery-filters" aria-label="Filter EV questions">
       <div class="discovery-filter-row"><span class="sr-only" id="model-topic-label">Topic</span><div class="topics" role="group" aria-labelledby="model-topic-label">{hubFaqCategories.map((category, index) => <button type="button" aria-pressed={index === 0 ? 'true' : 'false'} class={index === 0 ? 'selected' : ''} data-faq-category={category}>{category}</button>)}</div></div>
-      <div class="discovery-filter-row" data-faq-budget-row><span class="sr-only" id="budget-filter-label">Price range</span><div class="discovery-filter-control"><div class="budget-filter" data-faq-budget-filter role="group" aria-labelledby="budget-filter-label"><button type="button" class="selected" aria-pressed="true" data-budget="all">Any price</button>{budgetBands.map((band) => <button type="button" aria-pressed="false" data-budget={band.id}>{band.label}</button>)}</div><p class="price-filter-paused" data-price-filter-paused hidden={!priceSnapshotExpired}>Price filters are being updated.</p></div></div>
-      <div class="discovery-filter-row" data-faq-model-row><span class="sr-only" id="model-filter-label">MG model</span><div class="model-filter" role="group" aria-labelledby="model-filter-label">{faqModels.map(([value, label], index) => {
-        const model = modelById.get(value);
-        return <button type="button" class={index === 0 ? 'selected' : ''} aria-pressed={index === 0 ? 'true' : 'false'} data-faq-model={value} data-bands={model ? modelBudgetBands(model).join(' ') : ''} data-url={model ? official(model.url) : ''} data-model-name={label}>{label}</button>;
-      })}</div></div>
-      <p class="budget-note" data-budget-current hidden={priceSnapshotExpired}>Indicative NSW private-registration drive-away prices, checked {formatShortDate(evPriceSnapshot.checked)}. Offers end {formatShortDate(evPriceSnapshot.validUntil)}; price and availability vary by postcode and eligibility. <External href={official('/offers')}>Check current MG offers</External>.</p>
-      <p class="budget-note" data-budget-expired hidden={!priceSnapshotExpired}>The price snapshot has expired, so price filtering is paused. <External href={official('/offers')}>Check current MG offers</External> for prices and eligibility.</p>
     </div>
-    <div class="model-empty" data-model-empty hidden><p data-model-empty-copy>Model-specific answers for this selection are being updated.</p><External data-model-empty-link href={official('/vehicles/electric')} hidden>Explore this model <Icon name="out" /></External></div>
   </div>}
   {!isHub && <div class="topics" aria-label="Filter by topic">{faqCategories.map((category, index) => <button type="button" aria-pressed={index === 0 ? 'true' : 'false'} class={index === 0 ? 'selected' : ''} data-faq-category={category}>{category}</button>)}</div>}
   <div class="results-bar">
@@ -65,7 +53,7 @@ const hubFaqCategories = ['All topics', 'EV essentials', ...faqCategories.slice(
     <button type="button" class="text-button" data-faq-expand-all>Expand all</button>
   </div>
   <div class="faq-list"><FaqItems faqs={visibleFaqs} /></div>
-  <div class="empty" data-faq-empty hidden><h3>No matching questions</h3><p>Try a model name, “30k”, “family” or “warranty”, or clear the filters to see all questions.</p><button type="button" class="button dark" data-faq-reset>Show all questions</button></div>
+  <div class="empty" data-faq-empty hidden><h3>No matching questions</h3><p>Try a topic, model name, “25k”, “family” or “warranty”, or clear the search to see all questions.</p><button type="button" class="button dark" data-faq-reset>Show all questions</button></div>
   <p class="updated">Information checked {formatDate(faqData.modified)}. See each answer for its source and applicable conditions.</p>
 </section>
 

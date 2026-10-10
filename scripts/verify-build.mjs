@@ -47,6 +47,18 @@ for (const route of canonicalRoutes) {
 
 const guideHub = await readFile(htmlFile('/explore/ev-guides'), 'utf8');
 const questionsHtml = await readFile(htmlFile(questionsPath), 'utf8');
+const chargingHtml = htmlByRoute.get('/explore/ev-guides/ac-and-dc-ev-charging') || '';
+const guideIntro = 'Start with the basics, then move from charging and range to choosing, buying and owning an electric car.';
+const guideIntroDetail = 'Browse practical advice on EV technology, public and home charging, batteries, affordable cars, family SUVs, comparisons and running costs.';
+check(guideHub.split(escaped(guideIntro)).length - 1 === 1, 'guide hub must retain the first introduction sentence exactly once');
+check(guideHub.split(escaped(guideIntroDetail)).length - 1 === 1, 'guide hub must retain the supporting introduction exactly once');
+check(!guideHub.includes('Every guide uses plain English and links to the source material behind its key facts.'), 'guide hub still contains the struck-through sentence');
+check(chargingHtml.includes('/assets/mg4-ev-recharging.jpg'), 'charging guide must reference the MG4 recharging image');
+check(!chargingHtml.includes('/assets/mg4-urban-tech.jpg'), 'charging guide still references the infotainment image');
+for (const removed of ['data-faq-budget', 'data-budget=', 'data-faq-model', 'data-model-empty', 'price-filter-paused', 'budget-note', 'Price filters are being updated', 'Any price']) {
+  check(!questionsHtml.includes(removed), `${questionsPath} still contains removed filter output: ${removed}`);
+}
+check(questionsHtml.includes('data-faq-search') && questionsHtml.includes('data-faq-category'), `${questionsPath} must retain search and topic filters`);
 check(questionsHtml.includes(`"dateModified":"${faqData.modified}"`), `${questionsPath} is missing its structured-data modification date`);
 check(questionsHtml.includes(`"lastReviewed":"${faqData.reviewed}"`), `${questionsPath} is missing its structured-data review date`);
 check(questionsHtml.includes('"reviewedBy":{"@id":"https://mgmotor.com.au/#organization"}'), `${questionsPath} is missing its structured-data reviewer`);
