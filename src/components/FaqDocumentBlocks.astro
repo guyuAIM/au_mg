@@ -1,0 +1,19 @@
+---
+import { faqData } from '../lib/content.js';
+import { faqTextSegments } from '../lib/faq-content.js';
+
+const { faq } = Astro.props;
+---
+{faq.blocks.map((block) => block.type === 'paragraph' ? (
+  <p class="document-paragraph">{faqTextSegments(block.text, faq, faqData.faqs).map((segment) => segment.href ? <a href={segment.href}>{segment.text}</a> : segment.text)}</p>
+) : (
+  <div class="table-wrap" tabindex="0" role="region" aria-label={`Comparison table for ${faq.question}`}>
+    <table>
+      <thead><tr>{block.headers.map((header) => <th scope="col">{header}</th>)}</tr></thead>
+      <tbody>{block.rows.map((row) => <tr>{row.map((cell, index) => index === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>)}</tr>)}</tbody>
+    </table>
+  </div>
+))}
+<style>
+  .document-paragraph, th, td { white-space: pre-line; }
+</style>

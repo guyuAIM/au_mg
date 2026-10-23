@@ -1,9 +1,16 @@
 import approvedFaqData from '../data/faq-data.json' with { type: 'json' };
+import octoberFaqData from '../data/faq-october-2026.json' with { type: 'json' };
+import { faqBlocks } from './faq-content.js';
 import { evFaqBasics } from '../data/ev-faq-basics.js';
 import { evModels } from '../data/ev-models.js';
 import { editorialGuides, guideSources, legacyGuideAliases } from '../data/editorial-guides.js';
 
-export const faqData = { ...approvedFaqData, faqs: [...evFaqBasics, ...approvedFaqData.faqs] };
+export const faqData = {
+  ...approvedFaqData,
+  modified: octoberFaqData.modified,
+  sources: { ...approvedFaqData.sources, ...octoberFaqData.sources },
+  faqs: [...evFaqBasics, ...approvedFaqData.faqs, ...octoberFaqData.faqs]
+};
 export { editorialGuides, guideSources, legacyGuideAliases };
 
 export const faqCategories = ['All topics', 'Budget & offers', 'Choosing an EV', 'Compare models', 'Space & family', 'Driving & charging', 'Ownership & warranty'];
@@ -25,6 +32,8 @@ function assert(condition, message) {
 export function validateContent() {
   assert(approvedFaqData.faqs.length === 27, `expected 27 approved model FAQs, found ${approvedFaqData.faqs.length}`);
   assert(evFaqBasics.length === 6, `expected six cross-model EV questions, found ${evFaqBasics.length}`);
+  assert(octoberFaqData.faqs.length === 24, 'expected 24 October document FAQs');
+  assert(faqData.faqs.length === 57, 'expected 57 combined FAQs');
   for (const category of faqCategories.slice(1)) {
     assert(evFaqBasics.filter((faq) => faq.category === category && faq.audience === 'all-evs').length === 1, `expected one cross-model EV question for ${category}`);
   }
@@ -52,7 +61,8 @@ export function validateContent() {
   for (const [id] of faqModels.slice(1)) assert(modelIds.has(id), `FAQ model filter references a non-model: ${id}`);
 
   for (const faq of faqData.faqs) {
-    assert(faq.question && faq.paragraphs?.length, `FAQ ${faq.id} is missing visible content`);
+    assert(faq.question && faqBlocks(faq).length, `FAQ ${faq.id} is missing visible content`);
+    assert(faqCategories.includes(faq.category), `FAQ ${faq.id} has an unknown category`);
     for (const id of faq.models || []) assert(modelIds.has(id), `FAQ ${faq.id} is tagged with a non-model: ${id}`);
     for (const id of faq.related || []) assert(faqIds.has(id), `FAQ ${faq.id} references missing FAQ ${id}`);
     for (const id of faq.sources || []) assert(faqSourceIds.has(id), `FAQ ${faq.id} references missing source ${id}`);

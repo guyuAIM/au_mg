@@ -3,6 +3,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { canonicalRoutes, editorialGuides, faqData, guideSources, questionsPath } from '../src/lib/content.js';
 import { contentFile, guideBase } from '../src/lib/site.js';
+import { parseHTML } from 'linkedom';
+import { faqAnswerText, faqTextSegments } from '../src/lib/faq-content.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
@@ -47,6 +49,11 @@ for (const route of canonicalRoutes) {
 
 const guideHub = await readFile(htmlFile('/explore/ev-guides'), 'utf8');
 const questionsHtml = await readFile(htmlFile(questionsPath), 'utf8');
+const questionsDocument = parseHTML(questionsHtml).document;
+const normalizedText = (value) => value.replace(/\s+/g, ' ').trim();
+check(questionsDocument.querySelectorAll('[data-faq-item]').length === 57, 'Q&A page must contain all 57 FAQ articles');
+const questionSchema = JSON.parse(questionsDocument.querySelector('script[type="application/ld+json"]').textContent)['@graph'].find((node) => node.mainEntity);
+check(questionSchema.mainEntity.length === 57, 'Q&A structured data must contain all 57 questions');
 const chargingHtml = htmlByRoute.get('/explore/ev-guides/ac-and-dc-ev-charging') || '';
 const guideIntro = 'Start with the basics, then move from charging and range to choosing, buying and owning an electric car.';
 const guideIntroDetail = 'Browse practical advice on EV technology, public and home charging, batteries, affordable cars, family SUVs, comparisons and running costs.';
@@ -66,9 +73,39 @@ check(!/class="answer"[^>]*role="region"/.test(questionsHtml), `${questionsPath}
 for (const faq of faqData.faqs) {
   check(questionsHtml.includes(escaped(faq.question)), `${questionsPath} is missing FAQ question ${faq.id}`);
   check(questionsHtml.includes(`https://mgmotor.com.au${questionsPath}#${faq.id}`), `${questionsPath} is missing structured-data URL for ${faq.id}`);
-  for (const paragraph of faq.paragraphs) check(questionsHtml.includes(escaped(paragraph)), `${questionsPath} is missing paragraph from ${faq.id}`);
+  for (const paragraph of faq.paragraphs || []) check(questionsHtml.includes(escaped(paragraph)), `${questionsPath} is missing paragraph from ${faq.id}`);
   for (const cell of tableCells(faq.table)) check(questionsHtml.includes(escaped(cell)), `${questionsPath} is missing table cell from ${faq.id}: ${cell}`);
   for (const sourceId of faq.sources || []) check(questionsHtml.includes(escaped(faqData.sources[sourceId].url)), `${questionsPath} is missing source URL ${sourceId}`);
+  if (faq.blocks) {
+    const article = questionsDocument.getElementById(faq.id);
+    const answer = article?.querySelector('.answer');
+    check(Boolean(answer), `missing document answer ${faq.id}`);
+    if (!answer) continue;
+    const renderedBlocks = [...answer.children].filter((node) => !node.classList.contains('sources'));
+    check(renderedBlocks.length === faq.blocks.length, `document block count differs for ${faq.id}`);
+    faq.blocks.forEach((block, index) => {
+      const rendered = renderedBlocks[index];
+      check(Boolean(rendered), `missing document block ${faq.id}/${index}`);
+      if (!rendered) return;
+      if (block.type === 'paragraph') {
+        const segments = faqTextSegments(block.text, faq, faqData.faqs);
+        check(rendered.tagName === 'P' && normalizedText(rendered.textContent) === normalizedText(segments.map((segment) => segment.text).join('')), `paragraph/order differs for ${faq.id}/${index}`);
+        for (const segment of segments.filter((segment) => segment.href)) check(Boolean(rendered.querySelector(`a[href="${segment.href}"]`)), `missing internal link ${faq.id} -> ${segment.href}`);
+      } else {
+        const cells = [...rendered.querySelectorAll('th, td')].map((node) => normalizedText(node.textContent));
+        check(JSON.stringify(cells) === JSON.stringify(tableCells(block).map(normalizedText)), `table cells/order differ for ${faq.id}/${index}`);
+      }
+    });
+    check(!answer.querySelector('.answer-note, .date-note'), `document FAQ ${faq.id} has an added note or legacy offer banner`);
+    const references = [...answer.querySelectorAll('.sources a')];
+    check(references.length === faq.sources.length, `reference count differs for ${faq.id}`);
+    faq.sources.forEach((sourceId, index) => {
+      const source = faqData.sources[sourceId];
+      check(references[index]?.getAttribute('href') === source.url && normalizedText(references[index].textContent) === normalizedText(source.title), `source label/URL differs for ${faq.id}/${sourceId}`);
+    });
+    const schemaQuestion = questionSchema.mainEntity.find((node) => node.url.endsWith(`#${faq.id}`));
+    check(schemaQuestion?.acceptedAnswer.text === faqAnswerText(faq, faqData.faqs), `structured answer differs for ${faq.id}`);
+  }
 }
 for (const guide of editorialGuides) {
   check(guideHub.includes(escaped(guide.title)), `guide hub is missing ${guide.guideId}`);

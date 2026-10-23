@@ -54,7 +54,7 @@ const hubFaqCategories = ['All topics', 'EV essentials', ...faqCategories.slice(
   </div>
   <div class="faq-list"><FaqItems faqs={visibleFaqs} /></div>
   <div class="empty" data-faq-empty hidden><h3>No matching questions</h3><p>Try a topic, model name, “25k”, “family” or “warranty”, or clear the search to see all questions.</p><button type="button" class="button dark" data-faq-reset>Show all questions</button></div>
-  <p class="updated">Information checked {formatDate(faqData.modified)}. See each answer for its source and applicable conditions.</p>
+  <p class="updated">Page updated {formatDate(faqData.modified)}. See each answer for its source and applicable conditions.</p>
 </section>
 
 <section class="owner-section"><div class="container owner-inner"><div><span class="eyebrow">Already an MG owner?</span><h2>Here for your <br /><strong>everyday questions.</strong></h2></div><div class="owner-links"><External href={official('/about/faqs')}>Vehicle care and existing owner FAQs <Icon name="right" /></External><External href={official('/about/servicing')}>Servicing your MG <Icon name="right" /></External><External href={official('/explore/warranty')}>Warranty and ownership cover <Icon name="right" /></External></div></div></section>

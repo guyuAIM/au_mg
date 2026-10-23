@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import { readFile } from 'node:fs/promises';
 import { parseHTML } from 'linkedom';
+import { faqData, faqCategories } from '../src/lib/content.js';
+import { faqAnswerText } from '../src/lib/faq-content.js';
 
 const interactions = await readFile(new URL('../public/scripts/site-interactions.js', import.meta.url), 'utf8');
 
@@ -23,7 +25,7 @@ function render(html, href) {
     },
     requestAnimationFrame: (callback) => callback()
   });
-  return { document, window };
+  return { document, window, location };
 }
 
 function keydown(window, element, key) {
@@ -111,4 +113,42 @@ test('FAQ search accepts price formats and combines with topic selection', () =>
   items[0].querySelector('[data-faq-trigger]').click();
   assert.equal(items[0].classList.contains('is-open'), true);
   assert.equal(items[0].querySelector('.answer').hidden, false);
+});
+
+test('all 57 FAQs support topic/table search, essentials and filtered document deep links', () => {
+  const escape = (value) => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
+  const { document, window, location } = render(`
+    <main data-faq-root>
+      <input data-faq-search /><button data-faq-search-clear>Clear</button>
+      ${['All topics', 'EV essentials', ...faqCategories.slice(1)].map((category) => `<button data-faq-category="${escape(category)}">${escape(category)}</button>`).join('')}
+      <span data-faq-count></span><button data-faq-expand-all>Expand all</button>
+      ${faqData.faqs.map((faq) => `<article id="${faq.id}" data-faq-item data-faq-kind="${faq.audience === 'all-evs' ? 'general' : 'model'}" data-category="${escape(faq.category)}" data-search="${escape(faq.question + ' ' + faqAnswerText(faq, faqData.faqs))}"><button data-faq-trigger>${escape(faq.question)}</button><div class="answer" hidden>Answer</div></article>`).join('')}
+      <div data-faq-empty hidden></div><button data-faq-reset>Reset</button>
+    </main>
+  `, 'https://mgmotor.com.au/explore/ev-guides/questions');
+  const count = () => document.querySelector('[data-faq-count]').textContent;
+  assert.equal(count(), '57 questions');
+  document.querySelector('[data-faq-category="EV essentials"]').click();
+  assert.equal(count(), '6 questions');
+  document.querySelector('[data-faq-category="Driving & charging"]').click();
+  assert.equal(count(), '10 questions');
+  document.querySelector('[data-faq-reset]').click();
+  const search = document.querySelector('[data-faq-search]');
+  document.querySelector('[data-faq-category="Ownership & warranty"]').click();
+  search.value = '1376';
+  search.dispatchEvent(new window.Event('input'));
+  assert.equal(count(), '1 question');
+  assert.equal(document.getElementById('AU20261023-19').hidden, false);
+  document.querySelector('[data-faq-expand-all]').click();
+  assert.equal(document.getElementById('AU20261023-19').querySelector('.answer').hidden, false);
+  const target = document.getElementById('AU20261023-12');
+  let scrolled = false;
+  target.scrollIntoView = () => { scrolled = true; };
+  location.hash = '#AU20261023-12';
+  window.dispatchEvent(new window.Event('hashchange'));
+  assert.equal(search.value, '');
+  assert.equal(count(), '57 questions');
+  assert.equal(target.hidden, false);
+  assert.equal(target.querySelector('.answer').hidden, false);
+  assert.ok(scrolled);
 });

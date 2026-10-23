@@ -1,0 +1,1280 @@
+{
+  "sourceDocument": "MG_Australia_24_FAQs_Final_20261023.docx",
+  "sourceSha256": "47fc3e3b3ed3971be35106b35ed01e09f8f8194fbd79eda6ae71a82990746abc",
+  "reviewed": "2026-10-22",
+  "modified": "2026-10-23",
+  "sources": {
+    "oct2026-source-01": {
+      "title": "MG electric vehicle range",
+      "url": "https://mgmotor.com.au/vehicles/electric"
+    },
+    "oct2026-source-02": {
+      "title": "Australian Government: choosing an EV",
+      "url": "https://www.energy.gov.au/electric-vehicles/buying-electric-vehicle/preparing-buy-electric-vehicle"
+    },
+    "oct2026-source-03": {
+      "title": "MG Australia offers and full terms",
+      "url": "https://mgmotor.com.au/offers"
+    },
+    "oct2026-source-04": {
+      "title": "MG4 EV Urban",
+      "url": "https://mgmotor.com.au/vehicles/mg4-ev-urban"
+    },
+    "oct2026-source-05": {
+      "title": "MG4 EV",
+      "url": "https://mgmotor.com.au/vehicles/mg4-ev"
+    },
+    "oct2026-source-06": {
+      "title": "MGS5 EV",
+      "url": "https://mgmotor.com.au/vehicles/mgs5-ev"
+    },
+    "oct2026-source-07": {
+      "title": "MGS6 EV",
+      "url": "https://mgmotor.com.au/vehicles/mgs6-ev"
+    },
+    "oct2026-source-08": {
+      "title": "MG4 EV Urban Australian brochure",
+      "url": "https://mgmotor.com.au/brochures/MG4_EV_URBAN_2026_v8.pdf"
+    },
+    "oct2026-source-09": {
+      "title": "MG Hybrid+ and Super Hybrid range",
+      "url": "https://mgmotor.com.au/vehicles/hybrid"
+    },
+    "oct2026-source-10": {
+      "title": "Australian Government: cost comparison tools",
+      "url": "https://www.energy.gov.au/electric-vehicles/buying-electric-vehicle/cost-and-emissions-comparison-tools"
+    },
+    "oct2026-source-11": {
+      "title": "MGS6 EV Australian brochure",
+      "url": "https://mgmotor.com.au/brochures/MGS6_EV_2026.pdf"
+    },
+    "oct2026-source-12": {
+      "title": "MG owner manuals",
+      "url": "https://mgmotor.com.au/owners-manuals"
+    },
+    "oct2026-source-13": {
+      "title": "ANCAP MGS6 EV",
+      "url": "https://www.ancap.com.au/safety-ratings/mg/mgs6-ev/588e29"
+    },
+    "oct2026-source-14": {
+      "title": "MG Australia offers",
+      "url": "https://mgmotor.com.au/offers"
+    },
+    "oct2026-source-15": {
+      "title": "Australian Government: EV road trips",
+      "url": "https://www.energy.gov.au/electric-vehicles/owning-electric-vehicle/planning-electric-vehicle-trip"
+    },
+    "oct2026-source-16": {
+      "title": "Australian Government: EV charging",
+      "url": "https://www.energy.gov.au/electric-vehicles/owning-electric-vehicle/how-charge-your-electric-vehicle"
+    },
+    "oct2026-source-17": {
+      "title": "MG owner’s manuals",
+      "url": "https://mgmotor.com.au/owners-manuals"
+    },
+    "oct2026-source-18": {
+      "title": "MGS6 EV model page",
+      "url": "https://mgmotor.com.au/vehicles/mgs6-ev"
+    },
+    "oct2026-source-19": {
+      "title": "MG Precise Price Servicing",
+      "url": "https://mgmotor.com.au/about/service-pricing-guide"
+    },
+    "oct2026-source-20": {
+      "title": "MG servicing",
+      "url": "https://mgmotor.com.au/about/servicing"
+    },
+    "oct2026-source-21": {
+      "title": "MG warranty policy and eligibility",
+      "url": "https://mgmotor.com.au/explore/warranty"
+    },
+    "oct2026-source-22": {
+      "title": "MG Roadside Assist and full conditions",
+      "url": "https://mgmotor.com.au/about/roadside-assist"
+    },
+    "oct2026-source-23": {
+      "title": "ANCAP: MG4 EV Urban safety report",
+      "url": "https://www.ancap.com.au/safety-ratings/mg/4-ev-urban/f3ed7b"
+    },
+    "oct2026-source-24": {
+      "title": "ANCAP: MGS6 EV safety report",
+      "url": "https://www.ancap.com.au/safety-ratings/mg/mgs6-ev/588e29"
+    }
+  },
+  "faqs": [
+    {
+      "id": "AU20261023-01",
+      "documentNumber": 1,
+      "category": "Choosing an EV",
+      "audience": "model",
+      "models": [
+        "urban",
+        "mg4",
+        "s5",
+        "s6"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "Which MG electric car would fit my daily life?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Choose around your usual trips, passengers, luggage and charging access. These four MG electric models serve different priorities:"
+        },
+        {
+          "type": "paragraph",
+          "text": "MG4 EV Urban: an entry-level electric hatchback for city life and everyday commuting.\nMG4 EV: an electric hatchback focused on driving enjoyment, with rear-wheel drive in Essence 64 and all-wheel drive in XPOWER.\nMGS5 EV: a compact electric family SUV with a space-efficient, ultra-thin battery.\nMGS6 EV: a mid-size electric family SUV combining technology, comfort and a longer-range option. See FAQ 12 for the RWD and AWD specification comparison."
+        },
+        {
+          "type": "paragraph",
+          "text": "Try the shortlisted cars with your usual passengers and luggage, then compare drive-away prices, insurance, charging availability and scheduled servicing costs over the same ownership period. Choose based on your routine, with enough flexibility for occasional longer trips."
+        }
+      ],
+      "sources": [
+        "oct2026-source-01",
+        "oct2026-source-02"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-01",
+      "related": [
+        "AU20261023-12"
+      ]
+    },
+    {
+      "id": "AU20261023-02",
+      "documentNumber": 2,
+      "category": "Budget & offers",
+      "audience": "model",
+      "models": [
+        "urban",
+        "mg4"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "Which MG electric hatchbacks are under $30,000 or $40,000 drive-away?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Based on MG’s advertised pricing for October 2026, the MG4 EV Urban Essence 43 comes in under $30,000. The MG4 EV Urban Essence 54 and the rear-wheel-drive MG4 EV Essence 64 are also priced below $40,000."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Australian model",
+            "Advertised drive-away price"
+          ],
+          "rows": [
+            [
+              "MG4 EV Urban Essence 43",
+              "$29,990"
+            ],
+            [
+              "MG4 EV Urban Essence 54",
+              "$32,990"
+            ],
+            [
+              "MG4 EV Essence 64",
+              "$39,990"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "All prices shown are in Australian dollars. The MG4 EV Urban price includes the $2,000 cashback offer. Compare the final quote for the selected car, and budget separately for comprehensive insurance and any home-charger installation costs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Checked 22 October 2026. Offers valid for sale and delivery: 1–31 October 2026, at participating dealers, while stocks last. Options cost extra. Buyer exclusions and full offer terms apply."
+        }
+      ],
+      "sources": [
+        "oct2026-source-03",
+        "oct2026-source-04",
+        "oct2026-source-05"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-03",
+      "related": []
+    },
+    {
+      "id": "AU20261023-03",
+      "documentNumber": 3,
+      "category": "Budget & offers",
+      "audience": "model",
+      "models": [
+        "s5",
+        "s6"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "Which MG electric SUVs fit a $50,000 or $60,000 budget?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "MG’s advertised October 2026 drive-away pricing places both MGS5 EV variants and the MGS6 EV Essence RWD under $50,000. The MGS6 EV Essence AWD is below $60,000."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Australian model",
+            "Advertised drive-away price"
+          ],
+          "rows": [
+            [
+              "MGS5 EV Essence 49 kWh",
+              "$39,990"
+            ],
+            [
+              "MGS5 EV Essence 62 kWh",
+              "$44,990"
+            ],
+            [
+              "MGS6 EV Essence RWD",
+              "$49,990"
+            ],
+            [
+              "MGS6 EV Essence AWD",
+              "$56,990"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "All prices shown are in Australian dollars. The MGS5 EV price includes the $2,000 cashback offer. Try the cabin and boot before deciding whether to spend more on a larger SUV, extra range or all-wheel drive."
+        },
+        {
+          "type": "paragraph",
+          "text": "Checked 22 October 2026. Offers valid for sale and delivery: 1–31 October 2026, at participating dealers, while stocks last. Options cost extra. Buyer exclusions and full offer terms apply."
+        }
+      ],
+      "sources": [
+        "oct2026-source-03",
+        "oct2026-source-06",
+        "oct2026-source-07"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-03",
+      "related": []
+    },
+    {
+      "id": "AU20261023-04",
+      "documentNumber": 4,
+      "category": "Choosing an EV",
+      "audience": "model",
+      "models": [
+        "urban"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "Would the MG4 EV Urban suit my commute and city parking?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The MG4 EV Urban is an electric hatchback worth considering for daily commuting and city parking. A 360-degree camera and physical controls for climate and volume let you assess everyday usability on a test drive."
+        },
+        {
+          "type": "paragraph",
+          "text": "Map your full return journey, including errands, and decide where charging fits into your week. Compare the two variants in FAQ 5, allowing a buffer between your regular driving needs and the published WLTP range."
+        },
+        {
+          "type": "paragraph",
+          "text": "The official brochure lists 382 litres of boot space with the rear seats in place, plus 98 litres of underfloor storage. Try parking in a space like the one at home or work, adjust the driver’s seat, check visibility and sit in the back. If you expect to rely on public charging, visit your usual charging site at typical use times to check access and availability."
+        }
+      ],
+      "sources": [
+        "oct2026-source-04",
+        "oct2026-source-08",
+        "oct2026-source-02"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-04",
+      "related": [
+        "AU20261023-05"
+      ]
+    },
+    {
+      "id": "AU20261023-05",
+      "documentNumber": 5,
+      "category": "Choosing an EV",
+      "audience": "model",
+      "models": [
+        "urban"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "Should I choose the MG4 EV Urban Essence 43 or Essence 54?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Choose the MG4 EV Urban Essence 43 if its range and your charging routine comfortably cover your usual driving. Consider the Essence 54 if you regularly travel further or want more flexibility between charging spots."
+        },
+        {
+          "type": "paragraph",
+          "text": "Think about your longest regular day and the difference in the final quotes. Allow a range buffer for motorway speeds, weather, passengers and heating or air conditioning. WLTP figures aren’t a guarantee of real-world driving distance. The equipment list is the same across both versions, so the decision really comes down to range, spec and budget."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "MG4 EV Urban specification",
+            "Essence 43",
+            "Essence 54"
+          ],
+          "rows": [
+            [
+              "Battery capacity and chemistry",
+              "43 kWh LFP",
+              "54 kWh LFP"
+            ],
+            [
+              "WLTP combined range",
+              "316 km",
+              "405 km"
+            ],
+            [
+              "Maximum motor power",
+              "110 kW",
+              "118 kW"
+            ],
+            [
+              "0–100 km/h",
+              "9.0 seconds",
+              "8.7 seconds"
+            ],
+            [
+              "Maximum DC charging power",
+              "82 kW",
+              "87 kW"
+            ],
+            [
+              "Estimated DC 10–80% at 25°C",
+              "28 minutes",
+              "30 minutes"
+            ],
+            [
+              "Onboard AC charging limit",
+              "6.6 kW",
+              "6.6 kW"
+            ],
+            [
+              "Wheels and tyres",
+              "17-inch alloy\n205/50 R17",
+              "17-inch alloy\n205/50 R17"
+            ],
+            [
+              "Heat pump and heated front seats",
+              "Standard",
+              "Standard"
+            ],
+            [
+              "360-degree camera",
+              "Standard",
+              "Standard"
+            ],
+            [
+              "Advertised drive-away price",
+              "A$29,990",
+              "A$32,990"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Price includes the A$2,000 cashback advertised for eligible sales and deliveries from 1–31 October 2026. Conditions and exclusions apply. WLTP is a comparison measure; real-world range varies. Charging times are estimates, not guaranteed session times."
+        }
+      ],
+      "sources": [
+        "oct2026-source-04",
+        "oct2026-source-08"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-04",
+      "related": []
+    },
+    {
+      "id": "AU20261023-06",
+      "documentNumber": 6,
+      "category": "Compare models",
+      "audience": "model",
+      "models": [
+        "urban",
+        "mg4"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "What’s the difference between the MG4 EV Urban and MG4 EV?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The MG4 EV Urban uses front-wheel drive and is positioned for accessible everyday electric motoring. The MG4 EV offers rear-wheel drive in Essence 64 and all-wheel drive in XPOWER, giving buyers a different choice of driving characteristics. Test the models on similar roads rather than assuming the shared MG4 name means they are the same car."
+        },
+        {
+          "type": "paragraph",
+          "text": "The MG4 EV Urban brochure lists 382 litres of boot space with the rear seats up plus 98 litres of underfloor storage. The MG4 EV model page lists 350 litres with the rear seats up. These figures describe different storage arrangements, so compare the opening, usable shape and space for your own bags as well as the published litres."
+        },
+        {
+          "type": "paragraph",
+          "text": "For commuting, weigh up charging access, ride comfort and price. If driving enjoyment matters to you, compare steering response, traction and ride on a test drive. Check the exact variant’s equipment and charging specifications before deciding."
+        }
+      ],
+      "sources": [
+        "oct2026-source-08",
+        "oct2026-source-05"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-08",
+      "related": []
+    },
+    {
+      "id": "AU20261023-07",
+      "documentNumber": 7,
+      "category": "Choosing an EV",
+      "audience": "model",
+      "models": [],
+      "referencePrefix": "AU20261023-",
+      "question": "Should I buy an electric MG, a Hybrid+ or a Super Hybrid?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "An all-electric MG is worth considering if you can charge reliably and its range suits your trips. It runs entirely on electricity, so your energy costs depend on where you charge and the electricity tariff you pay."
+        },
+        {
+          "type": "paragraph",
+          "text": "MG Hybrid+ combines petrol and electric power without the need of an external plug-in. It may suit you if plug-in charging would be difficult. MG Super Hybrid is a plug-in hybrid: it supports external charging and also has a petrol engine. To get useful electric driving from a plug-in hybrid, regular charging needs to fit your routine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Compare the candidate models on the same annual distance. For a plug-in hybrid, factor in both electricity and petrol costs, and consider how much driving you’ll complete with a charged battery. A headline fuel-consumption figure alone won’t tell you what your real-world commute will actually cost."
+        }
+      ],
+      "sources": [
+        "oct2026-source-09",
+        "oct2026-source-02",
+        "oct2026-source-10"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-09",
+      "related": []
+    },
+    {
+      "id": "AU20261023-08",
+      "documentNumber": 8,
+      "category": "Compare models",
+      "audience": "model",
+      "models": [
+        "s5",
+        "s6"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "Should I look at the MGS5 EV or the MGS6 EV for my family?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Start with the MGS5 EV if you want a compact electric family SUV, with a published 453-litre boot that expands to 1,441 litres with the rear seats folded. Consider the MGS6 EV if a mid-size SUV better suits your family. Your passengers, child restraints, luggage and parking space should guide the decision."
+        },
+        {
+          "type": "paragraph",
+          "text": "Use the same checks for both models: install your child seats correctly, set the front seats for the drivers, and load your folded pram and regular bags. Then try getting everyone in and out. Ask for the driving range, charging figures and warranty terms for the exact variant alongside its drive-away quote."
+        },
+        {
+          "type": "paragraph",
+          "text": "When comparing these models with another brand, keep the criteria consistent: seats in use, the same range-test method, the same charging window and current Australian specifications. Use the MGS6 EV comparison in FAQ 12 to distinguish its two variants."
+        }
+      ],
+      "sources": [
+        "oct2026-source-06",
+        "oct2026-source-07",
+        "oct2026-source-02"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-06",
+      "related": [
+        "AU20261023-12"
+      ]
+    },
+    {
+      "id": "AU20261023-09",
+      "documentNumber": 9,
+      "category": "Space & family",
+      "audience": "model",
+      "models": [
+        "s6"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "Can I fit my child seats and another passenger in the MGS6 EV?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The MGS6 EV has five seats and ISOFIX mounting points on the two outer rear seats. Whether your specific child restraints leave enough space for another passenger must be checked in the car; exterior dimensions alone cannot establish a safe or comfortable fit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bring your own restraints to the dealership. Follow both the vehicle manual and instructions of the restraint manufacturer, including the required top-tether routing. With the front seats in their normal positions, check access, clearance and whether the remaining passenger can use the seat and seatbelt properly."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rehearse the everyday routine before buying: lifting your child in, reaching the harness and opening the door in a tight parking space. A safety rating does not replace correct restraint installation. Ask an accredited child-restraint fitter if you need help checking fit or installation."
+        }
+      ],
+      "sources": [
+        "oct2026-source-11",
+        "oct2026-source-12",
+        "oct2026-source-13"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-11",
+      "related": []
+    },
+    {
+      "id": "AU20261023-10",
+      "documentNumber": 10,
+      "category": "Space & family",
+      "audience": "model",
+      "models": [
+        "s6"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "Will the MGS6 EV take a pram and luggage with all five seats in use?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "MG quotes 581 litres of rear boot space for the MGS6 EV with the rear seats up. With those seats folded, the figure expands to 1,690 litres. Use the seats-up figure when planning a trip with rear passengers."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Storage area / seat configuration",
+            "Essence RWD",
+            "Essence AWD"
+          ],
+          "rows": [
+            [
+              "Rear boot, rear seats up",
+              "581 L",
+              "581 L"
+            ],
+            [
+              "Rear luggage area, rear seats folded",
+              "1,690 L",
+              "1,690 L"
+            ],
+            [
+              "Front storage compartment",
+              "86 L",
+              "67 L"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Litre figures won’t tell you whether a particular pram fits through the boot opening. Try your folded pram and weekend bags with the rear seats still upright, and check the tailgate closes without pressing on the load. Keep sightlines unobstructed and secure luggage as directed in the owner’s manual."
+        }
+      ],
+      "sources": [
+        "oct2026-source-11"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-11",
+      "related": []
+    },
+    {
+      "id": "AU20261023-11",
+      "documentNumber": 11,
+      "category": "Space & family",
+      "audience": "model",
+      "models": [
+        "s6"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "Which MGS6 EV features could make everyday family trips more comfortable?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Both Australian MGS6 EV Essence variants include heated and ventilated front seats, heated outer rear seats, reclining rear seatbacks and an 11-speaker audio system. Try the seating positions and controls with your usual passengers."
+        },
+        {
+          "type": "paragraph",
+          "text": "The cabin includes a 12.8-inch touchscreen, a 10.25-inch driver display and a head-up display, together with physical controls for frequently used functions. The panoramic glass roof with electric sunshade is fitted to the Essence AWD; it is not listed as fitted to the Essence RWD."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seat comfort and ride quality are personal. Take a test drive over familiar roads, try the seat adjustments and assess cabin noise before deciding which version suits you."
+        }
+      ],
+      "sources": [
+        "oct2026-source-07",
+        "oct2026-source-11"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-07",
+      "related": []
+    },
+    {
+      "id": "AU20261023-12",
+      "documentNumber": 12,
+      "category": "Compare models",
+      "audience": "model",
+      "models": [
+        "s6"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "Is the MGS6 EV Essence RWD or AWD the better choice for me?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Choose the Essence RWD if you prioritise the higher published driving range and lower advertised price. Consider the Essence AWD if you want stronger acceleration, all-wheel drive and the panoramic glass roof with electric sunshade."
+        },
+        {
+          "type": "paragraph",
+          "text": "The table below compares the Australian variants on the same published basis. Shared equipment includes heated and ventilated front seats, heated outer rear seats, a head-up display and MG Pilot Custom."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "MGS6 EV specification",
+            "Essence RWD",
+            "Essence AWD"
+          ],
+          "rows": [
+            [
+              "Battery capacity and chemistry",
+              "77 kWh NCM",
+              "77 kWh NCM"
+            ],
+            [
+              "Driven wheels",
+              "Rear",
+              "All"
+            ],
+            [
+              "Maximum motor power",
+              "180 kW",
+              "266 kW"
+            ],
+            [
+              "0–100 km/h",
+              "7.3 seconds",
+              "5.1 seconds"
+            ],
+            [
+              "WLTP combined range",
+              "530 km",
+              "485 km"
+            ],
+            [
+              "Wheels and tyres",
+              "20-inch alloy\n245/50 R20",
+              "20-inch alloy\n245/50 R20"
+            ],
+            [
+              "Panoramic glass roof with electric sunshade",
+              "Not fitted",
+              "Standard"
+            ],
+            [
+              "Advertised drive-away price",
+              "A$49,990",
+              "A$56,990"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Australian specifications. Prices are advertised drive-away offers for eligible sales and deliveries from 1–31 October 2026; options and exclusions apply. See the current offer terms."
+        },
+        {
+          "type": "paragraph",
+          "text": "WLTP figures are intended for laboratory-based comparisons. Actual range depends on driving style, weather conditions, load and battery state; all-wheel drive doesn’t remove the need to drive for the road and weather conditions."
+        }
+      ],
+      "sources": [
+        "oct2026-source-14",
+        "oct2026-source-07",
+        "oct2026-source-11"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-14",
+      "related": []
+    },
+    {
+      "id": "AU20261023-13",
+      "documentNumber": 13,
+      "category": "Driving & charging",
+      "audience": "model",
+      "models": [
+        "s6"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "Will an MGS6 EV deliver its published range on every trip?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No. The published WLTP figures in FAQ 12 are laboratory-based comparison results, not a guarantee for an individual journey."
+        },
+        {
+          "type": "paragraph",
+          "text": "WLTP is a standardised laboratory test designed for vehicle comparison. Your results change with speed, hills, wind, temperature, passengers, luggage and use of heating or air conditioning. Battery age and conditions also matter."
+        },
+        {
+          "type": "paragraph",
+          "text": "For a weekend away, plan from the distance between reliable chargers and keep a safety buffer, rather than setting a charging stop at the headline range limit. If a review quotes a real-world result, check its variant, route, weather, starting charge and load before applying it to your trip. Use the published range to compare cars, and then plan for the conditions on your route."
+        }
+      ],
+      "sources": [
+        "oct2026-source-07",
+        "oct2026-source-15"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-07",
+      "related": [
+        "AU20261023-12"
+      ]
+    },
+    {
+      "id": "AU20261023-14",
+      "documentNumber": 14,
+      "category": "Driving & charging",
+      "audience": "model",
+      "models": [
+        "urban",
+        "s6"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "How long do the MG4 EV Urban and MGS6 EV take to fast-charge?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "MG publishes the DC charging figures for the Australian variants as below. All times refer to a 10% to 80% battery charge, so they can be read on the same stated basis."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Australian variant",
+            "Maximum DC power",
+            "DC 10–80% at 25°C"
+          ],
+          "rows": [
+            [
+              "MG4 EV Urban Essence 43",
+              "82 kW",
+              "28 minutes"
+            ],
+            [
+              "MG4 EV Urban Essence 54",
+              "87 kW",
+              "30 minutes"
+            ],
+            [
+              "MGS6 EV Essence RWD",
+              "144 kW",
+              "38 minutes"
+            ],
+            [
+              "MGS6 EV Essence AWD",
+              "144 kW",
+              "38 minutes"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The brochures state estimated 10% to 80% CCS charging times at 25°C. These are published test figures; a higher maximum DC rating does not, by itself, mean a shorter charging stop."
+        },
+        {
+          "type": "paragraph",
+          "text": "Charging power fluctuates throughout a session. Battery temperature, starting charge, charger output and power sharing can all affect the result, and figures quoted for 10% to 80% time should not be compared directly with claims for 30% to 80% time."
+        },
+        {
+          "type": "paragraph",
+          "text": "Published figures checked 22 October 2026. Allow separately for arrival, connection and any queue; the quoted charging time is not total time at the site."
+        }
+      ],
+      "sources": [
+        "oct2026-source-08",
+        "oct2026-source-11",
+        "oct2026-source-16"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-08",
+      "related": []
+    },
+    {
+      "id": "AU20261023-15",
+      "documentNumber": 15,
+      "category": "Driving & charging",
+      "audience": "model",
+      "models": [
+        "urban",
+        "s6"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "Can I own an MG EV if I don’t have a home-charging setup?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Yes, provided you have a reliable charging solution that suits your driving. This could be at workplace, in your apartment building or on a nearby public charging network. Before buying, check access, opening hours, connector compatibility and charging costs at the locations you expect to use."
+        },
+        {
+          "type": "paragraph",
+          "text": "The MG4 EV Urban and MGS6 EV use Type 2 AC and CCS2 DC charging connections. Their published onboard AC limits are 6.6 kW and 11 kW respectively. A higher-rated AC charger will not make a vehicle exceed its onboard AC limit, and the available electrical supply can impose a lower limit."
+        },
+        {
+          "type": "paragraph",
+          "text": "If home charging is an option for you, ask a licensed electrician to assess the supply and installation requirements. In a strata building, check the approval process before ordering any charging equipment. Compare the cost and time of your actual charging options, rather than assuming public charging will work like overnight charging at home."
+        }
+      ],
+      "sources": [
+        "oct2026-source-08",
+        "oct2026-source-11",
+        "oct2026-source-16",
+        "oct2026-source-02"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-08",
+      "related": []
+    },
+    {
+      "id": "AU20261023-16",
+      "documentNumber": 16,
+      "category": "Driving & charging",
+      "audience": "model",
+      "models": [],
+      "referencePrefix": "AU20261023-",
+      "question": "How should I plan a longer trip in an MG electric car?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Plan around reliable charging stops, and keep a backup for each important leg. For regional trips, the gap between suitable chargers matters as much as the car’s published range."
+        },
+        {
+          "type": "paragraph",
+          "text": "Check the route, connector, charger access and payment method before departing. Use the network’s current status information where available."
+        },
+        {
+          "type": "paragraph",
+          "text": "Allow extra energy for motorway speeds, hills, weather and a fully-loaded car. Aim to arrive with charge in reserve."
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose a charging stop that also works for lunch, a rest or a change of driver. Keep an alternative reachable if the first site is unavailable."
+        },
+        {
+          "type": "paragraph",
+          "text": "Reassess the plan as you travel. Use your car’s current battery level and consumption, rather than relying only on the original range estimate."
+        },
+        {
+          "type": "paragraph",
+          "text": "You don’t need to charge to 100% at every stop. Charge enough for the next reliable leg with a sensible buffer, and follow the charging guidance for your model. A longer stretch with limited facilities may need a different plan."
+        }
+      ],
+      "sources": [
+        "oct2026-source-15",
+        "oct2026-source-16",
+        "oct2026-source-17"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-15",
+      "related": []
+    },
+    {
+      "id": "AU20261023-17",
+      "documentNumber": 17,
+      "category": "Driving & charging",
+      "audience": "model",
+      "models": [
+        "s6"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "Can the MGS6 EV remember my driver-assistance preferences?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "MG lists MG Pilot Custom for both Australian MGS6 EV Essence variants. It lets you personalise driver-assistance settings and recall your preferences. This does not establish that every setting remains active automatically after restarting."
+        },
+        {
+          "type": "paragraph",
+          "text": "Make adjustments while safely parked. At handover, ask the dealer to demonstrate the save-and-recall steps on your vehicle, then practise using them before driving away. Check the settings displayed each time rather than assuming they have all carried over."
+        },
+        {
+          "type": "paragraph",
+          "text": "Screen layouts and available functions can vary with configuration, software and market. Follow the instructions for your vehicle; a procedure shown for a different MG model or an overseas car may differ. Driver assistance is designed to support your driving and still requires you to watch the road and remain in control."
+        }
+      ],
+      "sources": [
+        "oct2026-source-18",
+        "oct2026-source-11"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-18",
+      "related": []
+    },
+    {
+      "id": "AU20261023-18",
+      "documentNumber": 18,
+      "category": "Ownership & warranty",
+      "audience": "model",
+      "models": [],
+      "referencePrefix": "AU20261023-",
+      "question": "How do I compare the full cost of owning an MG EV?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Compare each car over the same period and distance. For example, use five years and 15,000 km a year, then replace those assumptions with your own driving. The purchase price or scheduled servicing cost alone is not the full ownership cost."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Cost to include",
+            "How to compare it"
+          ],
+          "rows": [
+            [
+              "Vehicle and resale",
+              "Use a written purchase quote and a clearly labelled resale estimate."
+            ],
+            [
+              "Charging or fuel",
+              "Use the same annual kilometres and your home/public charging mix."
+            ],
+            [
+              "Insurance and registration",
+              "Obtain quotes and allow for renewals; avoid double-counting complimentary first-year cover."
+            ],
+            [
+              "Servicing, tyres and other maintenance",
+              "Follow the correct schedule; allow separately for wear-and-tear items."
+            ],
+            [
+              "Home charging and finance",
+              "Include installation costs where needed, plus relevant interest and fees."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Keep quoted costs separate from estimates. Resale value, future energy prices and insurance renewals may change, so test multiple scenarios. That shows whether an apparent saving is robust or depends on an unusually low tariff or optimistic resale value."
+        }
+      ],
+      "sources": [
+        "oct2026-source-10",
+        "oct2026-source-19",
+        "oct2026-source-03"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-10",
+      "related": []
+    },
+    {
+      "id": "AU20261023-19",
+      "documentNumber": 19,
+      "category": "Ownership & warranty",
+      "audience": "model",
+      "models": [
+        "s6"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "How much should I budget for scheduled MGS6 EV servicing?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "MG’s published service guide lists the prices for the first five scheduled services for the MGS6 EV. A service is due at whichever comes first: the time or distance shown."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Service due",
+            "Essence RWD",
+            "Essence AWD"
+          ],
+          "rows": [
+            [
+              "12 months / 25,000 km",
+              "$149",
+              "$149"
+            ],
+            [
+              "24 months / 50,000 km",
+              "$281",
+              "$281"
+            ],
+            [
+              "36 months / 75,000 km",
+              "$275",
+              "$330"
+            ],
+            [
+              "48 months / 100,000 km",
+              "$467",
+              "$467"
+            ],
+            [
+              "60 months / 125,000 km",
+              "$149",
+              "$149"
+            ],
+            [
+              "Total of the five listed services",
+              "$1,321",
+              "$1,376"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "All prices shown are in Australian dollars including GST, checked as at 22 October 2026. Confirm the current schedule, inclusions and quote for your vehicle when booking. Drivers who reach the distance limit earlier will need services sooner."
+        },
+        {
+          "type": "paragraph",
+          "text": "This total covers the listed scheduled services only. It isn’t a five-year total ownership cost or a promise that tyres, wear-and-tear items, repairs and other expenses are included."
+        }
+      ],
+      "sources": [
+        "oct2026-source-19",
+        "oct2026-source-20"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-19",
+      "related": []
+    },
+    {
+      "id": "AU20261023-20",
+      "documentNumber": 20,
+      "category": "Driving & charging",
+      "audience": "model",
+      "models": [],
+      "referencePrefix": "AU20261023-",
+      "question": "How can I estimate the cost of charging my MG EV?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Base your calculation on the electricity rate you are charged at the charger: charging cost equals billed kilowatt-hours multiplied by the rate per kilowatt-hour. For a yearly estimate, use your expected annual distance and an energy consumption figure that includes charging losses."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Illustrative assumption",
+            "Calculation / result"
+          ],
+          "rows": [
+            [
+              "15,000 km a year; 18 kWh billed per 100 km",
+              "2,700 kWh a year"
+            ],
+            [
+              "All charging at $0.30 per kWh",
+              "$810 a year"
+            ],
+            [
+              "All charging at $0.65 per kWh",
+              "$1,755 a year"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "This is a worked example only, not a measured MG consumption figure, an electricity quote or a guarantee of savings. The 18 kWh figure already includes charging losses. Substitute it with energy consumption and tariffs relevant to your car and circumstances."
+        },
+        {
+          "type": "paragraph",
+          "text": "If you use both home and public charging, weight the costs by the energy bought at each. Add any session, parking, idle or subscription costs. Solar charging also has an opportunity cost if that electricity could otherwise earn a feed-in tariff credit."
+        }
+      ],
+      "sources": [
+        "oct2026-source-10",
+        "oct2026-source-16"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-10",
+      "related": []
+    },
+    {
+      "id": "AU20261023-21",
+      "documentNumber": 21,
+      "category": "Ownership & warranty",
+      "audience": "model",
+      "models": [
+        "urban",
+        "s6"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "Which warranty applies to an MG4 EV Urban or MGS6 EV in Australia?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For MG passenger vehicles first registered from 1 July 2025, the published policy distinguishes standard cover from a service-activated extended warranty. High-voltage battery cover has separate terms."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Cover under the published policy",
+            "Period / limit"
+          ],
+          "rows": [
+            [
+              "Private-use passenger vehicle: standard",
+              "7 years / unlimited kilometres"
+            ],
+            [
+              "Eligible private-use passenger vehicle: extended",
+              "Up to 10 years / 250,000 km, whichever comes first; exclusive authorised MG servicing required"
+            ],
+            [
+              "Commercial-use passenger vehicle",
+              "7 years / 160,000 km, whichever comes first; no extended warranty"
+            ],
+            [
+              "EV / hybrid high-voltage battery",
+              "7 years / 150,000 km, whichever comes first; separate battery conditions apply"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The extended warranty term commences from the date of first registration; it isn’t ten extra years. Component exclusions and servicing conditions apply. Commercial use includes rideshare and hire, so confirm your eligibility before purchase. Battery capacity claims follow dedicated assessment conditions; battery warranty cover does not guarantee unchanged driving range."
+        },
+        {
+          "type": "paragraph",
+          "text": "The extended warranty requires all scheduled servicing at authorised MG dealers within the policy’s permitted time and kilometre windows. Keep the required records. Confirm the terms for your registration date and use; these summaries do not replace the policy or affect your rights under the Australian Consumer Law."
+        }
+      ],
+      "sources": [
+        "oct2026-source-21"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-21",
+      "related": []
+    },
+    {
+      "id": "AU20261023-22",
+      "documentNumber": 22,
+      "category": "Ownership & warranty",
+      "audience": "model",
+      "models": [],
+      "referencePrefix": "AU20261023-",
+      "question": "Do I need to service my MG at an MG dealer to keep the warranty valid?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For MG’s policy covering vehicles first registered from 1 July 2025, the service-activated extended warranty requires all scheduled servicing at an authorised MG dealer. Follow the model’s schedule and keep the service records."
+        },
+        {
+          "type": "paragraph",
+          "text": "The standard warranty allows servicing by a suitably qualified Australian repairer, provided MG’s maintenance, parts and record requirements are met. MG requires each service completed within 30 days and 2,000 km of its scheduled service interval. If servicing is undertaken outside the authorised dealer network, the record must be uploaded to MG’s online service portal within ten days."
+        },
+        {
+          "type": "paragraph",
+          "text": "Before booking servicing outside the dealer network, consider whether you want to retain eligibility for the extended warranty period. Require the repairer to document the work, parts and fluids used. For an older-model vehicle or a different usage category, check the specific policy for that car rather than assuming the current private-use terms will apply."
+        }
+      ],
+      "sources": [
+        "oct2026-source-21"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-21",
+      "related": []
+    },
+    {
+      "id": "AU20261023-23",
+      "documentNumber": 23,
+      "category": "Ownership & warranty",
+      "audience": "model",
+      "models": [],
+      "referencePrefix": "AU20261023-",
+      "question": "Who do I call if my MG breaks down, and what does roadside assistance cover?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For MG Motor Roadside Assist in Australia, call 1800 64 2277 (1800 MG CARS). Have your VIN, registration, location, contact number and a description of the fault on hand. The published service runs 24 hours a day, seven days a week, subject to eligibility and conditions."
+        },
+        {
+          "type": "paragraph",
+          "text": "For an eligible breakdown that cannot be resolved on-site, MG’s policy provides towing to the nearest MG dealer or authorised service agent, with covered-distance limits of 20 km in metropolitan areas and 100 km in regional areas. Assistance and towing are limited to gazetted, sealed roads; extra distance can be at the driver’s cost."
+        },
+        {
+          "type": "paragraph",
+          "text": "Not all incidents or costs are covered. Services such as lost-key assistance and accident-related towing may incur charges. If your vehicle is in a hazardous location, tell the operator and keep clear of moving traffic. Confirm what assistance is available before arranging your own recovery."
+        }
+      ],
+      "sources": [
+        "oct2026-source-22"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-22",
+      "related": []
+    },
+    {
+      "id": "AU20261023-24",
+      "documentNumber": 24,
+      "category": "Compare models",
+      "audience": "model",
+      "models": [
+        "urban",
+        "s6"
+      ],
+      "referencePrefix": "AU20261023-",
+      "question": "How do I check safety when comparing the MG4 EV Urban or MGS6 EV with another car?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Both the MG4 EV Urban and MGS6 EV have a five-star ANCAP rating dated 2025. Their Australian reports cover all variants within the stated applicability: MG4 EV Urban on sale from March 2026, and MGS6 EV on sale from June 2026, with both models built from December 2025."
+        },
+        {
+          "type": "paragraph",
+          "text": "Read the report for the exact model and build date. Compare the assessment year and the individual results for adult occupants, child occupants, vulnerable road users and safety assistance. A rating for one MG model should not be applied to another, and a star rating doesn’t guarantee protection in every crash."
+        },
+        {
+          "type": "paragraph",
+          "text": "Then check the things that matter to your household: correct child-restraint fit, visibility and how the assistance systems behave on a test drive. Judge value alongside those checks, the final price and ownership costs. Safety equipment is useful, but the driver remains responsible for watching the road and controlling the car."
+        }
+      ],
+      "sources": [
+        "oct2026-source-23",
+        "oct2026-source-24"
+      ],
+      "keywords": "",
+      "expiry": false,
+      "owner": "/explore/ev-guides/questions",
+      "cta": "oct2026-source-23",
+      "related": []
+    }
+  ]
+}
